@@ -1,5 +1,6 @@
 backend:
-  name: test-repo
+  name: jeftarmascarenhas.io
+  repo: jeftarmascarenhas/jeftarmascarenhas.io
 
 media_folder: static/assets
 public_folder: assets
