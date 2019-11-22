@@ -1,17 +1,20 @@
 backend:
-  name: jeftarmascarenhas.io
+  name: github
   repo: jeftarmascarenhas/jeftarmascarenhas.io
+  branch: master
 
-media_folder: static/assets
+media_folder: static/assets/posts
 public_folder: assets
 
 collections:
   - name: blog
     label: Blog
-    folder: blog
+    folder: content/posts
     create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
-      - { name: path, label: Path }
-      - { name: date, label: Date, widget: date }
+      - { name: date, label: Date, widget: date, format: YYYY-MM-DD hh:mm:ss }
       - { name: title, label: Title }
+      - { name: description, label: Description, widget: string }
+      - { name: tags, label: Tags, widget: list, default: [""] }
       - { name: body, label: Body, widget: markdown }
