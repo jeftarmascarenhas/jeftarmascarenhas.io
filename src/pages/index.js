@@ -1,12 +1,12 @@
 import React from "react"
 import { Link } from "gatsby"
 
-import Layout from "../components/layout"
-import Image from "../components/image"
-import SEO from "../components/seo"
+import Layout from "components/layout"
+import Image from "components/image"
+import SEO from "components/seo"
 
 const IndexPage = props => {
-  console.log(props)
+  console.log("Index: ", props)
   return (
     <Layout>
       <SEO title="Home" />
