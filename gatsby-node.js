@@ -1,10 +1,10 @@
 const path = require(`path`)
 const { createFilePath } = require(`gatsby-source-filesystem`)
-const { fmImagesToRelative } = require("gatsby-remark-relative-images")
+const { fmImagesToRelative } = require('gatsby-remark-relative-images')
 
 exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions
-  const blogPost = path.resolve(`./src/templates/blog-post.js`)
+  const blogPost = path.resolve(`./src/templates/blogPost.js`)
 
   return graphql(
     `
@@ -15,6 +15,7 @@ exports.createPages = ({ graphql, actions }) => {
         ) {
           edges {
             node {
+              id
               fields {
                 slug
               }
@@ -73,7 +74,7 @@ exports.createPages = ({ graphql, actions }) => {
     Array.from({ length: numPages }).forEach((_, i) => {
       createPage({
         path: i === 0 ? `/blog/` : `/blog/page/${i + 1}`,
-        component: path.resolve("./src/templates/blog-list.js"),
+        component: path.resolve('./src/templates/blogList.js'),
         context: {
           limit: postsPerPage,
           skip: i * postsPerPage,

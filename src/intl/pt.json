@@ -1,0 +1,17 @@
+{
+  "title": "Jeftar Mascarenhas",
+  "description": "Olá meus queridos, neste site/blog o foco é a parte técnica",
+  "author": "@jeftar",
+  "hello": "Olá a todos",
+  "welcome": "Bem-vindo ao meu site.",
+  "title_page2": "Página Dois",
+  "hello_page2": "Olá você está na segunda página",
+  "go_page2": "Ir a página 2",
+  "build": "Now go build something great.",
+  "welcome_page2": "Bem-vindo a página 2",
+  "go_back": "Voltar para Home",
+  "notfound": {
+    "header": "NOT FOUND",
+    "description": "You just hit a route that doesn't exist... the sadness."
+  }
+}

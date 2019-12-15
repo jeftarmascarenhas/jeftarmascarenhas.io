@@ -1,19 +1,20 @@
-import React from "react"
-import { Link } from "gatsby"
+import React from 'react'
+import PropTypes from 'prop-types'
+import { Link, graphql } from 'gatsby'
 
-import Layout from "components/layout"
-import SEO from "components/seo"
+import Layout from 'layouts'
+import SEO from 'components/seo'
 
-const BlogList = props => {
-  console.log("BlogList: ", props)
-  const list = props.data.allMarkdownRemark.edges
+const BlogList = ({ data }) => {
+  const list = data.allMarkdownRemark.edges
+  console.log(list)
   return (
     <Layout>
       <SEO title="Blog" />
       <h1>Blog List</h1>
       <ul>
-        {list.map(({ node }, idx) => (
-          <li key={idx}>
+        {list.map(({ node }) => (
+          <li key={node.id}>
             <Link to={`/${node.fields.slug}`}>
               <h3>{node.frontmatter.title}</h3>
               <h4>{node.frontmatter.description}</h4>
@@ -34,6 +35,7 @@ export const BlogListQuery = graphql`
     ) {
       edges {
         node {
+          id
           fields {
             slug
           }
@@ -49,5 +51,13 @@ export const BlogListQuery = graphql`
     }
   }
 `
+
+BlogList.propTypes = {
+  data: PropTypes.shape({
+    allMarkdownRemark: PropTypes.shape({
+      edges: PropTypes.array,
+    }),
+  }).isRequired,
+}
 
 export default BlogList

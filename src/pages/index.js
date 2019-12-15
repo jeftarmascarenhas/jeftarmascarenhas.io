@@ -1,24 +1,27 @@
-import React from "react"
-import { Link } from "gatsby"
+import React from 'react'
+import { Link, useIntl } from 'gatsby-plugin-intl'
 
-import Layout from "components/layout"
-import Image from "components/image"
-import SEO from "components/seo"
-import BlogList from "components/blogList"
+import Layout from 'layouts'
+import Image from 'components/image'
+import SEO from 'components/seo'
+import BlogList from 'components/blogList'
 
 const IndexPage = props => {
-  console.log("Index: ", props)
+  const intl = useIntl()
+  console.log('Index: ', props)
   return (
     <Layout>
       <SEO title="Home" />
-      <h1>Hi people</h1>
-      <p>Welcome to your new Gatsby site.</p>
-      <p>Now go build something great.</p>
+      <h1>{intl.formatMessage({ id: 'title' })}</h1>
+      <p>{intl.formatMessage({ id: 'welcome' })}</p>
+      <p>{intl.formatMessage({ id: 'description' })}</p>
       <BlogList />
       <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
         <Image />
       </div>
-      <Link to="/page-2/">Go to page 2</Link>
+      <Link to="/page-2/">{intl.formatMessage({ id: 'go_page2' })}</Link>
+      <br />
+      <Link to="/about/">Sobre</Link>
     </Layout>
   )
 }

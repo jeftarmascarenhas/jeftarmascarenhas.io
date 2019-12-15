@@ -2,13 +2,14 @@ const feeds = [
   {
     serialize: ({ query: { site, allMarkdownRemark } }) => {
       return allMarkdownRemark.edges.map(edge => {
-        return Object.assign({}, edge.node.frontmatter, {
+        return {
+          ...edge.node.frontmatter,
           description: edge.node.excerpt,
           date: edge.node.frontmatter.date,
           url: site.siteMetadata.siteUrl + edge.node.fields.slug,
           guid: site.siteMetadata.siteUrl + edge.node.fields.slug,
-          custom_elements: [{ "content:encoded": edge.node.html }],
-        })
+          custom_elements: [{ 'content:encoded': edge.node.html }],
+        }
       })
     },
     query: `
@@ -18,6 +19,7 @@ const feeds = [
         ) {
           edges {
             node {
+              id
               fields {
                 slug
               }
@@ -32,8 +34,8 @@ const feeds = [
         }
       }
     `,
-    output: "/feed.xml",
-    title: "Jeftar Mascarenhas - RSS Feed",
+    output: '/feed.xml',
+    title: 'Jeftar Mascarenhas - RSS Feed',
   },
 ]
 
@@ -75,6 +77,18 @@ const plugins = [
   `gatsby-plugin-transition-link`,
   `gatsby-plugin-sitemap`,
   {
+    resolve: 'gatsby-plugin-eslint',
+    options: {
+      test: /\.js$|\.jsx$/,
+      exclude: /(node_modules|.cache|public)/,
+      stages: ['develop'],
+      options: {
+        emitWarning: true,
+        failOnError: false,
+      },
+    },
+  },
+  {
     resolve: `gatsby-remark-responsive-iframe`,
     options: {
       wrapperStyle: `margin-bottom: 1.0725rem`,
@@ -91,9 +105,22 @@ const plugins = [
     options: {
       usePrefix: false,
       providers: {
-        include: ["Youtube", "Twitter", "Codepen"],
-        exclude: ["Reddit", "Flickr", "Instagram"],
+        include: ['Youtube', 'Twitter', 'Codepen'],
+        exclude: ['Reddit', 'Flickr', 'Instagram'],
       },
+    },
+  },
+  {
+    resolve: `gatsby-plugin-intl`,
+    options: {
+      // language JSON resource path
+      path: `${__dirname}/src/intl`,
+      // supported language
+      languages: [`en`, `pt`],
+      // language file path
+      defaultLanguage: `pt`,
+      // option to redirect to `/ko` when connecting `/`
+      redirect: true,
     },
   },
   {
@@ -119,13 +146,13 @@ const plugins = [
     options: {
       plugins: [
         {
-          resolve: "gatsby-remark-relative-images",
+          resolve: 'gatsby-remark-relative-images',
           options: {
-            name: "uploads",
+            name: 'uploads',
           },
         },
         {
-          resolve: "gatsby-remark-images",
+          resolve: 'gatsby-remark-images',
           options: {
             // It's important to specify the maxWidth (in pixels) of
             // the content container as this plugin uses this as the
@@ -135,9 +162,9 @@ const plugins = [
           },
         },
         {
-          resolve: "gatsby-remark-copy-linked-files",
+          resolve: 'gatsby-remark-copy-linked-files',
           options: {
-            destinationDir: "static/assets/img/",
+            destinationDir: 'static/assets/img/',
           },
         },
       ],
@@ -155,13 +182,13 @@ module.exports = {
     title: `Jeftar Mascarenhas - Front-end Developer`,
     description: `Eu trabalho como Front-end, Back-end and UI Design`,
     descriptionEn: `I work as Front-end, Back-end and UI Design`,
-    siteUrl: "https://jeftar.com.br/",
+    siteUrl: 'https://jeftar.com.br/',
     social: {
-      twitter: "jeftar",
-      twitterLink: "htps://twitter.com/jeftar",
-      githubLink: "https://github.com/jeftarmascarenhas",
-      linkedinLink: "https://www.linkedin.com/in/jeftarmascarenhas/",
-      codepenLink: "https://codepen.io/jeftar",
+      twitter: 'jeftar',
+      twitterLink: 'htps://twitter.com/jeftar',
+      githubLink: 'https://github.com/jeftarmascarenhas',
+      linkedinLink: 'https://www.linkedin.com/in/jeftarmascarenhas/',
+      codepenLink: 'https://codepen.io/jeftar',
     },
     author: `Jeftar Mascarenhas`,
   },

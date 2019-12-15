@@ -1,5 +1,5 @@
-import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
+import React from 'react'
+import { useStaticQuery, graphql } from 'gatsby'
 
 const blogListQuery = graphql`
   query {
@@ -9,6 +9,7 @@ const blogListQuery = graphql`
     ) {
       edges {
         node {
+          id
           fields {
             slug
           }
