@@ -2,6 +2,7 @@ import styled from 'styled-components'
 import { Link } from 'gatsby-plugin-intl'
 
 import { Colors } from 'styles/variables'
+import transitions from 'styles/transitions'
 
 export const SideBarMenu = styled.aside`
   width: 18.3rem;
@@ -30,6 +31,19 @@ export const NavItem = styled(Link)`
   position: relative;
   color: ${Colors.dark};
   padding: 0.5rem 0.4rem;
+  transition: ${transitions.all};
+  &:hover {
+    &::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      background-color: ${Colors.yellow};
+      top: 50%;
+      left: -0.2rem;
+      transform: translateY(-50%);
+    }
+  }
   &.active {
     &::after {
       content: '';

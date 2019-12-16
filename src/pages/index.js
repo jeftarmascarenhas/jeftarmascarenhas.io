@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link, useIntl } from 'gatsby-plugin-intl'
+import { useIntl } from 'gatsby-plugin-intl'
 
 import Layout from 'layouts'
 // import Image from 'components/image'
@@ -36,9 +36,9 @@ const IndexPage = props => {
         <S.LastPosts>
           <C.Title>Last Posts</C.Title>
           <BlogList />
-          <Link to="/blog/">
-            <C.Title>View posts</C.Title>
-          </Link>
+          <S.AllPost className="mt-3" to="/blog/">
+            View posts
+          </S.AllPost>
         </S.LastPosts>
       </S.HomeContnet>
     </Layout>

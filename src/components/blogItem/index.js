@@ -27,7 +27,7 @@ BlogItem.propTypes = {
     title: PropTypes.string,
     description: PropTypes.string,
     date: PropTypes.string,
-    timeToRead: PropTypes.string,
+    timeToRead: PropTypes.number,
     tags: PropTypes.arrayOf(PropTypes.string),
   }).isRequired,
 }

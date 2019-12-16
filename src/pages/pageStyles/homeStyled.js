@@ -1,10 +1,16 @@
 import styled from 'styled-components'
+import { Link } from 'gatsby-plugin-intl'
 
 import { Colors } from 'styles/variables'
+import transitions from 'styles/transitions'
 
 export const HomeContnet = styled.div`
   display: flex;
-  height: 100vh;
+  flex-direction: column;
+  min-height: 100vh;
+  @media (min-width: 868px) {
+    flex-direction: row;
+  }
 `
 
 export const PersonalInfo = styled.section`
@@ -24,8 +30,34 @@ export const LastPosts = styled.section`
     background-color: #fff;
     position: absolute;
     width: 0.6rem;
-    height: 96vh;
+    height: 96%;
     bottom: 0;
     left: 1rem;
+  }
+`
+
+export const AllPost = styled(Link)`
+  font-size: 5.6rem;
+  font-weight: 900;
+  text-align: right;
+  display: block;
+  position: relative;
+  &::before {
+    transition: ${transitions.all};
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: ${Colors.black};
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    opacity: 0;
+  }
+  &:hover {
+    &::before {
+      opacity: 1;
+      left: -0.2rem;
+    }
   }
 `
