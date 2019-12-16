@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import Tag from 'components/Tag'
+import Tag from 'components/tag'
 import * as S from './styled'
 
 const BlogItem = ({ info }) => {
