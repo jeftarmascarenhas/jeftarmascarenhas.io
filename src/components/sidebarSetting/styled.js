@@ -22,7 +22,10 @@ export const SidebarSetting = styled.aside`
   .copyright {
     font-size: 0.7em;
     writing-mode: vertical-rl;
-    margin-top: 3em;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
   }
 `
 export const IconLightbulbFlash = styled(LightbulbFlash)`

@@ -19,14 +19,20 @@ function Layout({ children }) {
   const [themeMode, setThemeMode] = useState(false)
 
   function handleChangeTheme() {
-    utils.setLocalStore('themesite', themeMode)
     setThemeMode(!themeMode)
   }
 
   useEffect(() => {
+    function setDefaultThem() {
+      utils.setLocalStore('themesite', themeMode)
+    }
+    setDefaultThem()
+  }, [])
+
+  useEffect(() => {
     function checkTheme() {
       const themesite = utils.getLocalStore('themesite', { parser: true })
-      setThemeMode(!themesite)
+      setThemeMode(themesite)
     }
     checkTheme()
     return () => {

@@ -13,7 +13,9 @@ const SidebarSetting = ({ onTheme }) => (
     <IconButton onClick={onTheme}>
       <S.IconLightbulbFlash />
     </IconButton>
-    <div className="copyright">{`Copyright © ${new Date().getFullYear()}`}</div>
+    <div className="copyright">
+      <span>{`Copyright © ${new Date().getFullYear()}`}</span>
+    </div>
   </S.SidebarSetting>
 )
 
