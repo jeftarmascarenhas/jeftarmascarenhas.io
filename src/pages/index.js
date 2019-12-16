@@ -7,15 +7,14 @@ import Box from 'components/box'
 import SEO from 'components/seo'
 import BlogList from 'components/blogList'
 import * as C from 'styles/common'
-import * as S from './pageStyles/homeStyled'
+import * as S from 'pages/pageStyles/homeStyled'
 
-const IndexPage = props => {
+const IndexPage = () => {
   const intl = useIntl()
-  console.log('Index: ', props)
   return (
     <Layout>
       <SEO title="Home" />
-      <S.HomeContnet>
+      <S.HomeContent>
         <S.PersonalInfo>
           <Box className="mb-2">
             <C.Title>{intl.formatMessage({ id: 'work' })}</C.Title>
@@ -40,7 +39,7 @@ const IndexPage = props => {
             View posts
           </S.AllPost>
         </S.LastPosts>
-      </S.HomeContnet>
+      </S.HomeContent>
     </Layout>
   )
 }

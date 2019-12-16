@@ -4,7 +4,7 @@ import { Link } from 'gatsby-plugin-intl'
 import { Colors } from 'styles/variables'
 import transitions from 'styles/transitions'
 
-export const HomeContnet = styled.div`
+export const HomeContent = styled.div`
   display: flex;
   flex-direction: column;
   min-height: 100vh;
