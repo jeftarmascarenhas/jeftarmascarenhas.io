@@ -1,8 +1,12 @@
 ---
 date: '2019-11-29 03:58:10'
-title: Second Post
-description: Description
+title: Usando Greensock com React
+description: Saiba com desenvolver animações para React
 tags:
-  - tag
+  - React
+  - GreenSock
+  - JavaScript
+  - Animation
 ---
-## Secound Post
+## Usando Greensock com React
+Saiba com desenvolver animações para React
