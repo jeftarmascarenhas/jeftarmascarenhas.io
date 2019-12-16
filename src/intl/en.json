@@ -1,6 +1,10 @@
 {
   "title": "Jeftar Mascarenhas",
+  "work": "Work",
+  "life": "Life out work",
   "description": "Kick off your next, great Gatsby project with this default-starter-intl. This barebones starter ships with the main Gatsby configuration files you might need.",
+  "workerDescription": "I always look for projects relevant to web or mobile. I love what I do. Make the most of technology best practices.",
+  "lifeDescription": "When I’m not coding, I’m busy studying investment in scholarship, politics, music, and running.",
   "author": "@jeftar",
   "hello": "Hi everybody",
   "welcome": "Welcome my website.",

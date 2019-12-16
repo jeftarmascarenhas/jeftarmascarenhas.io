@@ -9,20 +9,22 @@ const languageName = {
 }
 
 const LanguageButton = () => (
-  <IntlContextConsumer>
-    {({ languages, language: currentLocale }) =>
-      languages.map(language => (
-        <S.Button
-          key={language}
-          type="button"
-          onClick={() => changeLocale(language)}
-          active={currentLocale === language}
-        >
-          {languageName[language]}
-        </S.Button>
-      ))
-    }
-  </IntlContextConsumer>
+  <S.GroupButton>
+    <IntlContextConsumer>
+      {({ languages, language: currentLocale }) =>
+        languages.map(language => (
+          <S.Button
+            key={language}
+            type="button"
+            onClick={() => changeLocale(language)}
+            active={currentLocale === language}
+          >
+            {languageName[language]}
+          </S.Button>
+        ))
+      }
+    </IntlContextConsumer>
+  </S.GroupButton>
 )
 
 export default LanguageButton

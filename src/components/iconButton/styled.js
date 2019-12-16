@@ -10,6 +10,7 @@ export const IconButton = styled.button`
   border: 0;
   border-radius: 50%;
   position: relative;
+  cursor: pointer;
   &:hover {
     background-color: rgba(0, 0, 0, 0.08);
   }
@@ -27,5 +28,6 @@ export const IconButton = styled.button`
   > span {
     width: 100%;
     display: flex;
+    justify-content: center;
   }
 `

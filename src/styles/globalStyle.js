@@ -1,14 +1,50 @@
-import { createGlobalStyle } from 'styled-components'
+import { createGlobalStyle, css } from 'styled-components'
 
 import { Colors } from './variables'
 import transitions from './transitions'
 
+const createClassMarginHelp = amount => {
+  let styles
+  for (let i = 0; i < amount; i += 1) {
+    styles += `.mt-${i} {
+      margin-top: ${i}rem !important;
+    }
+    .mb-${i} {
+      margin-bottom: ${i}rem !important;
+    }
+    .ml-${i} {
+      margin-left: ${i}rem !important;
+    }
+    .mr-${i} {
+      margin-right: ${i}rem !important;
+    }
+    `
+  }
+  return css`
+    ${styles}
+  `
+}
+
+const createClassMarginYHelp = amount => {
+  let styles
+  for (let i = 0; i < amount; i += 1) {
+    styles += `.my-${i} {
+      margin-top: ${i}rem;
+      margin-bottom: ${i}rem;
+    }`
+  }
+  return css`
+    ${styles}
+  `
+}
+
 export default createGlobalStyle`
 html {
-  font-family: sans-serif;
+  font-family: Roboto, sans-serif;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
   line-height: 1;
+  font-size: 8px;
 }
 body {
   margin: 0;
@@ -71,6 +107,16 @@ dfn {
 h1 {
   font-size: 2rem;
   margin: 0.67rem 0;
+  font-weight: 700;
+}
+h2 {
+  font-size: 1.5rem;
+  margin: 0.67rem 0;
+  font-weight: 500;
+}
+h3 {
+  font-size: 1.2rem;
+  margin: 0.4rem 0;
 }
 mark {
   background-color: #ff0;
@@ -197,7 +243,6 @@ textarea {
   font: inherit;
 }
 html {
-  font: 112.5%/1.45em georgia, serif;
   box-sizing: border-box;
   overflow-y: scroll;
 }
@@ -224,9 +269,10 @@ img {
  body {
   ${props => (props.darkColor ? Colors.bgDark : Colors.bgLight)};
   color: ${props => (props.darkColor ? Colors.light : Colors.dark)};
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+  font-family: Roboto, -apple-system, BlinkMacSystemFont, Segoe UI, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   font-weight: normal;
+  font-size: 2rem;
   word-wrap: break-word;
   font-kerning: normal;
   -moz-font-feature-settings: 'kern', 'liga', 'clig', 'calt';
@@ -446,7 +492,7 @@ tt,
 code {
   background-color: hsla(0, 0%, 0%, 0.04);
   border-radius: 3px;
-  font-family: 'SFMono-Regular', Consolas, 'Roboto Mono', 'Droid Sans Mono',
+  font-family: Roboto, 'SFMono-Regular', Consolas, 'Roboto Mono', 'Droid Sans Mono',
     'Liberation Mono', Menlo, Courier, monospace;
   padding: 0;
   padding-top: 0.2em;
@@ -469,11 +515,11 @@ pre tt:before,
 pre tt:after {
   content: '';
 }
-@media only screen and (max-width: 480px) {
+@media screen and (min-width: 1170px) {
   html {
-    font-size: 100%;
+    font-size: 10px;
   }
 }
-
-
+  ${createClassMarginYHelp(5)}
+  ${createClassMarginHelp(5)}
 `

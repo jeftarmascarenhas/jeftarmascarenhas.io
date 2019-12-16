@@ -1,6 +1,8 @@
 import React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
 
+import BlogItem from 'components/blogItem'
+
 const blogListQuery = graphql`
   query {
     allMarkdownRemark(
@@ -29,12 +31,20 @@ const blogListQuery = graphql`
 const BlogList = () => {
   const allBlogList = useStaticQuery(blogListQuery)
   const list = allBlogList.allMarkdownRemark.edges
-  console.log(allBlogList)
-  console.log(list)
   return (
-    <div>
-      <h3>List Blog</h3>
-    </div>
+    <>
+      {list.map(({ node }) => {
+        const info = {
+          slug: node.fields.slug,
+          title: node.frontmatter.title,
+          description: node.frontmatter.description,
+          date: node.frontmatter.date,
+          timeToRead: node.timeToRead,
+          tags: node.frontmatter.tags,
+        }
+        return <BlogItem key={node.id} info={info} />
+      })}
+    </>
   )
 }
 

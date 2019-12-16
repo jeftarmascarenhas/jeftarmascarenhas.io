@@ -2,8 +2,13 @@ import { css } from 'styled-components'
 
 export const Colors = {
   dark: '#222',
+  black: '#222',
   light: '#fff',
   yellow: '#FFDA00',
+  grayLight: '#EBEBEB',
+  gray: '#BFBFBE',
+  grayDark: '#6E6E6E',
+  grayMedium: '#E8E7E7',
   bgDark: css`
     background-color: #222;
   `,

@@ -1,17 +1,19 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { LightbulbFlash } from 'styled-icons/remix-line/LightbulbFlash'
 
 import LanguageButton from 'components/languageButton'
 import IconButton from 'components/iconButton'
+import ListSocial from 'components/listSocial'
 import * as S from './styled'
 
 const SidebarSetting = ({ onTheme }) => (
   <S.SidebarSetting>
-    <IconButton onClick={onTheme}>
-      <LightbulbFlash color="red" width={18} height={18} />
-    </IconButton>
+    <ListSocial />
     <LanguageButton />
+    <IconButton onClick={onTheme}>
+      <S.IconLightbulbFlash />
+    </IconButton>
+    <div className="copyright">{`Copyright © ${new Date().getFullYear()}`}</div>
   </S.SidebarSetting>
 )
 

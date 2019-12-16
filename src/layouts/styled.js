@@ -1,9 +1,9 @@
 import styled from 'styled-components'
 
-export const Wrapper = styled.div`
+export const Wrapper = styled.main`
   position: relative;
   overflow-x: hidden;
-  padding: 0 5.875rem 0 12.625rem;
+  padding: 0 8rem 0 18.3rem;
   @media (min-width: 968px) {
   }
   /* display: grid;

@@ -1,10 +1,24 @@
 import styled from 'styled-components'
 
+import { Colors } from 'styles/variables'
+
 export const Button = styled.button`
   background: transparent;
-  font-size: 1.1rem;
+  font-size: 1.8rem;
   border: 0;
-  color: ${({ active }) => (active ? `yellow` : `black`)};
-  border-bottom: ${({ active }) => (active ? `1px solid #222` : 'none')};
+  color: ${({ active }) => (active ? Colors.black : Colors.gray)};
+  font-weight: ${({ active }) => active && 500};
   cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+`
+
+export const GroupButton = styled.div`
+  ${Button} {
+    &:nth-child(1) {
+      border-bottom: 1px solid ${Colors.dark};
+    }
+  }
 `

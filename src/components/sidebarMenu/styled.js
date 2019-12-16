@@ -4,11 +4,11 @@ import { Link } from 'gatsby-plugin-intl'
 import { Colors } from 'styles/variables'
 
 export const SideBarMenu = styled.aside`
-  width: 12.625rem;
+  width: 18.3rem;
   position: fixed;
   top: 0;
   left: 0;
-  min-height: 100vh;
+  height: 100%;
   padding: 1rem 1.5rem;
 `
 

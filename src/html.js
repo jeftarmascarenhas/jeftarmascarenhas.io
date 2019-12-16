@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React from 'react'
 import PropTypes from 'prop-types'
 
 const HTML = ({
@@ -20,32 +20,7 @@ const HTML = ({
         {headComponents}
       </head>
       <body {...bodyAttributes}>
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-            (function() {
-              window.__onThemeChange = function() {};
-              function setTheme(newTheme) {
-                window.__theme = newTheme;
-                usedTheme = newTheme;
-                document.body.className = newTheme;
-                window.__onThemeChange(newTheme);
-              }
-              var usedTheme;
-              try {
-                usedTheme = localStorage.getItem('theme');
-              } catch (err) { }
-              window.__setTheme = function(newTheme) {
-                setTheme(newTheme);
-                try {
-                  localStorage.setItem('theme', newTheme);
-                } catch (err) {}
-              }
-              setTheme(usedTheme || 'light');
-            })();
-          `,
-          }}
-        />
+        <script />
         {preBodyComponents}
         <noscript>
           Sem JavaScript está aplicação não funciona. JS is Life :/

@@ -52,10 +52,8 @@ function Layout({ children }) {
       <ThemeProvider theme={{ mode: themeMode ? 'dark' : 'light' }}>
         <S.Wrapper>
           <SidebarMenu />
-          <main>
-            <Header siteTitle={data.site.siteMetadata.title} />
-            {children}
-          </main>
+          <Header siteTitle={data.site.siteMetadata.title} />
+          {children}
           <SidebarSetting onTheme={handleChangeTheme} />
         </S.Wrapper>
       </ThemeProvider>

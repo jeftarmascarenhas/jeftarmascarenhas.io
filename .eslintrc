@@ -38,12 +38,7 @@
     "import/no-unresolved": 0,
     "no-console": "off",
     "react/state-in-constructor": 0,
-    "react/jsx-props-no-spreading": [
-      {
-        "custom": "ignore",
-        "html": "ignore"
-      }
-    ],
+    "react/jsx-props-no-spreading": "off",
     "react/jsx-filename-extension": [
       "error",
       {
