@@ -14,7 +14,9 @@ export const HomeContent = styled.div`
 
 export const PersonalInfo = styled.section`
   flex: 1 0 50%;
-  padding-right: 4rem;
+  @media (min-width: 768px) {
+    padding-right: 4rem;
+  }
 `
 
 export const LastPosts = styled.section`
@@ -40,22 +42,5 @@ export const AllPost = styled(Link)`
   font-weight: 900;
   text-align: right;
   display: block;
-  position: relative;
-  &::before {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 2px;
-    background-color: ${Colors.black};
-    top: 50%;
-    left: 0;
-    transform: translateY(-50%);
-    opacity: 0;
-  }
-  &:hover {
-    &::before {
-      opacity: 1;
-      left: -0.2rem;
-    }
-  }
+  margin-bottom: 1.5rem;
 `

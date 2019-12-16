@@ -9,7 +9,7 @@ export const Colors = {
   gray: '#BFBFBE',
   grayDark: '#6E6E6E',
   grayMedium: '#E8E7E7',
-  blackLight: 'rgba(0,0,0, 0.12)',
+  blackLight: 'rgba(0,0,0, 0.9)',
   bgDark: css`
     background-color: #222;
   `,

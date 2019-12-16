@@ -5,10 +5,13 @@ import React from 'react'
 import * as S from './styled'
 
 const Header = ({ siteTitle }) => (
-  <S.Header>
-    <h1>
+  <S.Header className="my-4">
+    <h1 className="title">
       <Link to="/">{siteTitle}</Link>
     </h1>
+    <h3 className="sub-title">
+      I love working with Design, Front-end and Back-end
+    </h3>
   </S.Header>
 )
 
@@ -17,7 +20,7 @@ Header.propTypes = {
 }
 
 Header.defaultProps = {
-  siteTitle: ``,
+  siteTitle: `Jeftar Mascarenhas`,
 }
 
 export default Header

@@ -7,11 +7,9 @@
 
 import React, { useState, useEffect } from 'react'
 import PropTypes from 'prop-types'
-import { useStaticQuery, graphql } from 'gatsby'
 import { ThemeProvider } from 'styled-components'
 
 import * as utils from 'helpers/utils'
-import Header from 'components/header'
 import SidebarMenu from 'components/sidebarMenu'
 import SidebarSetting from 'components/sidebarSetting'
 import GlobalStyle from '../styles/globalStyle'
@@ -19,16 +17,6 @@ import * as S from './styled'
 
 function Layout({ children }) {
   const [themeMode, setThemeMode] = useState(false)
-
-  const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-    }
-  `)
 
   function handleChangeTheme() {
     utils.setLocalStore('themesite', themeMode)
@@ -52,7 +40,6 @@ function Layout({ children }) {
       <ThemeProvider theme={{ mode: themeMode ? 'dark' : 'light' }}>
         <S.Wrapper>
           <SidebarMenu />
-          <Header siteTitle={data.site.siteMetadata.title} />
           {children}
           <SidebarSetting onTheme={handleChangeTheme} />
         </S.Wrapper>

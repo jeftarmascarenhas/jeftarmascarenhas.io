@@ -13,6 +13,12 @@ export const SidebarSetting = styled.aside`
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
+  visibility: hidden;
+  opacity: 0;
+  @media (min-width: 768px) {
+    visibility: visible;
+    opacity: 1;
+  }
   .copyright {
     font-size: 0.7em;
     writing-mode: vertical-rl;

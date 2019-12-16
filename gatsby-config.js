@@ -179,7 +179,7 @@ const plugins = [
 
 module.exports = {
   siteMetadata: {
-    title: `Jeftar Mascarenhas - Front-end Developer`,
+    title: `Jeftar Mascarenhas`,
     description: `Eu trabalho como Front-end, Back-end and UI Design`,
     descriptionEn: `I work as Front-end, Back-end and UI Design`,
     siteUrl: 'https://jeftar.com.br/',
