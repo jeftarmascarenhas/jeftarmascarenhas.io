@@ -1,19 +1,19 @@
 import React from 'react'
-// import { useIntl } from 'gatsby-plugin-intl'
+import { useIntl } from 'gatsby-plugin-intl'
 
 import Layout from 'layouts'
-// import Box from 'components/box'
+import Box from 'components/box'
 import SEO from 'components/seo'
-// import BlogList from 'components/blogList'
-// import * as C from 'styles/common'
-// import * as S from 'pages/pageStyles/homeStyled'
+import BlogList from 'components/blogList'
+import * as C from 'styles/common'
+import * as S from 'pages/pageStyles/homeStyled'
 
 const IndexPage = () => {
-  // const intl = useIntl()
+  const intl = useIntl()
   return (
     <Layout>
       <SEO title="Home" />
-      {/* <S.HomeContent>
+      <S.HomeContent>
         <S.PersonalInfo>
           <Box className="mb-2">
             <C.Title>{intl.formatMessage({ id: 'work' })}</C.Title>
@@ -31,7 +31,7 @@ const IndexPage = () => {
             View posts
           </S.AllPost>
         </S.LastPosts>
-      </S.HomeContent> */}
+      </S.HomeContent>
     </Layout>
   )
 }
