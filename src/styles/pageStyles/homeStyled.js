@@ -1,8 +1,7 @@
 import styled from 'styled-components'
-import { Link } from 'gatsby-plugin-intl'
+import { Link } from 'gatsby'
 
 import { Colors } from 'styles/variables'
-import transitions from 'styles/transitions'
 
 export const HomeContent = styled.div`
   display: flex;
@@ -43,7 +42,6 @@ export const AllPost = styled(Link)`
   display: block;
   position: relative;
   &::before {
-    transition: ${transitions.all};
     content: '';
     position: absolute;
     width: 100%;

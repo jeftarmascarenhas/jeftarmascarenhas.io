@@ -6,7 +6,7 @@ import Box from 'components/box'
 import SEO from 'components/seo'
 import BlogList from 'components/blogList'
 import * as C from 'styles/common'
-import * as S from 'pages/pageStyles/homeStyled'
+import * as S from 'styles/pageStyles/homeStyled'
 
 const IndexPage = () => {
   const intl = useIntl()
