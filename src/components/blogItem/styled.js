@@ -18,15 +18,8 @@ export const BlogItem = styled(Link)`
     left: 0;
     right: 0;
     width: 100%;
-    height: 0.2rem;
+    height: 0.4rem;
     background-color: ${Colors.black};
-  }
-  &:hover {
-    &:before {
-      bottom: 50%;
-      height: 0.4rem;
-      transform: translateY(-50%);
-    }
   }
 `
 

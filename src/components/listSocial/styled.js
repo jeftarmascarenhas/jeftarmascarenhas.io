@@ -12,10 +12,15 @@ const iconStyle = css`
 
 export const ListSocial = styled.div`
   display: flex;
-  flex-direction: column;
-  justify-content: center;
   align-items: center;
-  margin-top: 2rem;
+  margin-right: 6rem;
+  @media (min-width: 768px) {
+    margin-right: 0;
+    margin-top: 2rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 `
 export const IconLinkedin = styled(Linkedin)`
   ${iconStyle}
@@ -39,5 +44,14 @@ export const ListSocialItem = styled.a.attrs({
   height: 4.6rem;
   border-radius: 50%;
   background-color: ${Colors.yellow};
-  margin-bottom: 2rem;
+  &:not(:last-child) {
+    margin-right: 2rem;
+  }
+  @media (min-width: 768px) {
+    &:not(:last-child) {
+      margin-right: 0;
+    }
+    margin-right: 0;
+    margin-bottom: 2rem;
+  }
 `

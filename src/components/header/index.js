@@ -5,7 +5,7 @@ import React from 'react'
 import * as S from './styled'
 
 const Header = ({ siteTitle }) => (
-  <S.Header className="my-4">
+  <S.Header className="mb-4">
     <h1 className="title">
       <Link to="/">{siteTitle}</Link>
     </h1>

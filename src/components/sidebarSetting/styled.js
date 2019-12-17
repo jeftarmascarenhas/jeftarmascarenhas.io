@@ -4,28 +4,39 @@ import { LightbulbFlash } from 'styled-icons/remix-line/LightbulbFlash'
 import { Colors } from 'styles/variables'
 
 export const SidebarSetting = styled.aside`
-  width: 8rem;
   position: fixed;
-  top: 0;
-  right: 0;
-  height: 100%;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 8rem;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: flex-start;
-  visibility: hidden;
-  opacity: 0;
+  background-color: ${Colors.light};
+  box-shadow: 0 0.2rem 0.6rem #222;
+  padding: 1rem;
   @media (min-width: 768px) {
-    visibility: visible;
-    opacity: 1;
+    box-shadow: none;
+    width: 8rem;
+    top: 0;
+    right: 0;
+    left: auto;
+    height: 100%;
+    padding: 0;
+    flex-direction: column;
+    justify-content: flex-start;
+    background-color: transparent;
   }
   .copyright {
-    font-size: 0.7em;
-    writing-mode: vertical-rl;
+    font-size: 0.9em;
     flex: 1;
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: stretch;
+    @media (min-width: 768px) {
+      justify-content: center;
+      writing-mode: vertical-rl;
+      font-size: 0.8em;
+    }
   }
 `
 export const IconLightbulbFlash = styled(LightbulbFlash)`
