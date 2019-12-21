@@ -61,12 +61,12 @@ const plugins = [
     resolve: `gatsby-plugin-manifest`,
     options: {
       name: `Jeftar Mascarenhas`,
-      short_name: `jeftar.com.br`,
+      short_name: `jeftar`,
       start_url: `/`,
-      background_color: `#663399`,
-      theme_color: `#663399`,
+      background_color: `#F5F5F5`,
+      theme_color: `#FFDA00`,
       display: `minimal-ui`,
-      icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+      icon: `src/images/jeftar-icon.png`, // This path is relative to the root of the site.
     },
   },
   `gatsby-plugin-svgr`,

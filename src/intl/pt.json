@@ -14,8 +14,21 @@
   "build": "Now go build something great.",
   "welcome_page2": "Bem-vindo a página 2",
   "go_back": "Voltar para Home",
+  "blog": {
+    "viewPosts": "Ver posts",
+    "lastPosts": "Últimos posts",
+    "read": "Read"
+  },
+  "menu": {
+    "me": "Eu",
+    "experience": "Experiência",
+    "blog": "Blog",
+    "lab": "Meu Lab",
+    "mentor": "Mentor",
+    "contact": "Contato"
+  },
   "notfound": {
-    "header": "NOT FOUND",
-    "description": "You just hit a route that doesn't exist... the sadness."
+    "header": "Página Não encontrada",
+    "description": "Pode ser que essa página não exista. Tente outra url. :)"
   }
 }

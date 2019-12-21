@@ -19,6 +19,7 @@ export const SideBarMenu = styled.aside`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  overflow-y: auto;
   .contetn-close {
     display: flex;
     justify-content: flex-end;
@@ -37,7 +38,7 @@ export const SideBarMenu = styled.aside`
     top: 0;
     left: 0;
     height: 100%;
-    padding: 1rem 1.5rem;
+    padding: 4rem 2rem 0 2rem;
     .btn-mobile {
       display: none;
     }
@@ -47,12 +48,12 @@ export const SideBarMenu = styled.aside`
 export const LogoLink = styled(Link)`
   text-decoration: none;
   background: transparent;
-  margin-top: 2rem;
-  margin-bottom: 2rem;
   display: block;
   width: 5.9rem;
   height: 5.3rem;
+  margin-top: 1.4rem;
   @media (min-width: 768px) {
+    margin-top: 0;
     width: 9rem;
     height: 8.1rem;
   }
@@ -78,6 +79,7 @@ export const Nav = styled.nav`
     position: relative;
     background: transparent;
     align-items: flex-start;
+    padding-top: 13rem;
   }
   ${menuMobile};
 `

@@ -10,6 +10,7 @@ export const SidebarSetting = styled.aside`
   width: 100%;
   height: 8rem;
   display: flex;
+  overflow-y: auto;
   align-items: center;
   background-color: ${Colors.light};
   box-shadow: 0 0.2rem 0.6rem #222;
@@ -21,7 +22,7 @@ export const SidebarSetting = styled.aside`
     right: 0;
     left: auto;
     height: 100%;
-    padding: 0;
+    padding: 0 0 2rem 0;
     flex-direction: column;
     justify-content: flex-start;
     background-color: transparent;

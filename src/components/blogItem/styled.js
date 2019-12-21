@@ -27,11 +27,6 @@ export const BlogTitle = styled.h2`
   font-size: 3.2rem;
 `
 
-export const DateTime = styled.time`
-  font-size: 1.2rem;
-  letter-spacing: 0.1rem;
-`
-
 export const BlogDescription = styled.h3`
   font-size: 1.8rem;
   margin-top: 1.5rem;

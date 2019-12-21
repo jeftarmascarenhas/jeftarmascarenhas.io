@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { useIntl } from 'gatsby-plugin-intl'
 
 import IconButton from 'components/iconButton'
 import { ReactComponent as Logo } from '../../images/logo.svg'
@@ -6,6 +7,8 @@ import * as S from './styled'
 
 const SidebarMenu = () => {
   const [menuMobile, setMenuMobile] = useState(false)
+
+  const intl = useIntl()
 
   function handleOpenMenu() {
     setMenuMobile(!menuMobile)
@@ -25,22 +28,22 @@ const SidebarMenu = () => {
           </div>
         </div>
         <S.NavItem to="/" activeClassName="active">
-          Me
+          {intl.formatMessage({ id: 'menu.me' })}
         </S.NavItem>
         <S.NavItem to="/about/" activeClassName="active">
-          Experience
+          {intl.formatMessage({ id: 'menu.experience' })}
         </S.NavItem>
         <S.NavItem to="/blog/" activeClassName="active">
-          Blog
+          {intl.formatMessage({ id: 'menu.blog' })}
         </S.NavItem>
         <S.NavItem to="/myLab/" activeClassName="active">
-          My Lab
+          {intl.formatMessage({ id: 'menu.lab' })}
         </S.NavItem>
         <S.NavItem to="/mentor/" activeClassName="active">
-          Mentor
+          {intl.formatMessage({ id: 'menu.mentor' })}
         </S.NavItem>
         <S.NavItem to="/contact/" activeClassName="active">
-          Contact
+          {intl.formatMessage({ id: 'menu.contact' })}
         </S.NavItem>
       </S.Nav>
       <IconButton className="btn-mobile" onClick={handleOpenMenu}>

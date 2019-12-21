@@ -105,17 +105,17 @@ dfn {
   font-style: italic;
 }
 h1 {
-  font-size: 2rem;
+  font-size: 3.6rem;
   margin: 0.67rem 0;
   font-weight: 700;
 }
 h2 {
-  font-size: 1.5rem;
+  font-size: 2.8rem;
   margin: 0.67rem 0;
   font-weight: 500;
 }
 h3 {
-  font-size: 1.2rem;
+  font-size: 2.2rem;
   margin: 0.4rem 0;
 }
 mark {
@@ -138,9 +138,6 @@ sub {
 sup {
   top: -0.5em;
 }
-img {
-  border-style: none;
-}
 svg:not(:root) {
   overflow: hidden;
 }
@@ -153,11 +150,6 @@ samp {
 }
 figure {
   margin: 1rem 40px;
-}
-hr {
-  box-sizing: content-box;
-  height: 0;
-  overflow: visible;
 }
 button,
 input,
@@ -257,14 +249,8 @@ html {
 }
 img {
   max-width: 100%;
-  margin-left: 0;
-  margin-right: 0;
-  margin-top: 0;
-  padding-bottom: 0;
-  padding-left: 0;
-  padding-right: 0;
-  padding-top: 0;
-  margin-bottom: 1.45rem;
+  display: block;
+  border-style: none;
 }
  body {
   ${props => (props.darkColor ? Colors.bgDark : Colors.bgLight)};
@@ -376,15 +362,15 @@ iframe {
 hr {
   margin-left: 0;
   margin-right: 0;
-  margin-top: 0;
+  margin-top: calc(1rem - 1px);
   padding-bottom: 0;
   padding-left: 0;
   padding-right: 0;
   padding-top: 0;
-  margin-bottom: calc(1.45rem - 1px);
-  background: hsla(0, 0%, 0%, 0.2);
+  margin-bottom: calc(1rem - 1px);
+  background: ${Colors.dark};
   border: none;
-  height: 1px;
+  height: 4px;
 }
 address {
   margin-left: 0;
@@ -520,6 +506,21 @@ pre tt:after {
     font-size: 10px;
   }
 }
+
+  .d-flex {
+    display: flex;
+  }
+  .flex-column {
+    flex-direction: column;
+  }
+
+  .flex-row {
+    flex-direction: row;
+  }
+
+  .align-self-end {
+    align-self: flex-end;
+  }
   ${createClassMarginYHelp(5)}
   ${createClassMarginHelp(5)}
 `

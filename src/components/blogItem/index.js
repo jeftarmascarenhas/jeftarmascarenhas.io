@@ -1,18 +1,25 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import { useIntl } from 'gatsby-plugin-intl'
 
 import Tag from 'components/tag'
+import * as C from 'styles/common'
 import * as S from './styled'
 
 const BlogItem = ({ info }) => {
+  const intl = useIntl()
   console.log(info)
   return (
     <S.BlogItem to={`/${info.slug}`}>
       {info.date && (
-        <S.DateTime>
+        <C.DateTime>
           {`${info.date} - `}
-          <span>{`Leitura ${info.timeToRead} min`}</span>
-        </S.DateTime>
+          <span>
+            {`${intl.formatMessage({ id: 'blog.read' })} ${
+              info.timeToRead
+            } min`}
+          </span>
+        </C.DateTime>
       )}
       <S.BlogTitle>{info.title}</S.BlogTitle>
       <S.BlogDescription>{info.description}</S.BlogDescription>

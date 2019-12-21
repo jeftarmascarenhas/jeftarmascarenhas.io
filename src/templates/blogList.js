@@ -1,27 +1,55 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Link, graphql } from 'gatsby'
+import { useIntl } from 'gatsby-plugin-intl'
 
 import Layout from 'layouts'
 import SEO from 'components/seo'
+import Header from 'components/header'
+import Box, { BoxHeader, BoxBody } from 'components/box'
+import Tag from 'components/tag'
+import * as S from 'styles/templateStyles/blogListStyled'
+import * as C from 'styles/common'
 
 const BlogList = ({ data }) => {
+  const intl = useIntl()
   const list = data.allMarkdownRemark.edges
-  console.log(list)
   return (
     <Layout>
       <SEO title="Blog" />
-      <h1>Blog List</h1>
-      <ul>
+      <Header siteTitle="Jeftar Mascarenhas" description="My blog" />
+      <S.BlogList>
         {list.map(({ node }) => (
-          <li key={node.id}>
-            <Link to={`/${node.fields.slug}`}>
-              <h3>{node.frontmatter.title}</h3>
-              <h4>{node.frontmatter.description}</h4>
-            </Link>
-          </li>
+          <Box
+            className="box"
+            as={Link}
+            key={node.id}
+            to={`/${node.fields.slug}`}
+          >
+            <BoxHeader>
+              {node.frontmatter.date && (
+                <C.DateTime>
+                  {`${node.frontmatter.date} - `}
+                  <span>
+                    {`${intl.formatMessage({ id: 'blog.read' })} ${
+                      node.timeToRead
+                    } min`}
+                  </span>
+                </C.DateTime>
+              )}
+            </BoxHeader>
+            <BoxBody>
+              <C.Title>{node.frontmatter.title}</C.Title>
+              <C.SubTitle>{node.frontmatter.description}</C.SubTitle>
+            </BoxBody>
+            <div>
+              {!!node.frontmatter.tags &&
+                node.frontmatter.tags.map(tag => <Tag key={tag}>{tag}</Tag>)}
+              <hr />
+            </div>
+          </Box>
         ))}
-      </ul>
+      </S.BlogList>
     </Layout>
   )
 }
