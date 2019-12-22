@@ -54,7 +54,7 @@ export const LastPosts = styled.section`
   flex: 1 0 50%;
   position: relative;
   padding-top: 3.5rem;
-  padding-left: 4rem;
+  padding-left: 5rem;
   padding-right: 4rem;
   background-color: ${({ bgColor }) => bgColor};
   &::before {
@@ -89,10 +89,12 @@ export const SelectColor = styled.div`
   justify-content: center;
   align-items: center;
   position: absolute;
-  /* bottom: 4rem; */
-  top: 56rem;
+  top: 40rem;
   left: 0.6rem;
   animation: ${upDown} 2.2s ease-out alternate 0.6s;
+  @media (min-width: 768px) {
+    top: 50rem;
+  }
 `
 
 export const AllPost = styled(Link)`

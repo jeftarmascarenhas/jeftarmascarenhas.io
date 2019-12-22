@@ -1,6 +1,6 @@
 const windowGlobal = typeof window !== `undefined` ? window : null
 export const getLocalStore = (key, options = { parser: false }) => {
-  if (!windowGlobal) return
+  if (!windowGlobal) return false
   if (!key) throw Error('Informe a chave')
   if (options.parser) return JSON.parse(windowGlobal.localStorage.getItem(key))
   return windowGlobal.localStorage.getItem(key)
