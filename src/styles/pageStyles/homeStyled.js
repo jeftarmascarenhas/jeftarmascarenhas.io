@@ -4,6 +4,18 @@ import { Link } from 'gatsby'
 import { Colors } from 'styles/variables'
 import transitions from 'styles/transitions'
 
+const upDownMobile = keyframes`
+  0% {
+    opacity: 0;
+    top: 3.5rem;
+  }
+  92% {
+    opacity: 1;
+  }
+  100% {
+    top: 38rem;
+  }
+`
 const upDown = keyframes`
   0% {
     opacity: 0;
@@ -13,7 +25,7 @@ const upDown = keyframes`
     opacity: 1;
   }
   100% {
-    top: 56rem;
+    top: 48rem;
   }
 `
 
@@ -89,11 +101,12 @@ export const SelectColor = styled.div`
   justify-content: center;
   align-items: center;
   position: absolute;
-  top: 40rem;
+  top: 38rem;
   left: 0.6rem;
-  animation: ${upDown} 2.2s ease-out alternate 0.6s;
+  animation: ${upDownMobile} 2.2s ease-out alternate 0.6s;
   @media (min-width: 768px) {
-    top: 50rem;
+    animation: ${upDown} 2.2s ease-out alternate 0.6s;
+    top: 48rem;
   }
 `
 
