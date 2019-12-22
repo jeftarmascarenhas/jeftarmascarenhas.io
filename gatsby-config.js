@@ -177,6 +177,17 @@ const plugins = [
   // `gatsby-plugin-offline`,
 ]
 
+if (process.env.CONTEXT === 'production') {
+  const analytics = {
+    resolve: `gatsby-plugin-google-analytics`,
+    options: {
+      trackingId: process.env.GOOGLE_ANALYTICS_ID,
+      head: false,
+    },
+  }
+  plugins.push(analytics)
+}
+
 module.exports = {
   siteMetadata: {
     title: `Jeftar Mascarenhas`,
