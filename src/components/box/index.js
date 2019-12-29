@@ -5,21 +5,24 @@ import * as S from './styled'
 
 export const { BoxHeader, BoxBody, BoxFooter } = S
 
-const Box = ({ children, variant, radius, border, ...rest }) => (
-  <S.Box variant={variant} radius={radius} border={border} {...rest}>
-    {children}
-  </S.Box>
-)
+const Box = ({ children, variant, radius, bordered, ...rest }) => {
+  const borderedBool = bordered ? 1 : 0
+  return (
+    <S.Box variant={variant} radius={radius} bordered={borderedBool} {...rest}>
+      {children}
+    </S.Box>
+  )
+}
 
 Box.defaultProps = {
   variant: 'primary',
   radius: 'top-left',
-  border: false,
+  bordered: false,
 }
 Box.propTypes = {
   children: PropTypes.node.isRequired,
   variant: PropTypes.oneOf(['primary', 'secondary', 'default']),
   radius: PropTypes.oneOf(['top-left', 'bottom-right']),
-  border: PropTypes.bool,
+  bordered: PropTypes.bool,
 }
 export default Box

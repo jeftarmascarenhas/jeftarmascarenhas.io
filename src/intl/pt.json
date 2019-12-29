@@ -14,10 +14,17 @@
   "build": "Now go build something great.",
   "welcome_page2": "Bem-vindo a página 2",
   "go_back": "Voltar para Home",
+  "header": {
+    "myBlog": "Meu Blog",
+    "home": "Eu amo trabalhar como Front-end e Back-end"
+  },
   "blog": {
     "viewPosts": "Ver posts",
     "lastPosts": "Últimos posts",
-    "read": "Read"
+    "read": "Read",
+    "of": "de",
+    "next": "Próximo",
+    "prev": "Anterior"
   },
   "menu": {
     "me": "Eu",

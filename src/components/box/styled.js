@@ -3,7 +3,8 @@ import styled from 'styled-components'
 import { Colors } from 'styles/variables'
 
 export const Box = styled.div`
-  border: ${({ border }) => (border ? `0.4rem solid ${Colors.dark}` : 'none')};
+  border: ${({ bordered }) =>
+    bordered ? `0.4rem solid ${Colors.dark}` : 'none'};
   border-radius: ${({ radius }) =>
     (radius === 'bottom-right' && `0 0 8rem 0`) ||
     (radius === 'top-left' && `8rem 0 0 0`)};

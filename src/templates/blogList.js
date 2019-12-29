@@ -1,23 +1,33 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { Link, graphql } from 'gatsby'
-import { useIntl } from 'gatsby-plugin-intl'
+import { graphql } from 'gatsby'
+import { useIntl, Link } from 'gatsby-plugin-intl'
 
 import Layout from 'layouts'
 import SEO from 'components/seo'
 import Header from 'components/header'
+import Pagination from 'components/pagination'
 import Box, { BoxHeader, BoxBody } from 'components/box'
 import Tag from 'components/tag'
 import * as S from 'styles/templateStyles/blogListStyled'
 import * as C from 'styles/common'
 
-const BlogList = ({ data }) => {
+const BlogList = ({ data, pageContext }) => {
   const intl = useIntl()
+  const { currentPage, numPages } = pageContext
+  const isFirst = currentPage === 1
+  const isLast = currentPage === numPages
+  const prevPage =
+    currentPage - 1 === 1 ? '/blog/' : `/blog/page/${currentPage - 1}`
+  const nextPage = `/blog/page/${currentPage + 1}`
   const list = data.allMarkdownRemark.edges
   return (
     <Layout>
       <SEO title="Blog" />
-      <Header siteTitle="Jeftar Mascarenhas" description="My blog" />
+      <Header
+        siteTitle="Jeftar Mascarenhas"
+        description={intl.formatMessage({ id: 'header.myBlog' })}
+      />
       <S.BlogList>
         {list.map(({ node }) => (
           <Box
@@ -50,6 +60,14 @@ const BlogList = ({ data }) => {
           </Box>
         ))}
       </S.BlogList>
+      <Pagination
+        currentPage={currentPage}
+        numPages={numPages}
+        isFirst={isFirst}
+        isLast={isLast}
+        prevPage={prevPage}
+        nextPage={nextPage}
+      />
     </Layout>
   )
 }
@@ -85,6 +103,10 @@ BlogList.propTypes = {
     allMarkdownRemark: PropTypes.shape({
       edges: PropTypes.array,
     }),
+  }).isRequired,
+  pageContext: PropTypes.shape({
+    currentPage: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
+    numPages: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
   }).isRequired,
 }
 
