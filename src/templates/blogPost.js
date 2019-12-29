@@ -6,6 +6,7 @@ import { useIntl } from 'gatsby-plugin-intl'
 
 import Layout from 'layouts'
 import Header from 'components/header'
+import DisqusComment from 'components/disqusComment'
 import SEO from 'components/seo'
 import Box, { BoxHeader, BoxBody } from 'components/box'
 import * as C from 'styles/common'
@@ -36,11 +37,12 @@ const BlogPost = ({ data }) => {
           <C.Title>{post.frontmatter.title}</C.Title>
           <C.SubTitle>{post.frontmatter.description}</C.SubTitle>
         </BoxHeader>
-        <hr />
+        <hr className="mb-3" />
         <BoxBody>
           <div itemProp="articleBody">{parser(post.html)}</div>
         </BoxBody>
       </Box>
+      <DisqusComment title={post.frontmatter.title} slug={post.fields.slug} />
     </Layout>
   )
 }

@@ -270,7 +270,11 @@ img {
  h1, h2 ,h3, h4, h5, h6, p, a, span {
   color: ${props => (props.darkColor ? Colors.light : Colors.dark)};
  }
-
+ p {
+   line-height: 1.5;
+   font-size: 2rem;
+   color: ${Colors.grayDark};
+ }
  figure {
   margin-left: 0;
   margin-right: 0;
