@@ -62,7 +62,7 @@ const IndexPage = () => {
             <C.Title>{intl.formatMessage({ id: 'work' })}</C.Title>
             <p>{intl.formatMessage({ id: 'workerDescription' })}</p>
           </Box>
-          <Box border radius="top-left" variant="default" className="mb-2">
+          <Box bordered radius="top-left" variant="default" className="mb-2">
             <C.Title>{intl.formatMessage({ id: 'life' })}</C.Title>
             <p>{intl.formatMessage({ id: 'lifeDescription' })}</p>
           </Box>

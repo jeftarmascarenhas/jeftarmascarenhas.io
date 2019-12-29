@@ -42,7 +42,9 @@ const BlogPost = ({ data }) => {
           <div itemProp="articleBody">{parser(post.html)}</div>
         </BoxBody>
       </Box>
-      <DisqusComment title={post.frontmatter.title} slug={post.fields.slug} />
+      <Box border radius="top-left" variant="default">
+        <DisqusComment title={post.frontmatter.title} slug={post.fields.slug} />
+      </Box>
     </Layout>
   )
 }
