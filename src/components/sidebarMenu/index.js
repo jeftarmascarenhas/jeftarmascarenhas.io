@@ -30,7 +30,7 @@ const SidebarMenu = () => {
         <S.NavItem to="/" activeClassName="active">
           {intl.formatMessage({ id: 'menu.me' })}
         </S.NavItem>
-        <S.NavItem to="/about/" activeClassName="active">
+        <S.NavItem to="/experience/" activeClassName="active">
           {intl.formatMessage({ id: 'menu.experience' })}
         </S.NavItem>
         <S.NavItem to="/blog/" activeClassName="active">

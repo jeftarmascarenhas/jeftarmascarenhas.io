@@ -9,10 +9,10 @@ import SEO from 'components/seo'
 //   siteDescription: "A lettle better about me",
 // }
 
-const AboutPage = () => (
+const ExperiencePage = () => (
   <Layout>
-    <SEO title="About" />
+    <SEO title="Experience" />
   </Layout>
 )
 
-export default AboutPage
+export default ExperiencePage

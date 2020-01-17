@@ -112,6 +112,7 @@ export const NavItem = styled(Link)`
       background-color: ${Colors.yellow};
       top: 50%;
       left: -0.2rem;
+      z-index: -1;
       transform: translateY(-50%);
     }
   }
