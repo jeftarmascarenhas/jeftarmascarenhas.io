@@ -16,7 +16,8 @@
   "go_back": "Voltar para Home",
   "header": {
     "myBlog": "Meu Blog",
-    "home": "Eu amo trabalhar como Front-end e Back-end"
+    "home": "Eu amo trabalhar como Front-end e Back-end",
+    "experience": "Experiência"
   },
   "blog": {
     "viewPosts": "Ver posts",

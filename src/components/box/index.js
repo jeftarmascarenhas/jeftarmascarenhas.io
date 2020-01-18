@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 
 import * as S from './styled'
 
-export const { BoxHeader, BoxBody, BoxFooter } = S
+export const { BoxHeader, BoxBody, BoxFooter, BoxImg } = S
 
 const Box = ({ children, variant, radius, bordered, ...rest }) => {
   const borderedBool = bordered ? 1 : 0
@@ -22,7 +22,7 @@ Box.defaultProps = {
 Box.propTypes = {
   children: PropTypes.node.isRequired,
   variant: PropTypes.oneOf(['primary', 'secondary', 'default']),
-  radius: PropTypes.oneOf(['top-left', 'bottom-right']),
+  radius: PropTypes.oneOf(['top-left', 'top-right', 'bottom-right']),
   bordered: PropTypes.bool,
 }
 export default Box

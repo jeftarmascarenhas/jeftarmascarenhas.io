@@ -7,7 +7,7 @@ import Layout from 'layouts'
 import SEO from 'components/seo'
 import Header from 'components/header'
 import Pagination from 'components/pagination'
-import Box, { BoxHeader, BoxBody } from 'components/box'
+import Box, { BoxHeader, BoxBody, BoxFooter } from 'components/box'
 import Tag from 'components/tag'
 import * as S from 'styles/templateStyles/blogListStyled'
 import * as C from 'styles/common'
@@ -32,6 +32,7 @@ const BlogList = ({ data, pageContext }) => {
         {list.map(({ node }) => (
           <Box
             className="box"
+            radius="top-right"
             as={Link}
             key={node.id}
             to={`/${node.fields.slug}`}
@@ -52,11 +53,11 @@ const BlogList = ({ data, pageContext }) => {
               <C.Title>{node.frontmatter.title}</C.Title>
               <C.SubTitle>{node.frontmatter.description}</C.SubTitle>
             </BoxBody>
-            <div>
+            <BoxFooter>
               {!!node.frontmatter.tags &&
                 node.frontmatter.tags.map(tag => <Tag key={tag}>{tag}</Tag>)}
               <hr />
-            </div>
+            </BoxFooter>
           </Box>
         ))}
       </S.BlogList>

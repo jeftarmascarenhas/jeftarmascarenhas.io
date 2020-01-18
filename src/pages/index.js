@@ -4,8 +4,8 @@ import { useIntl } from 'gatsby-plugin-intl'
 
 import Layout from 'layouts'
 import Header from 'components/header'
-import Box from 'components/box'
 import SEO from 'components/seo'
+import Box, { BoxBody } from 'components/box'
 import Avatar from 'components/avatar'
 import BlogList from 'components/blogList'
 import jeftarImg from 'images/avatar.png'
@@ -59,12 +59,16 @@ const IndexPage = () => {
             </span>
           </S.PersonAuthor>
           <Box className="mb-4" variant="secondary" radius="bottom-right">
-            <C.Title>{intl.formatMessage({ id: 'work' })}</C.Title>
-            <p>{intl.formatMessage({ id: 'workerDescription' })}</p>
+            <BoxBody>
+              <C.Title>{intl.formatMessage({ id: 'work' })}</C.Title>
+              <p>{intl.formatMessage({ id: 'workerDescription' })}</p>
+            </BoxBody>
           </Box>
           <Box bordered radius="top-left" variant="default" className="mb-2">
-            <C.Title>{intl.formatMessage({ id: 'life' })}</C.Title>
-            <p>{intl.formatMessage({ id: 'lifeDescription' })}</p>
+            <BoxBody>
+              <C.Title>{intl.formatMessage({ id: 'life' })}</C.Title>
+              <p>{intl.formatMessage({ id: 'lifeDescription' })}</p>
+            </BoxBody>
           </Box>
         </S.PersonalInfo>
         <S.LastPosts bgColor={activeColor}>

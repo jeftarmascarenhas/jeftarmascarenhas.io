@@ -22,7 +22,12 @@ const BlogPost = ({ data }) => {
         siteTitle="Jeftar Mascarenhas"
         description={intl.formatMessage({ id: 'header.myBlog' })}
       />
-      <Box className="my-4" itemScope itemType="http://schema.org/Article">
+      <Box
+        className="my-4"
+        radius="top-right"
+        itemScope
+        itemType="http://schema.org/Article"
+      >
         <BoxHeader>
           {post.frontmatter.date && (
             <C.DateTime>
