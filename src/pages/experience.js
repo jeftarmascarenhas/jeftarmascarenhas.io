@@ -9,11 +9,6 @@ import Tag from 'components/tag'
 import Box, { BoxImg, BoxBody, BoxFooter } from 'components/box'
 import * as C from 'styles/common'
 
-// const headerInfo = {
-//   siteTitle: "About",
-//   siteDescription: "A lettle better about me",
-// }
-
 const ExperiencePage = () => {
   const intl = useIntl()
   return (

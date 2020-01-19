@@ -1,5 +1,5 @@
 import styled, { keyframes } from 'styled-components'
-import { Link } from 'gatsby'
+import { Link } from 'gatsby-plugin-intl'
 
 import { Colors } from 'styles/variables'
 import transitions from 'styles/transitions'

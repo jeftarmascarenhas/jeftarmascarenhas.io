@@ -17,7 +17,8 @@
   "header": {
     "myBlog": "Meu Blog",
     "home": "Eu amo trabalhar como Front-end e Back-end",
-    "experience": "Experiência"
+    "experience": "Experiência",
+    "notfound": "Não encontrado, ops :("
   },
   "blog": {
     "viewPosts": "Ver posts",
@@ -36,7 +37,7 @@
     "contact": "Contato"
   },
   "notfound": {
-    "header": "Página Não encontrada",
-    "description": "Pode ser que essa página não exista. Tente outra url. :)"
+    "title": "Talvez essa url não existe",
+    "description": "Veja meu blog ou se não achou algo que queria entre em contato."
   }
 }
