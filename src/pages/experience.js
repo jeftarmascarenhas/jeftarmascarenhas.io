@@ -24,7 +24,7 @@ const ExperiencePage = () => {
       {!!experiencies.length &&
         experiencies.map(experience => (
           <Box key={experience.id} radius="top-right" className="my-4">
-            <BoxImg src="https://www.hotelenseadaboaviagem.com.br/blog/wp-content/uploads/2018/06/ground-zero-2014135_960_720-960x480.jpg" />
+            <BoxImg src={experience.thumb} />
             <BoxBody>
               <C.Title>{experience.title}</C.Title>
               <C.SubTitle>{experience.description}</C.SubTitle>

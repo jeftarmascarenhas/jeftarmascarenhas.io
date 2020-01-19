@@ -43,7 +43,7 @@ html {
   font-family: Roboto, sans-serif;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
-  line-height: 1;
+  line-height: 1.3;
   font-size: 8px;
 }
 body {
