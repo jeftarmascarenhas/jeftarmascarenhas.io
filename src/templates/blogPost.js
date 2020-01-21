@@ -41,8 +41,8 @@ const BlogPost = ({ data }) => {
           )}
           <C.Title>{post.frontmatter.title}</C.Title>
           <C.SubTitle>{post.frontmatter.description}</C.SubTitle>
+          <hr className="mb-3" />
         </BoxHeader>
-        <hr className="mb-3" />
         <BoxBody>
           <div itemProp="articleBody">{parser(post.html)}</div>
         </BoxBody>

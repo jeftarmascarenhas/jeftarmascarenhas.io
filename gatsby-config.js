@@ -101,16 +101,6 @@ const plugins = [
     },
   },
   {
-    resolve: `@raae/gatsby-remark-oembed`,
-    options: {
-      usePrefix: false,
-      providers: {
-        include: ['Youtube', 'Twitter', 'Codepen'],
-        exclude: ['Reddit', 'Flickr', 'Instagram'],
-      },
-    },
-  },
-  {
     resolve: `gatsby-plugin-intl`,
     options: {
       // language JSON resource path
@@ -165,6 +155,23 @@ const plugins = [
           resolve: 'gatsby-remark-copy-linked-files',
           options: {
             destinationDir: 'static/assets/img/',
+          },
+        },
+        {
+          resolve: `@raae/gatsby-remark-oembed`,
+          options: {
+            usePrefix: false,
+            providers: {
+              include: [
+                'Youtube',
+                'Twitter',
+                'Codepen',
+                'Vimeo',
+                'Instagram',
+                'Codesandbox',
+              ],
+              exclude: ['Reddit', 'Flickr'],
+            },
           },
         },
         `gatsby-remark-prismjs`,
