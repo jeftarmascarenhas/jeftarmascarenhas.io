@@ -167,6 +167,7 @@ const plugins = [
             destinationDir: 'static/assets/img/',
           },
         },
+        `gatsby-remark-prismjs`,
       ],
     },
   },
