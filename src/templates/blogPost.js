@@ -47,8 +47,16 @@ const BlogPost = ({ data }) => {
           <div itemProp="articleBody">{parser(post.html)}</div>
         </BoxBody>
       </Box>
-      <Box border radius="top-left" variant="default">
-        <DisqusComment title={post.frontmatter.title} slug={post.fields.slug} />
+      <Box border radius="top-left" className="mb-2">
+        <BoxHeader>
+          <C.Title>{intl.formatMessage({ id: 'comments' })}</C.Title>
+        </BoxHeader>
+        <BoxBody>
+          <DisqusComment
+            title={post.frontmatter.title}
+            slug={post.fields.slug}
+          />
+        </BoxBody>
       </Box>
     </Layout>
   )

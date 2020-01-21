@@ -58,6 +58,13 @@ const plugins = [
     },
   },
   {
+    resolve: `gatsby-source-filesystem`,
+    options: {
+      path: `${__dirname}/content/lab`,
+      name: `lab`,
+    },
+  },
+  {
     resolve: `gatsby-plugin-manifest`,
     options: {
       name: `Jeftar Mascarenhas`,
@@ -69,6 +76,7 @@ const plugins = [
       icon: `src/images/jeftar-icon.png`, // This path is relative to the root of the site.
     },
   },
+  `gatsby-transformer-json`,
   `gatsby-plugin-svgr`,
   `gatsby-plugin-offline`,
   `gatsby-plugin-resolve-src`,

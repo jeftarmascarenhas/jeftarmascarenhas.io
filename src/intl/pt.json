@@ -14,6 +14,7 @@
   "build": "Now go build something great.",
   "welcome_page2": "Bem-vindo a página 2",
   "go_back": "Voltar para Home",
+  "comments": "Deixa aquele comments esperto",
   "header": {
     "myBlog": "Meu Blog",
     "home": "Eu amo trabalhar como Front-end e Back-end",
