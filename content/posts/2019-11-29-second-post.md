@@ -36,4 +36,4 @@ Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica 
 
 https://www.instagram.com/p/Bof9WhgBmY2/
 
-![Testando Netlify CMS](/assets/wolf_geo_art_by_emynemzz_d9b2b5w.png "Testando Netlify CMS")
+![](/assets/wolf_geo_art_by_emynemzz_d9b2b5w.png)
