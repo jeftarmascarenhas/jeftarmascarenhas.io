@@ -5,6 +5,7 @@ import { Colors } from 'styles/variables'
 export const Box = styled.div`
   position: relative;
   overflow-x: hidden;
+  box-shadow: -0.1rem 0.1rem 0.4rem 0 ${Colors.shadow};
   border: ${({ bordered }) =>
     bordered ? `0.4rem solid ${Colors.dark}` : 'none'};
   border-radius: ${({ radius }) =>
@@ -29,14 +30,14 @@ export const BoxImg = styled.div`
 `
 
 export const BoxHeader = styled.div`
-  padding: 1.8rem;
+  padding: 1.4rem 2.8rem;
 `
 
 export const BoxBody = styled.div`
-  padding: 1.8rem;
+  padding: 2.2rem 2.8rem;
   flex: 1 0 auto;
 `
 
 export const BoxFooter = styled.div`
-  padding: 1rem 1.8rem;
+  padding: 1rem 2.8rem;
 `

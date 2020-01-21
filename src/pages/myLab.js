@@ -1,16 +1,31 @@
 import React from 'react'
-import { Link } from 'gatsby'
+import { useIntl } from 'gatsby-plugin-intl'
 
 import Layout from 'layouts'
+import Header from 'components/header'
 import SEO from 'components/seo'
+import Box, { BoxBody } from 'components/box'
+import * as C from 'styles/common'
 
-const MyLab = () => (
-  <Layout>
-    <SEO title="Page two" />
-    <h1>Hi from the second page</h1>
-    <p>Welcome to page 2</p>
-    <Link to="/">Go back to the homepage</Link>
-  </Layout>
-)
+const MyLab = () => {
+  const intl = useIntl()
+  return (
+    <Layout>
+      <SEO title="My Labrary" />
+      <Header
+        siteTitle="Jeftar Mascarenhas"
+        description={intl.formatMessage({ id: 'dev.title' })}
+      />
+      <Box className="my-4">
+        <BoxBody>
+          <C.Title>{intl.formatMessage({ id: 'dev.title' })}</C.Title>
+          <C.SubTitle>
+            {intl.formatMessage({ id: 'dev.description' })}
+          </C.SubTitle>
+        </BoxBody>
+      </Box>
+    </Layout>
+  )
+}
 
 export default MyLab

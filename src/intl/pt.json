@@ -20,6 +20,10 @@
     "experience": "Experiência",
     "notfound": "Não encontrado, ops :("
   },
+  "dev": {
+    "title": "Em desenvolvimento",
+    "description": "Em breve você terá acesso a essa página. Obrigado por visitar."
+  },
   "blog": {
     "viewPosts": "Ver posts",
     "lastPosts": "Últimos posts",

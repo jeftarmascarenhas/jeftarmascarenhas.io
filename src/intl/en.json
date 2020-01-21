@@ -17,8 +17,12 @@
   "header": {
     "myBlog": "My Blog",
     "home": "I love working as Front-end and Back-end",
-    "experience": "Experiência",
+    "experience": "Experience",
     "notfound": "Not Found, ops :("
+  },
+  "dev": {
+    "title": "Under development",
+    "description": "You will soon have access to this page. Thank you for visiting"
   },
   "blog": {
     "viewPosts": "View posts",
