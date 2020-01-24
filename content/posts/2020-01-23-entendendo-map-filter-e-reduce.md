@@ -1,9 +1,7 @@
 ---
 date: '2020-01-23 09:17:29'
 title: 'Entendendo Map, Filter e Reduce'
-description: >-
-  Em entrevista quando te perguntam sobre alguns métodos de array no JS, você
-  utiliza esses métodos, mais não sabe explicar?
+description: Aprenda de forma simples a utilizar e responder esses métodos
 tags:
   - Javascript
   - QuickTips
