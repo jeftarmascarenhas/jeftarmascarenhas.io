@@ -82,3 +82,30 @@ const filter = users.filter(item => item.roleId === 1)
   ]
 */
 ```
+
+### Reduce
+
+Você tem uma matriz de itens e deja calcular algum valor novo inteirando cada item.
+
+O resultado poder ser qualquer coisa, outra matriz, um novo objeto, um valor booleano...
+```javascript
+const reduce = users.reduce((acumulator, current, idx) => {
+  acumulator.employeeTypes[idx] = { id: current.roleId, name: current.role }
+  return
+}, {
+  employeeTypes: []
+})
+
+/*
+  result
+  {
+    employeeTypes: [
+      {id: 1, name: "Developer"},
+      {id: 2, name: "UI Design"},
+      {id: 2, name: "Developer"},
+    ]
+  }
+*/
+```
+
+É isso, dicas rápidas para ajudar a quem precisa.
