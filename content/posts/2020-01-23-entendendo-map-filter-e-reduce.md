@@ -41,3 +41,23 @@ const users = [
   },
 ]
 ```
+## Map
+Se você tem uma matriz de array e quer transformar cada um dos itens.
+```javascript
+const users = [...]
+
+const map = users.map(item => ({
+  id: item.id,
+  roleId: item.roleId,
+  role: item.role,
+}))
+
+/*
+  result
+  [
+    {id: 1, roleId: 2, role: "Developer"},
+    {id: 2, roleId: 1, role: "UI Design"},
+    {id: 3, roleId: 2, role: "Developer"},
+  ]
+*/
+```
