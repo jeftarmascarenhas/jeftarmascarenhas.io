@@ -43,6 +43,8 @@ const users = [
 ```
 ## Map
 Se você tem uma matriz de array e quer transformar cada um dos itens.
+O resultado será uma nova matriz com o mesmo tamanho.
+
 ```javascript
 const users = [...]
 
@@ -58,6 +60,25 @@ const map = users.map(item => ({
     {id: 1, roleId: 2, role: "Developer"},
     {id: 2, roleId: 1, role: "UI Design"},
     {id: 3, roleId: 2, role: "Developer"},
+  ]
+*/
+```
+## Filter
+Se você tem um array e quer filtrar terminados items.
+
+O resultado é uma nova matriz com os mesmos itens, mais com alguns excluídos, porem comprimento será o mesmo(se um nenhum valor for omitido) ou menor que original.
+
+Dependendo da condição pode vir um array vazio.
+
+```javascript
+const users = [...]
+
+const filter = users.filter(item => item.roleId === 1)
+
+/*
+  result
+  [
+    {id: 2, roleId: 1, role: "UI Design"},
   ]
 */
 ```
