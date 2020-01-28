@@ -41,10 +41,10 @@ const HTML = ({
         {postBodyComponents}
         <script
           async
+          data-ad-client="ca-pub-1030376887130634"
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
         />
         <script
-          data-ad-client="ca-pub-1030376887130634"
           dangerouslySetInnerHTML={{
             __html: '(window.adsbygoogle = window.adsbygoogle || []).push({});',
           }}
