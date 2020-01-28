@@ -1,3 +1,4 @@
+/* eslint-disable react/no-danger */
 /* eslint-disable jsx-a11y/html-has-lang */
 /* eslint-disable react/forbid-prop-types */
 /* eslint-disable react/require-default-props */
@@ -38,6 +39,16 @@ const HTML = ({
           {parse(body)}
         </div>
         {postBodyComponents}
+        <script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
+        />
+        <script
+          data-ad-client="ca-pub-1030376887130634"
+          dangerouslySetInnerHTML={{
+            __html: '(window.adsbygoogle = window.adsbygoogle || []).push({});',
+          }}
+        />
       </body>
     </html>
   )
