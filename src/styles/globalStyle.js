@@ -267,8 +267,11 @@ img {
   font-feature-settings: 'kern', 'liga', 'clig', 'calt';
   transition: ${transitions.default};
  }
- h1, h2 ,h3, h4, h5, h6, p, a, span {
+ h1, h2 ,h3, h4, h5, h6, p, a {
   color: ${props => (props.darkColor ? Colors.light : Colors.dark)};
+ }
+ span {
+   color: inherit;
  }
  p {
    line-height: 1.5;
