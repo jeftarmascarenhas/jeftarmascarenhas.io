@@ -9,6 +9,7 @@ import Header from 'components/header'
 import DisqusComment from 'components/disqusComment'
 import SEO from 'components/seo'
 import Box, { BoxHeader, BoxBody } from 'components/box'
+// import GoogleAds from 'components/googleAds'
 import * as C from 'styles/common'
 
 const BlogPost = ({ data }) => {
@@ -22,6 +23,7 @@ const BlogPost = ({ data }) => {
         siteTitle="Jeftar Mascarenhas"
         description={intl.formatMessage({ id: 'header.myBlog' })}
       />
+      {/* <GoogleAds layout="inArticle" /> */}
       <Box
         className="my-4"
         radius="top-right"
@@ -46,6 +48,7 @@ const BlogPost = ({ data }) => {
         <BoxBody>
           <div itemProp="articleBody">{parser(post.html)}</div>
         </BoxBody>
+        {/* <GoogleAds layout="image"/> */}
       </Box>
       <Box border radius="top-left" className="mb-2">
         <BoxHeader>
