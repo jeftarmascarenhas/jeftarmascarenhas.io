@@ -7,25 +7,25 @@ import transitions from 'styles/transitions'
 const upDownMobile = keyframes`
   0% {
     opacity: 0;
-    top: 3.5rem;
+    top: -2%;
   }
   92% {
     opacity: 1;
   }
   100% {
-    top: 38rem;
+    top: 60%;
   }
 `
 const upDown = keyframes`
   0% {
     opacity: 0;
-    top: 3.5rem;
+    top: 10%;
   }
   92% {
     opacity: 1;
   }
   100% {
-    top: 48rem;
+    top: 60%;
   }
 `
 
@@ -101,12 +101,13 @@ export const SelectColor = styled.div`
   justify-content: center;
   align-items: center;
   position: absolute;
-  top: 38rem;
+  top: 60%;
+  transform: translateY(-50%);
   left: 0.6rem;
   animation: ${upDownMobile} 2.2s ease-out alternate 0.6s;
   @media (min-width: 768px) {
     animation: ${upDown} 2.2s ease-out alternate 0.6s;
-    top: 48rem;
+    top: 60%;
   }
 `
 

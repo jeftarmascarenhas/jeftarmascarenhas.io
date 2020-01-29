@@ -4,6 +4,7 @@
     "date": "2019",
     "title": "jeftar.com.br",
     "description": "My personal website",
+    "techs": "Gatsby, React, Styled-components",
     "imageSrc": "jeftar-icon.png"
   }
 ]
