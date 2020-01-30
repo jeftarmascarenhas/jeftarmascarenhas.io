@@ -3,8 +3,64 @@
     "path": "https://github.com/jeftarmascarenhas/jeftarmascarenhas.io",
     "date": "2019",
     "title": "jeftar.com.br",
-    "description": "My personal website",
+    "description": "Meu site pessoal",
     "techs": "Gatsby, React, Styled-components",
     "imageSrc": "jeftar-icon.png"
+  },
+  {
+    "path": "https://github.com/jeftarmascarenhas/react-native-ecommerce",
+    "date": "2019",
+    "title": "React Native Ecommerce",
+    "description": "Crei um exemplo de shopping cart com React",
+    "techs": "React, React Native, Redux, Redux Saga, styled-components, Storybook",
+    "imageSrc": "react-native-ecommerce.png"
+  },
+  {
+    "path": "https://codepen.io/jeftar/pen/ExxBRJE",
+    "date": "2019",
+    "title": "Greensock Animation",
+    "description": "Animação com Greensock.js e svg",
+    "techs": "CSS3, greensock.js, javascript, HTML",
+    "imageSrc": "greensock-animation-svg.png"
+  },
+  {
+    "path": "https://codepen.io/jeftar/pen/rOZOmY",
+    "date": "2014",
+    "title": "Game Stage in pure css",
+    "description": "Fiz um cenário apenas utilizando CSS e HTML",
+    "techs": "CSS3, HTML5",
+    "imageSrc": "game-stage-css.png"
+  },
+  {
+    "path": "https://codesandbox.io/s/react-table-collapsed-929ll",
+    "date": "2019",
+    "title": "React table collpsed",
+    "description": "Tabela sob row ou linha recolhida com React",
+    "techs": "React, uikit, CSS3, HTML5",
+    "imageSrc": "react-table-collapsed.png"
+  },
+  {
+    "path": "https://codesandbox.io/s/7jj8jx2v4x",
+    "date": "2017",
+    "title": "React render props",
+    "description": "Usando render props do React",
+    "techs": "React, Render props, Animation css",
+    "imageSrc": "react-render-props.png"
+  },
+  {
+    "path": "https://codepen.io/jeftar/pen/ksCDH",
+    "date": "2017",
+    "title": "Christimas Ball Pure CSS",
+    "description": "Criei um bola de natal com CSS3 e HTML5",
+    "techs": "CSS3, HTML5, Pure CSS, Christima CSS",
+    "imageSrc": "christmas-ball-css.png"
+  },
+  {
+    "path": "https://codesandbox.io/s/react-avatar-component-8jesn",
+    "date": "2019",
+    "title": "React avatar componente",
+    "description": "Criando avatar componente com React",
+    "techs": "React, Javascript, styled-components",
+    "imageSrc": "react-avatar-component.png"
   }
 ]
