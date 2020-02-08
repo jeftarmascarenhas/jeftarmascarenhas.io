@@ -6,8 +6,7 @@ import LanguageButton from 'components/languageButton'
 import ListSocial from 'components/listSocial'
 import * as S from './styled'
 
-const SidebarSetting = ({ onTheme }) => {
-  console.log(onTheme)
+const SidebarSetting = () => {
   return (
     <S.SidebarSetting>
       <ListSocial />

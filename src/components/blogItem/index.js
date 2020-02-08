@@ -8,7 +8,6 @@ import * as S from './styled'
 
 const BlogItem = ({ info }) => {
   const intl = useIntl()
-  console.log(info)
   return (
     <S.BlogItem to={`/${info.slug}`}>
       {info.date && (
