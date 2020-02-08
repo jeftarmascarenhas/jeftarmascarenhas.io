@@ -41,7 +41,7 @@ O React Native `doctor` suporta a maioria das bibliotecas e software utilizado n
 
 Se você não quer testar agora, veja esse vídeo rápido do `react-native doctor` em ação.
 
-<video style="max-width: 900px" src="https://facebook.github.io/react-native/img/homepage/DoctorCommand.mp4
+<video style="max-width: 700px" src="https://facebook.github.io/react-native/img/homepage/DoctorCommand.mp4
 " type="video/mp4" />
 
 Segue um checklist do que o Doctor verificar e suporta atualmente.
