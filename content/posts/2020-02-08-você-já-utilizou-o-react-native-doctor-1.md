@@ -63,4 +63,5 @@ Para IOS ele checa:
 
 Fiz esse post inspirado no post React Native Doctor do site oficial do React Native. Segue o link do short post feito por eles explicando o comando `doctor`.
 
+
 [Doc and blog React Native]: https://facebook.github.io/react-native/blog/2019/11/18/react-native-doctor
