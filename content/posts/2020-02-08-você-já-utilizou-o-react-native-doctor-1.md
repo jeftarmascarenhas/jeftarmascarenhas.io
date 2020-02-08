@@ -45,4 +45,18 @@ https://facebook.github.io/react-native/img/homepage/DoctorCommand.mp4
 
 Segue um checklist do que o Doctor verificar e suporta atualmente.
 
+Para o sistema no geral ele checa:
+- Node.js (>= 8.3)
+- yarn (>= 1.10)
+- npm (>= 4)
+- Watchman (>= 4)
 
+Para android ele checa:
+- Android SDK (>= 26)
+- Android NDK (>= 19)
+- `ANDROID_HOME`, variável de ambiente que é exigida pela configuração do SDK Android.
+
+Para IOS ele checa:
+- Xcode (>= 10)
+- CocoaPods, ferramenta de gerenciamento de dependência de biblioteca para aplicativos iOS.
+- ios-deploy (opcional), biblioteca usada internamente pela CLI para instalar aplicativos em um dispositivo iOS físico.
