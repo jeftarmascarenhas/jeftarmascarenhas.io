@@ -29,7 +29,7 @@ Se não for possível corrigir automaticamente o `react-native doctor` exibirá 
 
 ![](/assets/img/screen-shot-2020-02-08-at-13.26.47.png)
 
-O comando `react-native doctor` está disponível a partir da versão 0.62. Aí você faz não estou usando uma versão inferior :(, calma jovem você pode utilizar-lo sem atualizar sua versão do RN com o seguinte comando:
+O comando `react-native doctor` está disponível a partir da versão 0.62. Aí você faz estou usando uma versão inferior :( calma jovem você pode utilizar-lo sem atualizar sua versão do RN com o seguinte comando:
 
 
 ```
@@ -41,7 +41,8 @@ O React Native `doctor` suporta a maioria das bibliotecas e software utilizado n
 
 Se você não quer testar agora, veja esse vídeo rápido do `react-native doctor` em ação.
 
-https://facebook.github.io/react-native/img/homepage/DoctorCommand.mp4
+<video style="max-width: 700px" src="https://facebook.github.io/react-native/img/homepage/DoctorCommand.mp4
+" type="video/mp4" controls />
 
 Segue um checklist do que o Doctor verificar e suporta atualmente.
 
@@ -63,4 +64,5 @@ Para IOS ele checa:
 
 Fiz esse post inspirado no post React Native Doctor do site oficial do React Native. Segue o link do short post feito por eles explicando o comando `doctor`.
 
-[Doc and blog React Native]: https://facebook.github.io/react-native/blog/2019/11/18/react-native-doctor
+
+[Doc and blog React Native - Link](https://facebook.github.io/react-native/blog/2019/11/18/react-native-doctor)
