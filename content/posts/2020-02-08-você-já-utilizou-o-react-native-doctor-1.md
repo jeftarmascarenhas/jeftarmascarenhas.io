@@ -1,7 +1,7 @@
 ---
 date: '2020-02-08 01:37:28'
 title: Você já utilizou o React Native Doctor?
-description: Aprenda de forma simples a utilizar e responder esses métodos
+description: Verifique se seu ambiente está com algum problema
 tags:
   - React
   - React Native
