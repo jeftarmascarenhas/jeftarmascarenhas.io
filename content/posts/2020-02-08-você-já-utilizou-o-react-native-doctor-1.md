@@ -31,7 +31,9 @@ Se não for possível corrigir automaticamente o `react-native doctor` exibirá 
 
 O comando `react-native doctor` está disponível a partir da versão 0.62. Aí você faz não estou usando uma versão inferior :(, calma jovem você pode utilizar-lo sem atualizar sua versão do RN.
 
+
 `npx @react-native-community/cli doctor`
+
 
 O React Native `doctor` suporta a maioria das bibliotecas e software utilizado no ecossistema do RN, como CocoaPods, Xcode e Android SDK.
 
