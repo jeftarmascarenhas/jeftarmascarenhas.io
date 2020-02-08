@@ -21,9 +21,9 @@ O doctor surgiu de pedidos da comunidade do React, mais de 20 pull request e aju
 
 Ele faz uma analise do seu ambiente de desenvolvimento para encontrar problemas em seu ambiente de **DEV** dando a opção de corrigi-los automaticamente.
 
- **_Sua interface é inspirada no Jest, veja como ele exibe os outputs:_** 
+ _**Sua interface é inspirada no Jest, veja como ele exibe os outputs:**_ 
 
-![React Native Doctor em ação](/assets/img/screen-shot-2020-02-08-at-13.21.18.png "Comando React Native Doctor")
+![React Native Doctor](/assets/img/screen-shot-2020-02-08-at-13.21.18.png "Comando React Native doctor em ação")
 
 Se não for possível corrigir automaticamente o `react-native doctor` exibirá uma mensagem e um link útil explicando como corrigi-lo manualmente.
 
