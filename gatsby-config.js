@@ -140,6 +140,12 @@ const plugins = [
     },
   },
   {
+    resolve: `gatsby-plugin-google-adsense`,
+    options: {
+      publisherId: `ca-pub-1030376887130634`,
+    },
+  },
+  {
     resolve: `gatsby-transformer-remark`,
     options: {
       plugins: [

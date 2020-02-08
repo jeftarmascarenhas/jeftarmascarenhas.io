@@ -1,5 +1,5 @@
 import React from 'react'
-import PropTypes from 'prop-types'
+// import PropTypes from 'prop-types'
 
 import LanguageButton from 'components/languageButton'
 // import IconButton from 'components/iconButton'
@@ -21,7 +21,7 @@ const SidebarSetting = () => {
   )
 }
 
-SidebarSetting.propTypes = {
-  onTheme: PropTypes.func.isRequired,
-}
+// SidebarSetting.propTypes = {
+//   onTheme: PropTypes.func.isRequired,
+// }
 export default SidebarSetting

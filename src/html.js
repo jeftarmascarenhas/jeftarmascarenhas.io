@@ -39,16 +39,6 @@ const HTML = ({
           {parse(body)}
         </div>
         {postBodyComponents}
-        <script
-          async
-          data-ad-client="ca-pub-1030376887130634"
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
-        />
-        <script
-          dangerouslySetInnerHTML={{
-            __html: '(window.adsbygoogle = window.adsbygoogle || []).push({});',
-          }}
-        />
       </body>
     </html>
   )
