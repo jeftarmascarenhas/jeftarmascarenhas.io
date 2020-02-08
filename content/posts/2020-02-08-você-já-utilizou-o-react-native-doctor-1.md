@@ -29,10 +29,10 @@ Se não for possível corrigir automaticamente o `react-native doctor` exibirá 
 
 ![](/assets/img/screen-shot-2020-02-08-at-13.26.47.png)
 
-O comando <pre>`react-native doctor`<pre/> está disponível a partir da versão 0.62. Aí você faz não estou usando uma versão inferior :(, calma jovem você pode utilizar-lo sem atualizar sua versão do RN.
+O comando `react-native doctor` está disponível a partir da versão 0.62. Aí você faz não estou usando uma versão inferior :(, calma jovem você pode utilizar-lo sem atualizar sua versão do RN com o seguinte comando:
 
 
-```shell
+```
 npx @react-native-community/cli doctor
 ```
 
@@ -42,3 +42,7 @@ O React Native `doctor` suporta a maioria das bibliotecas e software utilizado n
 Se você não quer testar agora, veja esse vídeo rápido do `react-native doctor` em ação.
 
 https://facebook.github.io/react-native/img/homepage/DoctorCommand.mp4
+
+Segue um checklist do que o Doctor verificar e suporta atualmente.
+
+
