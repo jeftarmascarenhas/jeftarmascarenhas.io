@@ -29,7 +29,7 @@ Se não for possível corrigir automaticamente o `react-native doctor` exibirá 
 
 ![](/assets/img/screen-shot-2020-02-08-at-13.26.47.png)
 
-O comando `react-native doctor` está disponível a partir da versão 0.62. Aí você faz não estou usando uma versão inferior :(, calma jovem você pode utilizar-lo sem atualizar sua versão do RN.
+O comando <pre>`react-native doctor`<pre/> está disponível a partir da versão 0.62. Aí você faz não estou usando uma versão inferior :(, calma jovem você pode utilizar-lo sem atualizar sua versão do RN.
 
 
 `npx @react-native-community/cli doctor`
