@@ -14,7 +14,6 @@ import * as C from 'styles/common'
 
 const BlogPost = ({ data }) => {
   const post = data.markdownRemark
-  console.log(post)
   const intl = useIntl()
   return (
     <Layout>

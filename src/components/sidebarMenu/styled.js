@@ -91,31 +91,31 @@ export const NavItem = styled(Link)`
   margin-bottom: 2.2rem;
   font-size: 3.4rem;
   transition: ${transitions.all};
-  &:hover {
-    &::after {
-      content: '';
-      position: absolute;
-      width: 100%;
-      height: 2px;
-      background-color: ${Colors.yellow};
-      top: 50%;
-      left: -0.2rem;
-      transform: translateY(-50%);
-    }
+  &:hover::after,
+  &.active::after {
+    opacity: 1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 1.5px;
+    background-color: ${Colors.yellow};
+    bottom: 0;
+    left: -0.2rem;
+    z-index: -1;
   }
-  &.active {
-    &::after {
-      content: '';
-      position: absolute;
-      width: 100%;
-      height: 2px;
-      background-color: ${Colors.yellow};
-      top: 50%;
-      left: -0.2rem;
-      z-index: -1;
-      transform: translateY(-50%);
-    }
+  &:hover::before,
+  &.active::before {
+    content: '';
+    opacity: 1;
+    position: absolute;
+    width: 100%;
+    height: 1.5px;
+    background-color: ${Colors.yellow};
+    top: 0;
+    left: -0.2rem;
+    z-index: -1;
   }
+
   @media (min-width: 768px) {
     color: ${Colors.dark};
     font-size: 2.4rem;

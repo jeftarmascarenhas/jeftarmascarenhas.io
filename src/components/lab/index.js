@@ -39,7 +39,6 @@ LabImg.propTypes = {
 }
 
 const Lab = ({ labs }) => {
-  console.log(labs)
   return (
     <>
       {labs.map(({ node }) => (

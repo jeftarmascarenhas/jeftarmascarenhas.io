@@ -177,6 +177,7 @@ const plugins = [
                 'Vimeo',
                 'Instagram',
                 'Codesandbox',
+                'Facebook',
               ],
               exclude: ['Reddit', 'Flickr'],
             },
