@@ -51,7 +51,10 @@ const IndexPage = () => {
       />
       <S.HomeContent>
         <S.PersonalInfo>
-          <Header siteTitle={data.site.siteMetadata.title} />
+          <Header
+            siteTitle={data.site.siteMetadata.title}
+            description={intl.formatMessage({ id: 'header.home' })}
+          />
           <S.PersonAuthor>
             <Avatar src={jeftarImg} size="largger" alt="Jeftar Mascarenhas" />
             <span className="ml-2 author-name">

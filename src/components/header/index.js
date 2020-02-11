@@ -20,7 +20,7 @@ Header.propTypes = {
 
 Header.defaultProps = {
   siteTitle: `Jeftar Mascarenhas`,
-  description: `I love working with Design, Front-end and Back-end`,
+  description: `I love work with Front-end Developer and Javascript`,
 }
 
 export default Header
