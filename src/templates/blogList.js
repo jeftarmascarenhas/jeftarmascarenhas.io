@@ -25,8 +25,8 @@ const BlogList = ({ data, pageContext }) => {
     <Layout>
       <SEO title="Blog" />
       <Header
-        siteTitle="Jeftar Mascarenhas"
-        description={intl.formatMessage({ id: 'header.myBlog' })}
+        siteTitle="Jeftar Mascarenhas - Blog"
+        description={intl.formatMessage({ id: 'blog.description' })}
       />
       <S.BlogList>
         {list.map(({ node }) => (

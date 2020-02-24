@@ -15,9 +15,15 @@ import * as C from 'styles/common'
 const BlogPost = ({ data }) => {
   const post = data.markdownRemark
   const intl = useIntl()
+
+  console.log('img: ', post.frontmatter)
   return (
     <Layout>
-      <SEO title={intl.formatMessage({ id: 'header.myBlog' })} description="" />
+      <SEO
+        title={post.frontmatter.title}
+        description={post.frontmatter.description}
+        image="https://jeftar.com.br/assets/img/jeftar-icon.png"
+      />
       <Header
         siteTitle="Jeftar Mascarenhas"
         description={intl.formatMessage({ id: 'header.myBlog' })}
