@@ -38,7 +38,7 @@ Basicamente é método faz o oposto do método starsWith verifica se uma string 
 ```javascript
 str.endsWith(stringSendoBuscada[, tamanho])
 ```
-Atenção a opção ***tamanho(opcional):** se informada substitui o tamanho da string(texto) pesquisada.
+Atenção a opção **tamanho(opcional):** se informada substitui o tamanho da string(texto) pesquisada.
 
 ### Exemplo
 ```javascript
