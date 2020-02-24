@@ -70,7 +70,7 @@ console.log(study.repeat(4/2)) // 'Vou estudar Vou estudar '
 ```
 
 ## 3. Include
-Com método **include()** você faz uma busca em uma string para saber se a string tem determinado valor retornando ```true`` ou ```false```.
+Com método **include()** você faz uma busca em uma string para saber se a string tem determinado valor retornando ``` true `` ou ``` false ```.
 
 ### Sintaxe
 ```javascript
