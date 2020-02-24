@@ -88,7 +88,7 @@ console.log(anyPhrase.includes('cumpra suas metas', 1)) // true
 anyPhrase.includes('Sempre tenha foco', 1) // false
 ```
 
-São esses 4 métodos simples que podem ser úteis você sabendo utilizar. Deixa no comentário o que tá achando dos posts.
+São esses 4 métodos simples que podem ser úteis, você sabendo utilizar. Deixa no comentário o que tá achando dos posts.
 
 ## Bônus
 Talvez você não saiba, mais String são iterable(iteráveis), ou seja, você pode usar o ```for of``` spread operator ```...string```
