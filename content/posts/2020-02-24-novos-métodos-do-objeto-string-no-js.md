@@ -1,11 +1,10 @@
 ---
 date: '2020-02-24 01:25:57'
-title: Novos métodos do Objeto String no JS
+title: Métodos úteis do Objeto String no JS
 description: Conheça os novos métodos de String que são úteis para trabalhar no dia a dia.
 tags:
   - Javascript
   - Objeto String
-  - String Javascript
   - Métodos string
 ---
 ***Estou de volta com mais um post da serie dicas rápidas de Javascript(JS Quick Tips).***
