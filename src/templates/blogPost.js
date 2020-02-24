@@ -1,4 +1,3 @@
-/* eslint-disable react/prop-types */
 import React from 'react'
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
@@ -108,6 +107,7 @@ BlogPost.propTypes = {
         title: PropTypes.string,
         description: PropTypes.string,
         date: PropTypes.string,
+        image: PropTypes.string,
       }),
       timeToRead: PropTypes.number,
       fields: PropTypes.shape({
