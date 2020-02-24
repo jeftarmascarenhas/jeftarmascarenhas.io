@@ -108,3 +108,7 @@ console.log(myStringIterableArray)
 
 ```
 
+### Nota
+Esse post foi tirado do nosso amado developer.mozilla e outros blogs.
+
+Deixa teu comentário para me ajudar a saber se foi relevante esse post ou não.
