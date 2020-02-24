@@ -16,7 +16,6 @@ const BlogPost = ({ data }) => {
   const post = data.markdownRemark
   const intl = useIntl()
 
-  console.log('img: ', post.frontmatter)
   return (
     <Layout>
       <SEO
