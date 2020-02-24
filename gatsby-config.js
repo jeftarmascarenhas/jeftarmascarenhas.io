@@ -60,6 +60,13 @@ const plugins = [
   {
     resolve: `gatsby-source-filesystem`,
     options: {
+      path: `${__dirname}/static/assets/img`,
+      name: 'uploads',
+    },
+  },
+  {
+    resolve: `gatsby-source-filesystem`,
+    options: {
       path: `${__dirname}/content/lab`,
       name: `lab`,
     },

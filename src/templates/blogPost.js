@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import React from 'react'
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
@@ -15,13 +16,16 @@ import * as C from 'styles/common'
 const BlogPost = ({ data }) => {
   const post = data.markdownRemark
   const intl = useIntl()
-
   return (
     <Layout>
       <SEO
         title={post.frontmatter.title}
         description={post.frontmatter.description}
-        image="https://jeftar.com.br/assets/img/jeftar-icon.png"
+        image={
+          post.frontmatter.image
+            ? `https://jeftar.com.br${post.frontmatter.image}`
+            : 'https://jeftar.com.br/assets/img/jeftar-icon.png'
+        }
       />
       <Header
         siteTitle="Jeftar Mascarenhas"
@@ -81,6 +85,7 @@ export const query = graphql`
         description
         title
         tags
+        image
         # image {
         #   id
         #   publicURL
