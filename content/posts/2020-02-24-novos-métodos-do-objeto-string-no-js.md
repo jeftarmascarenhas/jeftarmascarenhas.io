@@ -22,7 +22,7 @@ str.startsWith(searchString, [position])
 ```
 searchString: caracteres a serem procurados, position(opcional): posição que iniciará a pesquisa(searchString)
 
-### Exemplo:
+### Exemplo
 ```javascript
 const description = 'Javascript é cool, Frameworks são bons se você foca mais no JS do que no Framework.'
 
@@ -40,7 +40,7 @@ str.endsWith(stringSendoBuscada[, tamanho])
 ```
 ***Atenção a opção tamanho(opcional): se informada substitui o tamanho da string(texto) pesquisada.***
 
-### Exemplo:
+### Exemplo
 ```javascript
 const description = 'Javascript é cool, Frameworks são bons se você foca mais no JS do que no Framework.'
 
@@ -58,7 +58,7 @@ str.repeat(count);
 ```
 O parâmetro `count` deve ser um valor inteiro que indica qual número de repetições, se for passado um número negativo -1 será apresentado um RangeError.
 
-### Exemplo:
+### Exemplo
 ```javascript
 const study = 'Vou estudar ';
 study.repeat(-1) // RangeError Invalid count value
@@ -68,3 +68,14 @@ study.repeat(2.5) // converte para inteiro
 study.repeat(1/0) // RangeError Invalid count value
 study.repeat(4/2) // 'Vou estudar Vou estudar '
 ```
+
+## 3. Include
+Com método `include()` você faz uma busca em uma string para saber se a string tem determinado valor.
+
+### Sintaxe
+```javascript
+str.includes(searchString[, position])
+```
+
+### Exemplo
+
