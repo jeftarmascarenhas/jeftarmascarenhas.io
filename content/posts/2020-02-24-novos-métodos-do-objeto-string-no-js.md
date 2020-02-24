@@ -34,7 +34,7 @@ description.startsWith('é cool', 11) // true 'Javascript ' são 11 posições d
 ## 2. endsWith
 Basicamente é método faz o oposto do método starsWith verifica se uma string termina com um determinado valor.
 
-### sintaxe
+### Sintaxe
 ```javascript
 str.endsWith(stringSendoBuscada[, tamanho])
 ```
@@ -47,4 +47,24 @@ const description = 'Javascript é cool, Frameworks são bons se você foca mais
 description.endsWith('no Framework.') // true
 description.endsWith('foca mais no JS.') // false
 description.endsWith('Frameworks são bons', 38) // true esse 38 é length do texto até a palavra 'bons'
+```
+
+## 3. Repeat
+O método `repeat()` retorna uma nova string com determinado número de copias concatenadas.
+
+### Sintaxe
+```javascript
+str.repeat(count);
+```
+O parâmetro `count` deve ser um valor inteiro que indica qual número de repetições, se for passado um número negativo -1 será apresentado um RangeError.
+
+### Exemplo:
+```javascript
+const study = 'Vou estudar ';
+study.repeat(-1) // RangeError Invalid count value
+study.repeat(0) // ''
+study.repeat(2) // 'Vou estudar Vou estudar Vou estudar'
+study.repeat(2.5) // converte para inteiro
+study.repeat(1/0) // RangeError Invalid count value
+study.repeat(4/2) // 'Vou estudar Vou estudar '
 ```
