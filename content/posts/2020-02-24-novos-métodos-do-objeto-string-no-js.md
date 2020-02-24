@@ -9,7 +9,7 @@ tags:
 ---
 ***Estou de volta com mais um post da serie dicas rápidas de Javascript(JS Quick Tips).***
 
-Vou falar sobre 4 não tão novos métodos assim, mais são novos.
+Vou falar sobre 4 não tão novos métodos assim.
 
 ## 1. startsWith 
 O startsWith é método que valida se uma string inicia com um terminado valor.
