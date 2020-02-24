@@ -12,7 +12,7 @@ tags:
 Vou falar sobre 4 não tão novos métodos assim.
 
 ## 1. startsWith 
-O startsWith é método que valida se uma string inicia com um terminado valor.
+O startsWith é método que valida se uma string inicia com um determinado valor.
 
 ### Sintaxe
 starts(inicia)Width(Com)
@@ -27,7 +27,7 @@ const description = 'Javascript é cool, Frameworks são bons se você foca mais
 
 console.log(description.startsWith('Javascript é')) // true
 console.log(description.startsWith('Frameworks são')) // false
-console.log(description.startsWith('é cool', 11)) // true 'Javascript ' são 11 posições devido ao espaço que é um caracter.
+console.log(description.startsWith('é cool', 11)) // true 'Javascript ' são 11 posições devido ao espaço que também é um caracter.
 ```
 
 ## 2. endsWith
