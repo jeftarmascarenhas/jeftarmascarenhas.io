@@ -28,6 +28,7 @@ const description = 'Javascript é cool, Frameworks são bons se você foca mais
 console.log(description.startsWith('Javascript é')) // true
 console.log(description.startsWith('Frameworks são')) // false
 console.log(description.startsWith('é cool', 11)) // true 'Javascript ' são 11 posições devido ao espaço que também é um caracter.
+
 ```
 
 ## 2. endsWith
