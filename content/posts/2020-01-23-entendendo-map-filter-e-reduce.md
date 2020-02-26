@@ -1,6 +1,6 @@
 ---
 date: '2020-01-23 09:17:29'
-title: 'Entendendo Map, Filter e Reduce'
+title: 'Entendendo Map, Filter e Reduce de forma simples'
 description: Aprenda de forma simples a utilizar e responder esses métodos
 tags:
   - Javascript
