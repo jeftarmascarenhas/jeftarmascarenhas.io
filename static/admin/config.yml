@@ -5,7 +5,12 @@ backend:
 
 media_folder: static/assets/img
 public_folder: /assets/img
+media_folder_relative: true
 publish_mode: editorial_workflow
+
+slug:
+  encoding: 'ascii'
+  clean_accents: true
 
 collections:
   - name: blog
@@ -16,7 +21,7 @@ collections:
     fields:
       - { name: date, label: Date, widget: date, format: YYYY-MM-DD hh:mm:ss }
       - { name: title, label: Title }
-      - { label: Cover, name: image, widget: image }
+      - { name: image, label: Cover, widget: image, required: false }
       - { name: description, label: Description, widget: string }
       - { name: tags, label: Tags, widget: list, default: [''] }
       - { name: body, label: Body, widget: markdown }
