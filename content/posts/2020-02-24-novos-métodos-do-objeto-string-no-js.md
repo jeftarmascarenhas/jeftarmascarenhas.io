@@ -1,6 +1,6 @@
 ---
 date: '2020-02-24 01:25:57'
-title: Métodos úteis do Objeto String no JS
+title: 4 Métodos úteis do Objeto String no JS
 image: /assets/img/string-methods.png
 description: Conheça os novos métodos de String que são úteis para trabalhar no dia a dia.
 tags:
