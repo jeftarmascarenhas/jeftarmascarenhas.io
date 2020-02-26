@@ -7,6 +7,7 @@ tags:
   - QuickTips
   - JS
   - dicasJS
+  - Array
 ---
 ***Estou começando uma serie de dicas rápidas de JavaScript(JS Quick Tips)***
 
