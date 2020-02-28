@@ -41,7 +41,7 @@ Basicamente é método faz o oposto do método starsWith verifica se uma string 
 ### Sintaxe
 
 ```javascript
-str.endsWith(stringSendoBuscada[, tamanho])
+str.endsWith(stringSendoBuscada, [tamanho])
 ```
 Atenção a opção **tamanho(opcional):** se informada substitui o tamanho da string(texto) pesquisada.
 
