@@ -19,7 +19,7 @@ O startsWith é método que valida se uma string inicia com um determinado valor
 
 ### Sintaxe
 
-starts(inicia)Width(Com)
+starts(inicia)With(Com)
 ```javascript
 str.startsWith(searchString, [position])
 ```
