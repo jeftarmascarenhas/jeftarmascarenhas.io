@@ -19,7 +19,7 @@ O startsWith é método que valida se uma string inicia com um determinado valor
 
 ### Sintaxe
 
-starts(inicia)Width(Com)
+starts(inicia)With(Com)
 ```javascript
 str.startsWith(searchString, [position])
 ```
@@ -41,7 +41,7 @@ Basicamente é método faz o oposto do método starsWith verifica se uma string 
 ### Sintaxe
 
 ```javascript
-str.endsWith(stringSendoBuscada[, tamanho])
+str.endsWith(stringSendoBuscada, [tamanho])
 ```
 Atenção a opção **tamanho(opcional):** se informada substitui o tamanho da string(texto) pesquisada.
 
