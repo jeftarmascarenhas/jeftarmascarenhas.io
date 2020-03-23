@@ -13,7 +13,9 @@ const Policies = () => {
     <Layout>
       <SEO title={intl.formatMessage({ id: 'policies.title' })} />
       <Header
-        siteTitle="Jeftar Mascarenhas"
+        siteTitle={`Jeftar Mascarenhas - ${intl.formatMessage({
+          id: 'policies.title',
+        })}`}
         description={intl.formatMessage({ id: 'policies.description' })}
       />
       <Box className="my-4">
@@ -29,7 +31,7 @@ const Policies = () => {
         <BoxBody>
           <h2>
             Política de privacidade para
-            <a href="http://jeftar.com.br"> Jeftar Mascarenhas</a>
+            <a href="http://jeftar.com.br"> jeftar.com.br</a>
           </h2>
           <p>
             Todas as suas informações pessoais recolhidas, serão usadas para o
@@ -38,12 +40,12 @@ const Policies = () => {
           </p>
           <p>
             A garantia da confidencialidade dos dados pessoais dos utilizadores
-            do nosso site é importante para o Jeftar Mascarenhas.
+            do nosso site é importante para o jeftar.com.br.
           </p>
           <p>
             Todas as informações pessoais relativas a membros, assinantes,
-            clientes ou visitantes que usem o Jeftar Mascarenhas serão tratadas
-            em concordância com a Lei da Proteção de Dados Pessoais de 26 de
+            clientes ou visitantes que usem o jeftar.com.br serão tratadas em
+            concordância com a Lei da Proteção de Dados Pessoais de 26 de
             outubro de 1998 (Lei n.º 67/98).
           </p>
           <p>
@@ -52,7 +54,7 @@ const Policies = () => {
             outros.
           </p>
           <p>
-            O uso do Jeftar Mascarenhas pressupõe a aceitação deste
+            O uso do jeftar.com.br pressupõe a aceitação deste
             <a
               href="http://www.politicaprivacidade.com"
               title="acordo de privacidade"
@@ -60,9 +62,9 @@ const Policies = () => {
               {' '}
               Acordo de privacidade
             </a>
-            . A equipa do Jeftar Mascarenhas reserva-se ao direito de alterar
-            este acordo sem aviso prévio. Deste modo, recomendamos que consulte
-            a nossa política de privacidade com regularidade de forma a estar
+            . A equipa do jeftar.com.br reserva-se ao direito de alterar este
+            acordo sem aviso prévio. Deste modo, recomendamos que consulte a
+            nossa política de privacidade com regularidade de forma a estar
             sempre atualizado.
           </p>
           <h2>Os anúncios</h2>
@@ -85,7 +87,14 @@ const Policies = () => {
           </p>
           <p>
             Os utilizadores podem desativar o cookie DART visitando a Política
-            de privacidade da rede de conteúdo e dos anúncios do Google.
+            de privacidade da rede de conteúdo e dos anúncios do
+            <a
+              href="https://policies.google.com/technologies/partner-sites"
+              title="Google"
+            >
+              {' '}
+              Google.
+            </a>
           </p>
           <h2>Os Cookies e Web Beacons</h2>
           <p>
@@ -117,11 +126,11 @@ const Policies = () => {
           </p>
           <h2>Ligações a Sites de terceiros</h2>
           <p>
-            O Jeftar Mascarenhas possui ligações para outros sites, os quais, a
-            nosso ver, podem conter informações / ferramentas úteis para os
-            nossos visitantes. A nossa política de privacidade não é aplicada a
-            sites de terceiros, pelo que, caso visite outro site a partir do
-            nosso deverá ler a politica de privacidade do mesmo.
+            O jeftar.com.br possui ligações para outros sites, os quais, a nosso
+            ver, podem conter informações / ferramentas úteis para os nossos
+            visitantes. A nossa política de privacidade não é aplicada a sites
+            de terceiros, pelo que, caso visite outro site a partir do nosso
+            deverá ler a politica de privacidade do mesmo.
           </p>
           <p>
             Não nos responsabilizamos pela política de privacidade ou conteúdo

@@ -30,6 +30,10 @@
     "title": "Policies and Privacy",
     "description": "Encontre tudo sobre as nossas políticas e privacidade"
   },
+  "terms": {
+    "title": "Termos de Uso",
+    "description": "Encontre tudo sobre nossos termos de uso"
+  },
   "blog": {
     "viewPosts": "Ver posts",
     "lastPosts": "Últimos posts",
