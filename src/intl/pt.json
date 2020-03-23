@@ -26,6 +26,10 @@
     "title": "Em desenvolvimento",
     "description": "Em breve você terá acesso a essa página. Obrigado por visitar."
   },
+  "policies": {
+    "title": "Policies and Privacy",
+    "description": "Encontre tudo sobre as nossas políticas e privacidade"
+  },
   "blog": {
     "viewPosts": "Ver posts",
     "lastPosts": "Últimos posts",
