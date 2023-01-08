@@ -48,7 +48,7 @@ export default function Header() {
             <Text as="span">Mascarenhas</Text>
           </HStack>
         </Link>
-        {!isMobile && (
+        {/* {!isMobile && (
           <IconButton
             aria-label="Open main manu"
             rounded="full"
@@ -59,7 +59,7 @@ export default function Header() {
         )}
         {(isMobile || openNavBar) && (
           <Navbar onClose={handleToggle} ref={ref} />
-        )}
+        )} */}
       </Stack>
       <Divider />
     </VStack>

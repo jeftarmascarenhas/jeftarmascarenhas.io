@@ -3,7 +3,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import {
   AiFillLinkedin,
-  AiFillInstagram,
+  AiFillTwitterCircle,
   AiOutlineGithub
 } from 'react-icons/ai'
 
@@ -14,30 +14,39 @@ export default function Bio() {
       columns={{ base: 1, lg: 2, xl: 2 }}
       alignItems="center"
     >
-      <VStack align="stretch" order={{ base: 1, md: 0 }}>
+      <VStack align="stretch" order={{ base: 1, md: 0 }} spacing="4">
         <Text as="h1" fontSize="7xl" fontWeight="semibold">
           Fala Pessoal
         </Text>
         <Text as="p" fontSize="larger">
           Sou Jeftar Mascarenhas, desde de 2012 venho trabalhando com
-          desenvolvimento web focado em Javascript UI developer na web.
+          desenvolvimento web/mobile com JavaScript e muitas libs e frameworks.
+          :)
         </Text>
         <Text as="p" fontSize="larger" pt="2">
-          Recentemente estou trabalhando com Nodejs e desenvolvimento
-          Blockchain, onde tenho o canal{' '}
-          <Box as={Link} href="#" textDecoration="underline" cursor="pointer">
+          Atualmente estou trabalhando com desenvolvimento Blockchain com
+          web3.js, ethers.js e Solidity. Hoje tenho o canal{' '}
+          <Box
+            as={Link}
+            href="https://www.youtube.com/@nftchoose"
+            textDecoration="underline"
+            cursor="pointer"
+          >
             @NFT Choose
           </Box>{' '}
-          e alguns Cursos
+          e estou gravando meu curso Base Blockchain
         </Text>
         <HStack>
-          <Link href="#">
+          <Link
+            href="https://www.linkedin.com/in/jeftarmascarenhas/"
+            target="_blank"
+          >
             <AiFillLinkedin size={20} />
           </Link>
-          <Link href="#">
-            <AiFillInstagram size={20} />
+          <Link href="https://twitter.com/jeftar" target="_blank">
+            <AiFillTwitterCircle size={20} />
           </Link>
-          <Link href="#">
+          <Link href="https://github.com/jeftarmascarenhas" target="_blank">
             <AiOutlineGithub size={20} />
           </Link>
         </HStack>

@@ -9,25 +9,33 @@ export default function Life() {
         <Text as="h2" fontSize="7xl" fontWeight="semibold">
           Vida
         </Text>
+        <Text fontSize="large">Nasci em Recife onde moro até hoje.</Text>
         <Text fontSize="large">
-          Estou em Recife, minha vida inteira, trabalhando, conhecindo pessoas
-          novas e o mais importante, tenho uma família maravilhosa.
-        </Text>
-        <Text fontSize="large">
-          Moro em Recife a capital de Pernambuco esse estado do Brasil o qual
-          amo demais.
+          Recife é um lugar maravilho, com praias e pessoas maravilhosas.
+          Conheci algumas cidades como São Paulo e Minas Gerais onde tive ótimas
+          experiências.
         </Text>
       </Box>
 
-      <Image
-        src="/assets/images/boa-viagem.jpeg"
-        alt="Boa viagem"
-        width={1994}
-        height={703}
-        style={{
-          borderRadius: '0.5rem'
-        }}
-      />
+      <VStack>
+        <Image
+          src="/assets/images/boa-viagem.jpeg"
+          alt="Boa viagem"
+          width={1994}
+          height={703}
+          style={{
+            borderRadius: '0.5rem'
+          }}
+        />
+        <Text
+          textAlign="center"
+          color="GrayText"
+          fontSize="sm"
+          fontWeight="semibold"
+        >
+          Recife-PE, Brasil. Praia de Boa Viagem
+        </Text>
+      </VStack>
     </VStack>
   )
 }
