@@ -1,6 +1,7 @@
 ---
-date: '2020-01-23 09:17:29'
-title: 'Entendendo Map, Filter e Reduce de forma simples'
+date: 2020-01-23 09:17:29
+title: Entendendo Map, Filter e Reduce de forma simpless
+slug: entendendo-map-filter-reduce-forma-simples
 description: Aprenda de forma simples a utilizar e responder esses métodos
 tags:
   - Javascript
