@@ -71,9 +71,9 @@ export const Navbar = forwardRef(
           Cursos
         </Text>
 
-        <Text as={Link} href="/" onClick={onClose}>
+        {/* <Text as={Link} href="/" onClick={onClose}>
           Blog
-        </Text>
+        </Text> */}
 
         <Text as={Link} href="/videos" onClick={onClose}>
           Vídeos
