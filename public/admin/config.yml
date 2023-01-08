@@ -1,0 +1,37 @@
+backend:
+  name: github
+  repo: jeftarmascarenhas/jeftarmascarenhas.io
+  ## base_url: https://jeftar.com.br/
+  branch: main
+  # auth_endpoint: api/auth/ # Essa rota vai ser muito importante mais para frente
+
+media_folder: public/assets/img
+public_folder: /assets/img
+
+publish_mode: editorial_workflow # Isso permite ter aquele workflow com drafts e tudo
+
+slug:
+  encoding: 'ascii'
+  clean_accents: true
+
+collections:
+  - name: blog
+    label: Blog
+    folder: content/posts
+    create: true
+    slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
+    fields:
+      - { name: date, label: Date, widget: date, format: YYYY-MM-DD hh:mm:ss }
+      - { name: title, label: Title }
+      - { name: slug, label: Slug }
+      - { name: image, label: Cover, widget: image, required: false }
+      - { name: description, label: Description, widget: string }
+      - { name: tags, label: Tags, widget: list, default: [''] }
+      - { name: body, label: Body, widget: markdown }
+  # - name: 'Pages'
+  #   label: 'pages'
+  #   folder: content/pages
+  #   fields:
+  #     - { name: date, label: Date, widget: date, format: YYYY-MM-DD hh:mm:ss }
+  #     - { name: title, label: Title }
+  #     - { name: slug, label: Slug }
