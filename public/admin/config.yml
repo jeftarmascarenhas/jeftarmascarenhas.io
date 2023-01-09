@@ -1,9 +1,9 @@
 backend:
   name: github
   repo: jeftarmascarenhas/jeftarmascarenhas.io
-  ## base_url: https://jeftar.com.br/
+  base_url: https://jeftar.com.br/
   branch: main
-  # auth_endpoint: api/auth/ # Essa rota vai ser muito importante mais para frente
+  auth_endpoint: api/auth/ # Essa rota vai ser muito importante mais para frente
 
 media_folder: public/assets/img
 public_folder: /assets/img
