@@ -2,7 +2,7 @@ backend:
   name: github
   repo: jeftarmascarenhas/jeftarmascarenhas.io
   ## base_url: https://jeftar.com.br/
-  branch: feat/nextjs-netlify
+  branch: main
   # auth_endpoint: api/auth/ # Essa rota vai ser muito importante mais para frente
 
 media_folder: public/assets/img
