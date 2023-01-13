@@ -6,8 +6,10 @@ import {
   SimpleGrid,
   FormControl,
   FormLabel,
-  FormErrorMessage
+  FormErrorMessage,
+  useToast
 } from '@chakra-ui/react'
+import fetch from 'isomorphic-unfetch'
 import { useForm } from 'react-hook-form'
 import { yupResolver } from '@hookform/resolvers/yup'
 import * as YUP from 'yup'
@@ -18,6 +20,9 @@ const formEmailSchema = YUP.object({
 })
 
 export default function NewsletterSubscribe({ email, onSubmit }: Props) {
+  const toast = useToast({
+    position: 'top-right'
+  })
   const {
     handleSubmit,
     register,
@@ -25,8 +30,38 @@ export default function NewsletterSubscribe({ email, onSubmit }: Props) {
   } = useForm<NewsletterForm>({
     resolver: yupResolver(formEmailSchema)
   })
-  const handleOnSubmit = handleSubmit(data => {
-    onSubmit(data)
+  const handleOnSubmit = handleSubmit(async data => {
+    if (onSubmit) {
+      onSubmit(data)
+      return
+    }
+    try {
+      const resp = await fetch('/api/users/subscriber-user', {
+        body: JSON.stringify(data),
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        method: 'POST'
+      })
+
+      if (!resp.ok) {
+        const error = await resp.json()
+        throw error
+      }
+
+      const { message } = await resp.json()
+
+      toast({
+        title: message || 'Email Cadastro com sucesso.'
+      })
+    } catch (error: any) {
+      console.log(error)
+      toast({
+        title:
+          error?.error || error.message || 'Houve um erro, tente novamente.',
+        status: 'error'
+      })
+    }
   })
   return (
     <form onSubmit={handleOnSubmit}>

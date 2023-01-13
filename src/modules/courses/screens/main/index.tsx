@@ -28,7 +28,7 @@ export default function CourseScreen() {
         py="10"
         mt="10"
       >
-        <NewsletterSubscribe onSubmit={data => console.log(data)} />
+        <NewsletterSubscribe />
       </Box>
       <VideosFree />
     </>
