@@ -6,7 +6,7 @@ import { Props } from './types'
 export default function WeekItems({ info }: Props) {
   return (
     <VStack align="stretch" spacing="6" mb="6">
-      <Text fontSize="3xl" fontWeight="bold" as="h2">
+      <Text fontSize="3xl" fontWeight="bold" as="h4">
         {info.title}
       </Text>
       <VStack pl="8" align="stretch" as="ul" spacing="6" listStyleType="none">

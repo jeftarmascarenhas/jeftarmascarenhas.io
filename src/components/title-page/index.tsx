@@ -9,7 +9,11 @@ export type Props = {
 export default function TitlePage({ title, subtitles }: Props) {
   return (
     <Box>
-      <Text as="h1" fontSize="7xl" fontWeight="semibold">
+      <Text
+        as="h1"
+        fontSize={{ base: '5xl', md: '7xl' }}
+        fontWeight={{ base: 'black', md: 'semibold' }}
+      >
         {title}
       </Text>
       {subtitles?.length &&

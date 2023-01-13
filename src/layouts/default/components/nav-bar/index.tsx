@@ -67,25 +67,25 @@ export const Navbar = forwardRef(
             onClick={onClose}
           />
         </HStack>
-        <Text as={Link} href="/courses" onClick={onClose}>
+        {/* <Text as={Link} href="/courses" onClick={onClose}>
           Cursos
-        </Text>
+        </Text> */}
 
         {/* <Text as={Link} href="/" onClick={onClose}>
           Blog
         </Text> */}
 
-        <Text as={Link} href="/videos" onClick={onClose}>
+        {/* <Text as={Link} href="/videos" onClick={onClose}>
           Vídeos
-        </Text>
+        </Text> */}
 
         <Text as={Link} href="/work-journal" onClick={onClose}>
           Diário de Trabalho
         </Text>
 
-        <Text as={Link} href="/" onClick={onClose}>
+        {/* <Text as={Link} href="/" onClick={onClose}>
           Projetos
-        </Text>
+        </Text> */}
       </Stack>
     )
   }

@@ -14,7 +14,7 @@ export default function WorkJournal() {
         mb="20"
         spacing="10"
       >
-        <Box pb="10">
+        <Box pb={{ base: 4, sm: 6, md: 10 }}>
           <TitlePage
             title="Diário de trabalho"
             subtitles={[
