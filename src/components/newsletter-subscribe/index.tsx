@@ -75,7 +75,7 @@ export default function NewsletterSubscribe({ email, onSubmit }: Props) {
       <SimpleGrid columns={{ base: 1, lg: 2 }} alignItems="center" spacing={10}>
         <VStack align="stretch">
           <Box>
-            <FormControl isInvalid={!!errors.email}>
+            <FormControl isInvalid={!!errors.email} isDisabled={loading}>
               <FormLabel
                 as="label"
                 htmlFor="email"
@@ -103,7 +103,17 @@ export default function NewsletterSubscribe({ email, onSubmit }: Props) {
             </FormControl>
           </Box>
         </VStack>
-        <Button type="submit" bg="black" color="white" rounded="full" size="lg">
+        <Button
+          type="submit"
+          bg="black"
+          color="white"
+          rounded="full"
+          size="lg"
+          isLoading={loading}
+          _hover={{
+            bgColor: 'blackAlpha.900'
+          }}
+        >
           Inscrever-se
         </Button>
       </SimpleGrid>
