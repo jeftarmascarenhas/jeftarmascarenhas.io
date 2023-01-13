@@ -14,19 +14,22 @@ import { useForm } from 'react-hook-form'
 import { yupResolver } from '@hookform/resolvers/yup'
 import * as YUP from 'yup'
 import { NewsletterForm, Props } from './types'
+import { useState } from 'react'
 
 const formEmailSchema = YUP.object({
   email: YUP.string().email('email invalid').required('is required')
 })
 
 export default function NewsletterSubscribe({ email, onSubmit }: Props) {
+  const [loading, setLoading] = useState(false)
   const toast = useToast({
     position: 'top-right'
   })
   const {
     handleSubmit,
     register,
-    formState: { errors }
+    formState: { errors },
+    resetField
   } = useForm<NewsletterForm>({
     resolver: yupResolver(formEmailSchema)
   })
@@ -36,6 +39,7 @@ export default function NewsletterSubscribe({ email, onSubmit }: Props) {
       return
     }
     try {
+      setLoading(true)
       const resp = await fetch('/api/users/subscriber-user', {
         body: JSON.stringify(data),
         headers: {
@@ -54,6 +58,7 @@ export default function NewsletterSubscribe({ email, onSubmit }: Props) {
       toast({
         title: message || 'Email Cadastro com sucesso.'
       })
+      resetField('email')
     } catch (error: any) {
       console.log(error)
       toast({
@@ -61,6 +66,8 @@ export default function NewsletterSubscribe({ email, onSubmit }: Props) {
           error?.error || error.message || 'Houve um erro, tente novamente.',
         status: 'error'
       })
+    } finally {
+      setLoading(false)
     }
   })
   return (
