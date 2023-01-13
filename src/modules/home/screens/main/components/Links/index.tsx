@@ -10,29 +10,29 @@ const LINKS_DATA = [
     description: `Aproveite os vídeos que faço com amor para todos o vocês. Meu
 objetivo com os vídeos é ajudar as pessoas aprenderem coisas novas o
 que serve para aprender navas tecnologias.`
-  },
-  {
-    id: 2,
-    title: 'Cursos',
-    link: `/courses`,
-    description: `O objetivo com os cursos para mim é fazer um conteúdo diferente com o foco no mundo real onde insentivo o aluno a válida o conhecimento adquerido ao fazer meus cursos.`
-  },
-  {
-    id: 3,
-    title: 'Mentorias',
-    link: `/mentoring`,
-    description: `O objetivo é entender as necessidades do mentorado(s) e a partir delas que a mentoria é organizada.
-
-    Assim a mentoria pode atender diversos formatos e ter inúmeros procedimentos diferentes tanto para empresas ou indiviual.`
-  },
-  {
-    id: 4,
-    title: 'Experiência',
-    link: `/experiencies`,
-    description: `Tenho experiências nas seguintes áreas, Front-end, Back-end e Blockchain Ethereum.
-    Minha Principal experiência é com Front-end e Javascript, mais adoro Rust e Solidity.
-    `
   }
+  // {
+  //   id: 2,
+  //   title: 'Cursos',
+  //   link: `/courses`,
+  //   description: `O objetivo com os cursos para mim é fazer um conteúdo diferente com o foco no mundo real onde insentivo o aluno a válida o conhecimento adquerido ao fazer meus cursos.`
+  // },
+  // {
+  //   id: 3,
+  //   title: 'Mentorias',
+  //   link: `/mentoring`,
+  //   description: `O objetivo é entender as necessidades do mentorado(s) e a partir delas que a mentoria é organizada.
+
+  //   Assim a mentoria pode atender diversos formatos e ter inúmeros procedimentos diferentes tanto para empresas ou indiviual.`
+  // },
+  // {
+  //   id: 4,
+  //   title: 'Experiência',
+  //   link: `/experiencies`,
+  //   description: `Tenho experiências nas seguintes áreas, Front-end, Back-end e Blockchain Ethereum.
+  //   Minha Principal experiência é com Front-end e Javascript, mais adoro Rust e Solidity.
+  //   `
+  // }
 ]
 
 export default function Links() {
