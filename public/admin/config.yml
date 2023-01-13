@@ -28,10 +28,11 @@ collections:
       - { name: description, label: Description, widget: string }
       - { name: tags, label: Tags, widget: list, default: [''] }
       - { name: body, label: Body, widget: markdown }
-  # - name: 'Pages'
-  #   label: 'pages'
-  #   folder: content/pages
-  #   fields:
-  #     - { name: date, label: Date, widget: date, format: YYYY-MM-DD hh:mm:ss }
-  #     - { name: title, label: Title }
-  #     - { name: slug, label: Slug }
+  - name: 'Pages'
+    label: 'pages'
+    folder: content/pages/work-journal.md
+    fields:
+      - { name: date, label: Date, widget: date, format: YYYY-MM-DD hh:mm:ss }
+      - { name: title, label: Title }
+      - { name: slug, label: Slug }
+      - { name: description, label: Description, widget: string }
