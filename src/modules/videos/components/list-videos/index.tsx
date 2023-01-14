@@ -7,7 +7,6 @@ export default function ListVideo({
 }: {
   channelVideos: Videos
 }) {
-  console.log('channelVideos: ', channelVideos)
   return (
     <SimpleGrid
       as="section"
