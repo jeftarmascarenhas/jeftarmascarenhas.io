@@ -29,8 +29,8 @@ export default function App({ Component, pageProps }: LayoutAppProps) {
   const getLayout = Component.getLayout ?? getLayoutDefault
   return (
     <>
-      <ChakraProvider>{getLayout(<Component {...pageProps} />)}</ChakraProvider>
       <Analytics />
+      <ChakraProvider>{getLayout(<Component {...pageProps} />)}</ChakraProvider>
     </>
   )
 }
