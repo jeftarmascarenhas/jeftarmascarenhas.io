@@ -15,7 +15,11 @@ export default function Bio() {
       alignItems="center"
     >
       <VStack align="stretch" order={{ base: 1, md: 0 }} spacing="4">
-        <Text as="h1" fontSize="7xl" fontWeight="semibold">
+        <Text
+          as="h1"
+          fontSize={{ base: '5xl', md: '7xl' }}
+          fontWeight="semibold"
+        >
           Fala Pessoal
         </Text>
         <Text as="p" fontSize="larger">
