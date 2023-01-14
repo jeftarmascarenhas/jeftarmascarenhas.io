@@ -13,7 +13,7 @@ const LINKS_DATA = [
     id: 2,
     title: 'Cursos',
     link: `/courses`,
-    description: `O objetivo com os cursos é fazer um conteúdo diferenciado com o foco no mundo real, onde incentivo o aluno a validar o conhecimento adquerido com bastante prática.`
+    description: `O objetivo com os cursos é fazer um conteúdo diferenciado com o foco no mundo real e bastante prática.`
   }
   // {
   //   id: 3,
