@@ -27,7 +27,7 @@ export default function Header() {
 
   return (
     <VStack align="stretch" px={{ base: 4, md: 10, lg: 10, xl: 20 }}>
-      <Stack direction={['row']} justify="space-between" align="center" pt="2">
+      <Stack direction={['row']} justify="space-between" align="center" pt="4">
         <Link href="/">
           <HStack
             spacing={0}
