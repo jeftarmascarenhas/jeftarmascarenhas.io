@@ -1,4 +1,4 @@
-import { Box, Text, VStack } from '@chakra-ui/react'
+import { Text, VStack } from '@chakra-ui/react'
 import Link from 'next/link'
 import { Props } from './types'
 
@@ -6,7 +6,8 @@ export default function CardCourse({
   image,
   info,
   modeType = 'light',
-  href,
+  href = '',
+  onClick,
   ...rest
 }: Props) {
   const typeColor = modeType === 'light' ? 'gray.600' : 'gray.100'
@@ -16,6 +17,7 @@ export default function CardCourse({
   return (
     <VStack
       {...rest}
+      onClick={onClick}
       align="stretch"
       boxShadow="2xl"
       rounded="lg"
@@ -23,11 +25,17 @@ export default function CardCourse({
       as="article"
       spacing="4"
       transition="all .8s"
+      cursor="pointer"
       _hover={{
         transform: `scale(1.04)`
       }}
     >
-      <Link href={href}>
+      <Link
+        href={href}
+        onClick={e => {
+          if (onClick) e.preventDefault()
+        }}
+      >
         <VStack align="stretch" spacing="4">
           <VStack align="stretch" spacing="2">
             {info.type && (

@@ -21,7 +21,7 @@ export default function Header() {
   const handleToggle = () => {
     setOpenNavBar(!openNavBar)
   }
-  const ref = useOutsideClick(() => {
+  const ref = useOutsideClick(event => {
     handleToggle()
   })
 

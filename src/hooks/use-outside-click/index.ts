@@ -1,13 +1,11 @@
-import { useEffect, useRef, MutableRefObject } from 'react'
+import { useEffect, useRef } from 'react'
 
-export const useOutsideClick = (callback: () => void) => {
+export const useOutsideClick = (callback: (event: MouseEvent) => void) => {
   const ref = useRef<HTMLElement>(null)
   useEffect(() => {
     const handleClick = (event: MouseEvent) => {
-      console.log(ref.current)
       if (ref.current && !ref.current?.contains(event.target as Node)) {
-        callback()
-        event.stopPropagation()
+        callback(event)
       }
     }
     document.addEventListener('click', handleClick, true)

@@ -67,9 +67,9 @@ export const Navbar = forwardRef(
             onClick={onClose}
           />
         </HStack>
-        {/* <Text as={Link} href="/courses" onClick={onClose}>
+        <Text as={Link} href="/courses" onClick={onClose}>
           Cursos
-        </Text> */}
+        </Text>
 
         {/* <Text as={Link} href="/" onClick={onClose}>
           Blog

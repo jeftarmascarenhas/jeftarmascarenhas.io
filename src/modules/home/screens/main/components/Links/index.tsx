@@ -10,13 +10,13 @@ const LINKS_DATA = [
     description: `Aproveite os vídeos que faço com amor para todos o vocês. Meu
 objetivo com os vídeos é ajudar as pessoas aprenderem coisas novas o
 que serve para aprender navas tecnologias.`
+  },
+  {
+    id: 2,
+    title: 'Cursos',
+    link: `/courses`,
+    description: `O objetivo com os cursos para mim é fazer um conteúdo diferente com o foco no mundo real onde insentivo o aluno a válida o conhecimento adquerido ao fazer meus cursos.`
   }
-  // {
-  //   id: 2,
-  //   title: 'Cursos',
-  //   link: `/courses`,
-  //   description: `O objetivo com os cursos para mim é fazer um conteúdo diferente com o foco no mundo real onde insentivo o aluno a válida o conhecimento adquerido ao fazer meus cursos.`
-  // },
   // {
   //   id: 3,
   //   title: 'Mentorias',

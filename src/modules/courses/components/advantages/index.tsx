@@ -27,7 +27,7 @@ export default function Advantages() {
       />
       <CardInfo
         title="Metodologia que fixa
-          o aprendizado validados com testes"
+          o aprendizado para ser aprovado nas entrevistas"
         icon={
           <Box
             _first={{

@@ -20,7 +20,11 @@ const formEmailSchema = YUP.object({
   email: YUP.string().email('email invalid').required('is required')
 })
 
-export default function NewsletterSubscribe({ email, onSubmit }: Props) {
+export default function NewsletterSubscribe({
+  onSubmit,
+  title = 'Receba posts, vídeos e cursos',
+  buttonName = 'Inscrever-se'
+}: Props) {
   const [loading, setLoading] = useState(false)
   const toast = useToast({
     position: 'top-right'
@@ -72,7 +76,11 @@ export default function NewsletterSubscribe({ email, onSubmit }: Props) {
   })
   return (
     <form onSubmit={handleOnSubmit}>
-      <SimpleGrid columns={{ base: 1, lg: 2 }} alignItems="center" spacing={10}>
+      <SimpleGrid
+        columns={{ base: 1, sm: 1, md: 1, lg: 1 }}
+        alignItems="center"
+        spacing={10}
+      >
         <VStack align="stretch">
           <Box>
             <FormControl isInvalid={!!errors.email} isDisabled={loading}>
@@ -83,7 +91,7 @@ export default function NewsletterSubscribe({ email, onSubmit }: Props) {
                 fontSize="larger"
                 marginBottom="2"
               >
-                Receba posts, vídeos e cursos
+                {title}
               </FormLabel>
               <Input
                 mt="2"
@@ -114,7 +122,7 @@ export default function NewsletterSubscribe({ email, onSubmit }: Props) {
             bgColor: 'blackAlpha.900'
           }}
         >
-          Inscrever-se
+          {buttonName}
         </Button>
       </SimpleGrid>
     </form>

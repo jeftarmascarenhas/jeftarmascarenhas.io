@@ -12,5 +12,5 @@ export type Props = {
   info: MicroInfo
   image?: ReactNode
   modeType?: ColorMode
-  href: string
+  href?: string
 } & StackProps
