@@ -5,15 +5,32 @@ import Head from 'next/head'
 import { Videos as VideosTypes } from '@global-entities/vidoes'
 
 export async function getStaticProps() {
-  const res = await fetch('https://jeftar.com.br/api/youtube/videos', {
-    method: 'GET'
-  })
+  try {
+    const BASE_URL = process.env.BASE_URL || `https://www.jeftar.com.br/api`
+    const res = await fetch(`${BASE_URL}/youtube/videos`, {
+      method: 'GET'
+    })
 
-  const channelVideos = await res.json()
+    if (!res.ok) {
+      return {
+        props: {
+          channelVideos: {}
+        }
+      }
+    }
 
-  return {
-    props: {
-      channelVideos
+    const channelVideos = await res.json()
+
+    return {
+      props: {
+        channelVideos
+      }
+    }
+  } catch (error) {
+    return {
+      props: {
+        channelVideos: {}
+      }
     }
   }
 }

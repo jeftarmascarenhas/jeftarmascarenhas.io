@@ -1,14 +1,8 @@
 import { Image, Text, VStack } from '@chakra-ui/react'
+import { formatDateJS } from '@global-utils/date'
 import Link from 'next/link'
 import React from 'react'
 import { Props } from './types'
-
-const { format } = new Intl.DateTimeFormat('pt-BR', {
-  year: 'numeric',
-  day: 'numeric',
-  month: 'short',
-  timeZone: 'UTC'
-})
 
 export default function VideoItem({ info }: Props) {
   return (
@@ -26,7 +20,7 @@ export default function VideoItem({ info }: Props) {
           objectFit="fill"
         />
         <Text as="time" fontSize="md" fontWeight="bold" color="gray.600">
-          {format(new Date(info.snippet.publishedAt))}
+          {formatDateJS(info.snippet.publishedAt)}
         </Text>
         <Text as="h2" fontSize="lg" fontWeight="bold">
           {info.snippet.title}
