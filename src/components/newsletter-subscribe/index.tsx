@@ -15,6 +15,7 @@ import { yupResolver } from '@hookform/resolvers/yup'
 import * as YUP from 'yup'
 import { NewsletterForm, Props } from './types'
 import { useState } from 'react'
+import { event as gaEvent } from '@global-libs/gtag'
 
 const formEmailSchema = YUP.object({
   email: YUP.string().email('email invalid').required('is required')
@@ -38,6 +39,12 @@ export default function NewsletterSubscribe({
     resolver: yupResolver(formEmailSchema)
   })
   const handleOnSubmit = handleSubmit(async data => {
+    gaEvent({
+      action: 'subscriber_user',
+      args: {
+        email: data.email
+      }
+    })
     if (onSubmit) {
       onSubmit(data)
       return

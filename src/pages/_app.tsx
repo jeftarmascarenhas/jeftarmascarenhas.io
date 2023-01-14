@@ -5,6 +5,7 @@ import { ReactElement, useEffect } from 'react'
 import Default from '@global-layouts/default'
 import { pageView } from '@global-libs/gtag'
 import { useRouter } from 'next/router'
+import Analytics from '@global-components/analytics'
 
 const getLayoutDefault = (page: ReactElement) => {
   return <Default>{page}</Default>
@@ -29,6 +30,7 @@ export default function App({ Component, pageProps }: LayoutAppProps) {
   return (
     <>
       <ChakraProvider>{getLayout(<Component {...pageProps} />)}</ChakraProvider>
+      <Analytics />
     </>
   )
 }
