@@ -18,7 +18,7 @@ export default function TitlePage({ title, subtitles }: Props) {
       </Text>
       {subtitles?.length &&
         subtitles.map(subtitle => (
-          <Text as="p" key={uuid()} fontSize="larger">
+          <Text as="p" key={uuid()} fontSize="larger" mt={{ base: 6, md: 6 }}>
             {subtitle}
           </Text>
         ))}
