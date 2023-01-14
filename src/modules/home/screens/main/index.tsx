@@ -11,9 +11,9 @@ export default function HomeScreen() {
       <Box pt={{ base: 10, md: 10 }} px={{ base: 4, lg: 16 }}>
         <Bio />
       </Box>
-      {/* <Box pt={{ base: 10, md: 20 }} px={{ base: 4, lg: 16 }}>
+      <Box pt={{ base: 10, md: 20 }} px={{ base: 4, lg: 16 }}>
         <Links />
-      </Box> */}
+      </Box>
       <Box pt={{ base: 10, md: 20 }} px={{ base: 4, lg: 16 }}>
         <Life />
       </Box>

@@ -7,15 +7,13 @@ const LINKS_DATA = [
     id: 1,
     title: 'Vídeos',
     link: `/videos`,
-    description: `Aproveite os vídeos que faço com amor para todos o vocês. Meu
-objetivo com os vídeos é ajudar as pessoas aprenderem coisas novas o
-que serve para aprender navas tecnologias.`
+    description: `Aproveite os vídeos que faço com amor para todos o vocês.`
   },
   {
     id: 2,
     title: 'Cursos',
     link: `/courses`,
-    description: `O objetivo com os cursos para mim é fazer um conteúdo diferente com o foco no mundo real onde insentivo o aluno a válida o conhecimento adquerido ao fazer meus cursos.`
+    description: `O objetivo com os cursos é fazer um conteúdo diferenciado com o foco no mundo real, onde incentivo o aluno a validar o conhecimento adquerido com bastante prática.`
   }
   // {
   //   id: 3,
