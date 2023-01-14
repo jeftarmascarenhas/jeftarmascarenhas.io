@@ -56,8 +56,8 @@ export default function Bio() {
           rounded="full"
           position="relative"
           overflow="hidden"
-          width={{ base: 190, md: 380, lg: 480 }}
-          height={{ base: 190, md: 380, lg: 480 }}
+          width={{ base: 190, md: 380, xl: 480 }}
+          height={{ base: 190, md: 380, xl: 480 }}
         >
           <Image
             src="/assets/images/profile.jpeg"
