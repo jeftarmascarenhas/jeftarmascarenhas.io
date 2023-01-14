@@ -6,7 +6,7 @@ export default function Home() {
     <>
       <NextSeo
         title="Home | Jeftar Mascarenhas"
-        description="Plataforma de cursos e treinamentos Blockchain, Front-end, React e muito Javascript. Sempre estudando e compartilhando conteúdo com novas tecnologias"
+        description="Site e Blog, cursos e treinamentos Blockchain, Front-end, React e muito Javascript. Sempre estudando e compartilhando conteúdo com novas tecnologias"
         openGraph={{
           images: [
             {
