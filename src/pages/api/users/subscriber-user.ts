@@ -41,8 +41,7 @@ export default async function handler(
     })
 
     await response.json()
-    console.log('ok', response.ok)
-    console.log('status', response.status)
+
     if (response.status === 400) {
       return res.status(400).json({
         error: `Email cadastrado. Dúvidas envie um email para nftchoose@gmail.com`

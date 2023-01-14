@@ -2,8 +2,9 @@ import { Box, VStack } from '@chakra-ui/react'
 import DefaultContainer from '@global-components/default-container'
 import TitlePage from '@global-components/title-page'
 import ListVideo from '@global-modules/videos/components/list-videos'
+import { Props } from './types'
 
-export default function VideosScreen() {
+export default function VideosScreen({ channelVideos }: Props) {
   return (
     <DefaultContainer>
       <VStack
@@ -18,7 +19,7 @@ export default function VideosScreen() {
             subtitles={['Aprenda grátis com os vídeos no canal NFT Choose.']}
           />
         </Box>
-        <ListVideo />
+        <ListVideo channelVideos={channelVideos} />
       </VStack>
     </DefaultContainer>
   )

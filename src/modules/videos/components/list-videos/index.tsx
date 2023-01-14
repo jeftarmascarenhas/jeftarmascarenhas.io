@@ -1,5 +1,5 @@
 import { SimpleGrid } from '@chakra-ui/react'
-import React from 'react'
+import { Videos } from '@global-entities/vidoes'
 import VideoItem from '../video-item'
 
 const videos = [
@@ -47,15 +47,22 @@ const videos = [
   }
 ]
 
-export default function ListVideo() {
+export default function ListVideo({
+  channelVideos
+}: {
+  channelVideos: Videos
+}) {
+  console.log('ListVideo: ', channelVideos)
   return (
     <SimpleGrid
       as="section"
       columns={{ base: 1, sm: 2, md: 2, lg: 3, xl: 4 }}
       spacing="10"
     >
-      {!!videos.length &&
-        videos.map(info => <VideoItem key={info.id} info={info} />)}
+      {!!channelVideos?.items.length &&
+        channelVideos?.items.map(info => (
+          <VideoItem key={info.id.videoId} info={info} />
+        ))}
     </SimpleGrid>
   )
 }

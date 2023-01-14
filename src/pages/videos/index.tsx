@@ -1,7 +1,28 @@
+import fetch from 'isomorphic-unfetch'
+
 import VideosScreen from '@global-modules/videos/screen/main'
 import Head from 'next/head'
+import { Videos as VideosTypes } from '@global-entities/vidoes'
 
-export default function Videos() {
+export async function getStaticProps() {
+  const res = await fetch('https://jeftar.com.br/api/youtube/videos', {
+    method: 'GET'
+  })
+
+  const channelVideos = await res.json()
+
+  return {
+    props: {
+      channelVideos
+    }
+  }
+}
+
+export default function Videos({
+  channelVideos
+}: {
+  channelVideos: VideosTypes
+}) {
   return (
     <>
       <Head>
@@ -10,7 +31,7 @@ export default function Videos() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <VideosScreen />
+      <VideosScreen channelVideos={channelVideos} />
     </>
   )
 }
