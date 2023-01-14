@@ -9,7 +9,7 @@ export default function Analytics() {
         src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`}
       />
       <Script
-        id=""
+        id="gtag-analytics"
         strategy="afterInteractive"
         dangerouslySetInnerHTML={{
           __html: `
