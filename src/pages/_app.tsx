@@ -3,7 +3,7 @@ import type { LayoutAppProps } from 'next/app'
 import { ChakraProvider } from '@chakra-ui/react'
 import { ReactElement, useEffect } from 'react'
 import Default from '@global-layouts/default'
-import * as gtag from '@global-libs/gtag'
+import { pageView } from '@global-libs/gtag'
 import { useRouter } from 'next/router'
 import Analytics from '@global-components/analytics'
 
@@ -16,7 +16,7 @@ export default function App({ Component, pageProps }: LayoutAppProps) {
 
   useEffect(() => {
     const handleRouteChange = (url: string) => {
-      gtag.pageView(url)
+      pageView(url)
     }
 
     router.events.on('routeChangeComplete', handleRouteChange)
