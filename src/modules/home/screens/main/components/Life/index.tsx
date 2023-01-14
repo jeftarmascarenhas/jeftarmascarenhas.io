@@ -1,20 +1,20 @@
 import { Box, Text, VStack } from '@chakra-ui/react'
+import TitlePage from '@global-components/title-page'
 import Image from 'next/image'
 import React from 'react'
+
+const subtitles = [
+  `Nasci em Recife onde moro até hoje.`,
+  `Recife é um lugar maravilho, com praias e pessoas maravilhosas.
+  Conheci algumas cidades como São Paulo e Minas Gerais onde tive ótimas
+  experiências.`
+]
 
 export default function Life() {
   return (
     <VStack align="stretch" as="section">
       <Box as="article" mb="4">
-        <Text as="h2" fontSize="7xl" fontWeight="semibold">
-          Vida
-        </Text>
-        <Text fontSize="large">Nasci em Recife onde moro até hoje.</Text>
-        <Text fontSize="large">
-          Recife é um lugar maravilho, com praias e pessoas maravilhosas.
-          Conheci algumas cidades como São Paulo e Minas Gerais onde tive ótimas
-          experiências.
-        </Text>
+        <TitlePage title="Vida" subtitles={subtitles} />
       </Box>
 
       <VStack>
