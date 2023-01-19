@@ -49,6 +49,25 @@ const yearsData = [
         ]
       }
     ]
+  },
+  {
+    id: 2,
+    title: `16 de Janeiro, 2023`,
+    subtitle: `Finalizando entregas e iniciando novas`,
+    infos: [
+      {
+        id: 0,
+        title: `Trabalho`,
+        items: [
+          {
+            id: 0,
+            title: `Gravei o últimos vídeos do Minicurso Ethers.js onde mostro como fazer deploy no blockchain da Ethereum e na polygon.
+            Veja os vídeos #10 e o #11`,
+            link: `https://www.youtube.com/watch?v=qKb0I1vpIdY&list=PLPPrIZLm5juZfG49vbjRVti1NwAZ_IrdA&index=16`
+          }
+        ]
+      }
+    ]
   }
 ].sort((a, b) => {
   if (a.id < b.id) return 1
