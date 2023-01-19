@@ -63,6 +63,7 @@ export default function VideosFree() {
         size="lg"
         rounded="full"
         fontSize="2xl"
+        minHeight="24"
         as={Link}
         href="https://www.youtube.com/@nftchoose"
         target="_blank"
