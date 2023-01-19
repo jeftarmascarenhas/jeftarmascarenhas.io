@@ -6,6 +6,7 @@ import Advantages from 'modules/courses/components/advantages'
 import HeaderCourses from 'modules/courses/components/header-courses'
 import ListCourses from 'modules/courses/components/list-courses'
 import VideosFree from 'modules/courses/components/videos-free'
+import MaxContent from '@global-components/max-content'
 
 export default function CourseScreen() {
   return (
@@ -17,8 +18,10 @@ export default function CourseScreen() {
           px={{ base: 4, lg: 16 }}
           spacing="10"
         >
-          <HeaderCourses />
-          <Advantages />
+          <MaxContent>
+            <HeaderCourses />
+            <Advantages />
+          </MaxContent>
           <ListCourses />
         </VStack>
       </DefaultContainer>
