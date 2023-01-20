@@ -5,7 +5,7 @@ import fs from 'fs'
 import { format } from 'date-fns'
 import { pt } from 'date-fns/locale'
 
-const postDirectory = join(process.cwd(), 'posts')
+const postDirectory = join(process.cwd(), 'content/posts')
 
 export function getPostBySlug(slug: string) {
   if (!slug) return null
