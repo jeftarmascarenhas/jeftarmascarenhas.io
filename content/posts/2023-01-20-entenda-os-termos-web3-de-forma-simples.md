@@ -15,7 +15,7 @@ tags:
 E﻿sse post foi inspirado em um post do [LinkedIn](https://www.linkedin.com/posts/conradodesa_os-jarg%C3%B5es-da-web3-e-seus-respectivos-em-activity-7021110015155445760-rouN?utm_source=share&utm_medium=member_desktop)
 
 | **Blockchain**      | Banco de dados público que garante segurança das informações.                        |
-|---------------------|--------------------------------------------------------------------------------------|
+| ------------------- | ------------------------------------------------------------------------------------ |
 | **Node(nós)**       | Servidores que validam blocos de informações.                                        |
 | **Hot Wallet**      | Conta digital na blockchain armazenada na web.                                       |
 | **Cold Wallet**     | Conta digital blockchain armazenada em um dispositivo físico não conectado à web.    |
@@ -39,3 +39,9 @@ E﻿sse post foi inspirado em um post do [LinkedIn](https://www.linkedin.com/pos
 | **Owner/ownership** | Dono de ativos como moedas, contratos, certificados(NFT).                            |
 | **Layer 1**         | Blockchain Principal tipo o Ethereum.                                                |
 | **Layer 2**         | Blockchain derivada de outro, tipo a Polygon que deriva do ethereum.                 |
+
+
+
+É ﻿um post simples para ajudar no entendimento dos termos web3 trazendo um significado simples.
+
+A﻿proveita para da uma olhada no meu canal do [NFT Choose](https://www.youtube.com/@nftchoose)
