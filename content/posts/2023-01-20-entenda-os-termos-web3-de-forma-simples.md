@@ -3,6 +3,7 @@ date: 2023-01-19 10:30:04
 title: Entenda os termos web3 de forma simples
 slug: termos-web3-forma-simples
 image: /assets/img/web3-terms.jpeg
+thumbnail: /assets/img/termos-web3.png
 description: Sabe os termos web3 que estão na moda e você não entende bem? Nesse
   post eu explico de forma fácil
 tags:
