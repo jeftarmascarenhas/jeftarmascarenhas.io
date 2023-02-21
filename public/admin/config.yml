@@ -24,7 +24,7 @@ collections:
       - { name: date, label: Date, widget: date, format: YYYY-MM-DD hh:mm:ss }
       - { name: title, label: Title }
       - { name: slug, label: Slug }
-      - { name: image, label: Cover, widget: image, required: false }
+      - { name: thumbnail, label: Thumbnail, widget: image, required: false }
       - { name: description, label: Description, widget: string }
       - { name: tags, label: Tags, widget: list, default: [''] }
       - { name: body, label: Body, widget: markdown }
