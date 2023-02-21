@@ -11,7 +11,7 @@ export default function Course() {
         openGraph={{
           images: [
             {
-              url: 'https://jeftar.com.br/assets/images/covers/generic-cover.png',
+              url: 'https://jeftar.com.br/assets/images/covers/courses-cover.png',
               width: 1200,
               height: 630,
               alt: 'Jeftar Mascarenhas Site E Cursos Blockchain, Front-end e JavaScript'
