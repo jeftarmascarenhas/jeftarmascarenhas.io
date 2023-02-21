@@ -15,6 +15,8 @@ export function getPostBySlug(slug: string) {
   const fileContents = fs.readFileSync(fullPath, 'utf8')
   const { data, content } = matter(fileContents)
 
+  console.log('DATA: ', data)
+
   const date = format(new Date(data.date), "dd 'de' MMMM 'de' yyyy", {
     locale: pt
   })

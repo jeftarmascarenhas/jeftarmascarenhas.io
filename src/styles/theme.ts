@@ -23,7 +23,8 @@ const theme = extendTheme({
     }
   },
   colors: {
-    primary: '#845EC2'
+    primary: '#845EC2',
+    grayText: '#636363'
   },
   fonts: {
     heading: 'Inter',
