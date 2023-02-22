@@ -33,18 +33,33 @@ export default async function handler(req: NextRequest) {
             display: 'flex',
             flexDirection: 'column',
             flexWrap: 'nowrap',
-            padding: '80px 30px 60px 80px',
-            fontFamily: '"Inter"'
+            fontFamily: '"Inter"',
+            position: 'relative'
           }}
         >
+          <img
+            src="https://www.jeftar.com.br/assets/images/covers/single-cover-auto.png"
+            alt="Jeff Mascarenhas"
+            style={{
+              objectFit: 'cover',
+              position: 'absolute',
+              top: 0,
+              left: 0,
+              right: 0,
+              bottom: 0,
+              width: '100%',
+              display: 'flex'
+            }}
+          />
           <div
             style={{
               fontSize: 70,
               fontStyle: 'normal',
               letterSpacing: '-0.025em',
               fontWeight: 'bolder',
-              color: 'white',
-              marginTop: 10,
+              color: 'black',
+              marginTop: 60,
+              marginLeft: 60,
               lineHeight: 1.4,
               whiteSpace: 'pre-wrap'
             }}
@@ -55,8 +70,9 @@ export default async function handler(req: NextRequest) {
             style={{
               display: 'flex',
               gap: 10,
-              marginTop: 180,
-              color: 'white'
+              marginTop: 120,
+              color: 'black',
+              marginLeft: 60
             }}
           >
             <img
