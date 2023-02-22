@@ -25,7 +25,7 @@ export default function Single({ post }: { post: Post }) {
           description: post.frontmatter.description,
           images: [
             {
-              url: `https://jeftar.com.br/api/og?title${post.frontmatter.title}&slug=${post.slug}`,
+              url: `https://jeftar.com.br/api/og?title=${post.frontmatter.title}&slug=${post.slug}`,
               alt: post.frontmatter.title
             }
           ]
