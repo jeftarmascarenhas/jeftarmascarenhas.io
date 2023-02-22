@@ -11,6 +11,12 @@ export const Article = styled(Box)`
     border-radius: 0.2rem;
     text-decoration: underline;
   }
+  img {
+    width: 100%;
+    display: block;
+    border-radius: 0.6rem;
+    margin-top: 1.5rem;
+  }
   h1,
   h2,
   h3,
@@ -26,6 +32,13 @@ export const Article = styled(Box)`
   }
   h4 {
     font-size: 1.5rem;
+  }
+  ul {
+    margin-left: 1.2rem;
+    margin-top: 0.6rem;
+    li {
+      font-size: 1.1rem;
+    }
   }
   p {
     margin-top: 1.5rem;

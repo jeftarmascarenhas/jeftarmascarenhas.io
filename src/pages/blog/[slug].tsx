@@ -27,7 +27,7 @@ export async function getStaticPaths() {
   }
 }
 
-export async function getStaticProps({ params }: { params: { slug: string } }) {
+export async function getStaticProps({ params }: Params) {
   const post = getPostBySlug(params.slug) as Post
   const parMarkdown = fm(post.content)
   const content = marked(parMarkdown.body)

@@ -5,6 +5,10 @@ import { Article } from './styles'
 import { useEffect } from 'react'
 import { NextSeo } from 'next-seo'
 
+require('prismjs/components/prism-javascript')
+require('prismjs/components/prism-css')
+require('prismjs/components/prism-jsx')
+
 export default function Single({ post }: { post: Post }) {
   useEffect(() => {
     Prism.highlightAll()

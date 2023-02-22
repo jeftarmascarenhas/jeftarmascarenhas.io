@@ -1,19 +1,9 @@
-import {
-  HStack,
-  Text,
-  VStack,
-  Image,
-  Stack,
-  Box,
-  Heading
-} from '@chakra-ui/react'
+import { HStack, Text, VStack, Image, Stack, Heading } from '@chakra-ui/react'
 import { PUBLIC_ROUTES } from '@configs/routes'
 import { Post } from '@global-entities/post'
 import Link from 'next/link'
-import React from 'react'
 
 export default function PostItem({ post }: { post: Post }) {
-  console.log('post.frontmatter?.thumbnail: ', post.frontmatter)
   return (
     <Stack
       direction={{ base: 'column', md: 'row' }}

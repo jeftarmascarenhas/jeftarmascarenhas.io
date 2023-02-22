@@ -1,3 +1,4 @@
+import '../styles/prisma.css'
 import '@fontsource/inter'
 import type { LayoutAppProps } from 'next/app'
 import { ChakraProvider } from '@chakra-ui/react'
