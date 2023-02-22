@@ -9,6 +9,7 @@ import { pageView } from '@global-libs/gtag'
 import { useRouter } from 'next/router'
 import Analytics from '@global-components/analytics'
 import { DefaultSeo } from 'next-seo'
+import NextNProgress from 'nextjs-progressbar'
 import SEO from '../../next-seo.config'
 
 const getLayoutDefault = (page: ReactElement) => {
@@ -50,6 +51,15 @@ export default function App({ Component, pageProps }: LayoutAppProps) {
         />
       </Head>
       <DefaultSeo {...SEO} />
+      <NextNProgress
+        color="#1ED760"
+        startPosition={0.3}
+        stopDelayMs={200}
+        height={5}
+        options={{
+          showSpinner: false
+        }}
+      />
       <ChakraProvider>{getLayout(<Component {...pageProps} />)}</ChakraProvider>
       <Analytics />
     </>

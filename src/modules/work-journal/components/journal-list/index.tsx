@@ -68,6 +68,40 @@ const yearsData = [
         ]
       }
     ]
+  },
+  {
+    id: 3,
+    title: `20 de Fevereiro, 2023`,
+    subtitle: `Finalizando entregas e iniciando novas`,
+    infos: [
+      {
+        id: 0,
+        title: `Trabalho`,
+        items: [
+          {
+            id: 0,
+            title: `Meu site e blog agora estão utilizando Next.js ao invés do Gatsby`,
+            link: ''
+          },
+          {
+            id: 2,
+            title: `Criei páginas de listagem e single para os posts utilizando Netlify CMS`,
+            link: `https://www.netlifycms.org/`
+          }
+        ]
+      },
+      {
+        id: 0,
+        title: `Coisas Interessantes`,
+        items: [
+          {
+            id: 0,
+            title: `Meu blog está utilizando o @vercel/og para gerar imagens dos posts, bem interessante!!!`,
+            link: 'https://vercel.com/docs/concepts/functions/edge-functions/og-image-generation'
+          }
+        ]
+      }
+    ]
   }
 ].sort((a, b) => {
   if (a.id < b.id) return 1

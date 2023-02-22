@@ -4,6 +4,8 @@ import { Post } from '@global-entities/post'
 import { Article } from './styles'
 import { useEffect } from 'react'
 import { NextSeo } from 'next-seo'
+import Link from 'next/link'
+import { PUBLIC_ROUTES } from '@configs/routes'
 
 require('prismjs/components/prism-javascript')
 require('prismjs/components/prism-css')
@@ -49,6 +51,9 @@ export default function Single({ post }: { post: Post }) {
           mb="20"
           spacing="10"
         >
+          <Link href={PUBLIC_ROUTES.BLOG}>
+            <Text as="span">← Voltar</Text>
+          </Link>
           <VStack align="stretch">
             <HStack align="stretch" as="header" spacing="2">
               {post.frontmatter?.tags.map(tag => (
