@@ -23,14 +23,21 @@ export default function Single({ post }: { post: Post }) {
           url: `https://jeftar.com.br/blog/${post.slug}`,
           title: `${post.frontmatter.title} - Jeftar Mascarenhas`,
           description: post.frontmatter.description,
+          type: 'article',
           images: [
             {
               url: `https://jeftar.com.br/api/og?title=${encodeURIComponent(
                 post.frontmatter.title
               )}&slug=${encodeURIComponent(post.slug)}.png`,
-              alt: post.frontmatter.title
+              alt: post.frontmatter.title,
+              width: 1200,
+              height: 630
             }
-          ]
+          ],
+          article: {
+            authors: ['https://twitter.com/jeftar'],
+            tags: post.frontmatter.tags
+          }
         }}
       />
       <Container maxWidth="4xl">

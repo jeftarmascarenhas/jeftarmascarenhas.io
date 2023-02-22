@@ -17,9 +17,7 @@ export default function BlogScreen({ posts }: Props) {
           images: [
             {
               url: 'https://jeftar.com.br/assets/images/covers/generic-cover.png',
-              width: 1200,
-              height: 630,
-              alt: 'Jeftar Mascarenhas Blog sobre tecnologia web2 e web3'
+              alt: 'Jeftar Mascarenhas Blog sobre tecnologia web2, web3, Blockchain e Javascript'
             }
           ]
         }}

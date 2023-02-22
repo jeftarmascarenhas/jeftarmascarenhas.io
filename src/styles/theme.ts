@@ -24,6 +24,7 @@ const theme = extendTheme({
   },
   colors: {
     primary: '#845EC2',
+    secondary: '#1ED760',
     grayText: '#636363'
   },
   fonts: {
