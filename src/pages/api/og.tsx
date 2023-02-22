@@ -21,7 +21,7 @@ export default async function handler(req: NextRequest) {
     const slug = searchParams.get('slug')
     const title = hasTitle
       ? searchParams.get('title')?.slice(0, 100)
-      : 'My default title'
+      : 'Jeff Mascarenhas'
 
     return new ImageResponse(
       (
@@ -53,13 +53,14 @@ export default async function handler(req: NextRequest) {
           />
           <div
             style={{
-              fontSize: 70,
+              fontSize: 62,
               fontStyle: 'normal',
               letterSpacing: '-0.025em',
               fontWeight: 'bolder',
               color: 'black',
               marginTop: 60,
               marginLeft: 60,
+              marginRight: 60,
               lineHeight: 1.4,
               whiteSpace: 'pre-wrap'
             }}
