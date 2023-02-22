@@ -29,14 +29,18 @@ export default function PostItem({ post }: { post: Post }) {
         minWidth={{ base: 'auto', md: 295 }}
         height={{ base: 'auto', md: 166 }}
         borderRadius="md"
-        border="1px solid"
         objectFit="cover"
         fallbackSrc="https://via.placeholder.com/150/1ED760/000000?text=Jeff%20Mascarenhas"
       />
       <VStack spacing="2" align="stretch">
         <HStack>
           {post?.frontmatter.tags.map(tag => (
-            <Text key={tag} color="grayText" fontSize="sm" fontWeight="medium">
+            <Text
+              key={tag}
+              color="grayText"
+              fontSize="sm"
+              fontWeight="semibold"
+            >
               {tag}
             </Text>
           ))}

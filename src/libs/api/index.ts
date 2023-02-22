@@ -15,8 +15,6 @@ export function getPostBySlug(slug: string) {
   const fileContents = fs.readFileSync(fullPath, 'utf8')
   const { data, content } = matter(fileContents)
 
-  console.log('DATA: ', data)
-
   const date = format(new Date(data.date), "dd 'de' MMMM 'de' yyyy", {
     locale: pt
   })
@@ -34,7 +32,7 @@ export function getAllPosts() {
   const posts = slugs
     .map(slug => getPostBySlug(slug))
     .sort((postA: any, postB: any) =>
-      new Date(postA.data) > new Date(postB.data) ? -1 : 1
+      new Date(postA.data) > new Date(postB.data) ? 1 : -1
     )
 
   return posts
