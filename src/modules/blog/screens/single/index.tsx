@@ -17,8 +17,8 @@ export default function Single({ post }: { post: Post }) {
   return (
     <>
       <NextSeo
-        title="Blog | Jeftar Mascarenhas"
-        description="Nesse blog escreve tudo que estou fazendo e interessado como blockchain, web3, desenvolvimento web e mobile."
+        title={`${post.frontmatter.title} | Jeftar Mascarenhas`}
+        description={post.frontmatter.description}
         openGraph={{
           url: `https://jeftar.com.br/blog/${post.slug}`,
           title: `${post.frontmatter.title} - Jeftar Mascarenhas`,
