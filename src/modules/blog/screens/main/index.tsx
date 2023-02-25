@@ -1,9 +1,8 @@
 import MaxContent from '@global-components/max-content'
 import DefaultContainer from '@global-components/default-container'
-import { getAllPosts } from '@global-libs/api'
 import { NextSeo } from 'next-seo'
 import { Props } from './types'
-import { Box, Container, HStack, Text, VStack } from '@chakra-ui/react'
+import { Box, HStack, Text, VStack } from '@chakra-ui/react'
 import PostItem from './components/post/post'
 import TitlePage from '@global-components/title-page'
 
