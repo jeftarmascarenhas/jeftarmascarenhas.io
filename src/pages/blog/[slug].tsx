@@ -37,6 +37,7 @@ export async function getStaticProps({ params }: Params) {
         ...post,
         content
       }
-    }
+    },
+    revalidate: 10
   }
 }
