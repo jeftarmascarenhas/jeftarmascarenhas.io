@@ -1,5 +1,6 @@
-import { Box, Text, VStack } from '@chakra-ui/react'
+import { Box, Divider, Text, VStack } from '@chakra-ui/react'
 import DefaultContainer from '@global-components/default-container'
+import NewsletterSubscribe from '@global-components/newsletter-subscribe'
 import TitlePage from '@global-components/title-page'
 import JournalList from '@global-modules/work-journal/components/journal-list'
 import { NextSeo } from 'next-seo'
@@ -61,6 +62,13 @@ export default function WorkJournal({ yearsData }: Props) {
             </Box>
             <JournalList yearsData={yearsData} />
           </VStack>
+        </Box>
+        <Box py={{ base: 10, md: 20 }} px={{ base: 4, lg: 16 }}>
+          <Divider borderColor="gray.300" />
+          <Box py={6}>
+            <NewsletterSubscribe />
+          </Box>
+          <Divider borderColor="gray.300" />
         </Box>
       </DefaultContainer>
     </>

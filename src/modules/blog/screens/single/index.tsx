@@ -1,4 +1,12 @@
-import { VStack, Heading, Text, HStack, Container } from '@chakra-ui/react'
+import {
+  VStack,
+  Heading,
+  Text,
+  HStack,
+  Container,
+  Box,
+  Divider
+} from '@chakra-ui/react'
 import Prism from 'prismjs'
 import { Post } from '@global-entities/post'
 import { Article } from './styles'
@@ -6,6 +14,7 @@ import { useEffect } from 'react'
 import { NextSeo } from 'next-seo'
 import Link from 'next/link'
 import { PUBLIC_ROUTES } from '@configs/routes'
+import NewsletterSubscribe from '@global-components/newsletter-subscribe'
 
 require('prismjs/components/prism-javascript')
 require('prismjs/components/prism-css')
@@ -80,6 +89,13 @@ export default function Single({ post }: { post: Post }) {
           <Article dangerouslySetInnerHTML={{ __html: post.content }} />
         </VStack>
       </Container>
+      <Box py={{ base: 10, md: 20 }} px={{ base: 4, lg: 16 }}>
+        <Divider borderColor="gray.300" />
+        <Box py={6}>
+          <NewsletterSubscribe />
+        </Box>
+        <Divider borderColor="gray.300" />
+      </Box>
     </>
   )
 }
