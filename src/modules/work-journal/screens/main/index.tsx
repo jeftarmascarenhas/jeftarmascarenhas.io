@@ -4,8 +4,9 @@ import TitlePage from '@global-components/title-page'
 import JournalList from '@global-modules/work-journal/components/journal-list'
 import { NextSeo } from 'next-seo'
 import Link from 'next/link'
+import { Props } from './types'
 
-export default function WorkJournal() {
+export default function WorkJournal({ yearsData }: Props) {
   return (
     <>
       <NextSeo
@@ -15,7 +16,9 @@ export default function WorkJournal() {
           images: [
             {
               url: 'https://jeftar.com.br/assets/images/covers/generic-cover.png',
-              alt: 'Jeftar Mascarenhas Blog sobre tecnologia web2, web3, Blockchain e Javascript'
+              width: 1200,
+              height: 630,
+              alt: 'Jeftar Mascarenhas Site, Diário de trabalho'
             }
           ]
         }}
@@ -56,7 +59,7 @@ export default function WorkJournal() {
                 </Link>
               </Text>
             </Box>
-            <JournalList />
+            <JournalList yearsData={yearsData} />
           </VStack>
         </Box>
       </DefaultContainer>
