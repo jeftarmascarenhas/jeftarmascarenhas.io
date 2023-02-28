@@ -35,10 +35,12 @@ export default function WeekItems({ info }: Props) {
                 }}
               >
                 {item.title}
-                <Link href={item.link} target="_blank">
-                  {' '}
-                  Link
-                </Link>
+                {item?.link && (
+                  <Link href={item.link} target="_blank">
+                    {' '}
+                    Link
+                  </Link>
+                )}
               </Box>
             </HStack>
           ))}

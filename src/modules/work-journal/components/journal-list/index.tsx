@@ -71,8 +71,8 @@ const yearsData = [
   },
   {
     id: 3,
-    title: `20 de Fevereiro, 2023`,
-    subtitle: `Finalizando entregas e iniciando novas`,
+    title: `27 de Fevereiro, 2023`,
+    subtitle: `Semana de entregas para começa março focado em meu novo desafio.`,
     infos: [
       {
         id: 0,
@@ -80,13 +80,18 @@ const yearsData = [
         items: [
           {
             id: 0,
-            title: `Meu site e blog agora estão utilizando Next.js ao invés do Gatsby`,
+            title: `Entrega da versão beta do app da GW Sistemas`,
             link: ''
           },
           {
             id: 2,
-            title: `Criei páginas de listagem e single para os posts utilizando Netlify CMS`,
-            link: `https://www.netlifycms.org/`
+            title: `Projeto feito com Strapi e deploy no Heroku`,
+            link: ``
+          },
+          {
+            id: 2,
+            title: `Criei a lista de assuntos que farei vídeos para o canal NFTChoose`,
+            link: `https://www.youtube.com/@nftchoose`
           }
         ]
       },
@@ -96,8 +101,13 @@ const yearsData = [
         items: [
           {
             id: 0,
-            title: `Meu blog está utilizando o @vercel/og para gerar imagens dos posts, bem interessante!!!`,
-            link: 'https://vercel.com/docs/concepts/functions/edge-functions/og-image-generation'
+            title: `Li um artigo interessante sobre React Query vs SWR. Vale apena conferir, tá em Inglês. Pretendo fazer um vídeo sobre e um artigo.`,
+            link: 'https://statusneo.com/react-query-vs-swr-which-data-fetching-solution-is-right-for-you/#:~:text=React%20Query%20vs%20SWR%3APerformance&text=With%20React%20Query%2C%20components%20will,need%20to%20use%20that%20data.'
+          },
+          {
+            id: 0,
+            title: `Estou estudando sobre Hook compartilhável no React, uma abordagem muito interessante quando você não quer compartilhar globalmente as informações, mais assim, com vários componentes de uma mesma página. Pode ser utilizado de forma global evitando um context api.`,
+            link: 'https://statusneo.com/react-query-vs-swr-which-data-fetching-solution-is-right-for-you/#:~:text=React%20Query%20vs%20SWR%3APerformance&text=With%20React%20Query%2C%20components%20will,need%20to%20use%20that%20data.'
           }
         ]
       }
