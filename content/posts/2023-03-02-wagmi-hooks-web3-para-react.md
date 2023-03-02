@@ -17,7 +17,7 @@ O [Wagmi](https://wagmi.sh/) facilita "Conectar carteira", exibir ENS(Ethereum n
 
 Vamos usar o [Wagmi](https://wagmi.sh/) React, o [Wagmi](https://wagmi.sh/) tem o módulo core e também uma [CLI](https://wagmi.sh/examples/connect-wallet).
 
-S﻿e quiser ver um exemplo você vá até final deste artigo
+***S﻿e quiser ver um exemplo você vá até [final deste artigo](#wagmi-exemplo)***
 
 Crie um projeto React com o [Vite](https://vitejs.dev/), [Next.js](https://nextjs.org/) ou da forma que você mais gosta de trabalhar com React, após o projeto criado vamos a instalação da lib Wagmi.
 
@@ -154,11 +154,9 @@ export default function Profile() {
 }
 ```
 
-### E﻿xemplo
+<h3 id="wagmi-exemplo">Exemplo</h3>
 
 O exemplo usa um provide público, o que pode não funcionar, use um provider como Alchemy.
-
-
 
 <iframe src="https://codesandbox.io/embed/react-wagmi-hook-c9x9jg?fontsize=14&hidenavigation=1&theme=dark"
      style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;"
