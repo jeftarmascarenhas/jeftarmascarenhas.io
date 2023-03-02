@@ -38,13 +38,14 @@ Conector são as múltiplas wallets que o usuário pode se conectar ao seu dApp.
 ```javascript
 import { WagmiConfig, createClient, configureChains, mainnet } from "wagmi";
 
-import { alchemyProvider } from "wagmi/providers/alchemy";
-import { publicProvider } from "wagmi/providers/public";
+import { alchemyProvider } from "wagmi/dist/providers/alchemy";
+import { publicProvider } from "wagmi/dist/providers/public";
 
-import { CoinbaseWalletConnector } from "wagmi/connectors/coinbaseWallet";
-import { InjectedConnector } from "wagmi/connectors/injected";
-import { MetaMaskConnector } from "wagmi/connectors/metaMask";
-import { WalletConnectConnector } from "wagmi/connectors/walletConnect";
+import { CoinbaseWalletConnector } from "wagmi/dist/connectors/coinbaseWallet";
+import { InjectedConnector } from "wagmi/dist/connectors/injected";
+import { MetaMaskConnector } from "wagmi/dist/connectors/metaMask";
+import { WalletConnectConnector } from "wagmi/dist/connectors/walletConnect";
+import Profile from "./Profile";
 
 // Configuração do chains e provider com Alchemy provider.
 // os providers web3 mais famosos são Alchemy (alchemy.com) e Infura (infura.io)
@@ -61,29 +62,29 @@ const client = createClient({
     new CoinbaseWalletConnector({
       chains,
       options: {
-        appName: "wagmi",
-      },
+        appName: "wagmi"
+      }
     }),
     new WalletConnectConnector({
       chains,
       options: {
-        qrcode: true,
-      },
+        qrcode: true
+      }
     }),
     new InjectedConnector({
       chains,
       options: {
         name: "Injected",
-        shimDisconnect: true,
-      },
-    }),
+        shimDisconnect: true
+      }
+    })
   ],
   provider,
-  webSocketProvider,
+  webSocketProvider
 });
 
 // Vamos usar o client para o provider do Wagmi
-function App() {
+export default function App() {
   return (
     <WagmiConfig client={client}>
       <Profile />
@@ -103,15 +104,20 @@ import {
   useConnect,
   useDisconnect,
   useEnsAvatar,
-  useEnsName,
+  useEnsName
 } from "wagmi";
 
-export function Profile() {
+export default function Profile() {
   const { address, connector, isConnected } = useAccount();
   const { data: ensAvatar } = useEnsAvatar({ address });
   const { data: ensName } = useEnsName({ address });
-  const { connect, connectors, error, isLoading, pendingConnector } =
-    useConnect();
+  const {
+    connect,
+    connectors,
+    error,
+    isLoading,
+    pendingConnector
+  } = useConnect();
   const { disconnect } = useDisconnect();
 
   if (isConnected) {
