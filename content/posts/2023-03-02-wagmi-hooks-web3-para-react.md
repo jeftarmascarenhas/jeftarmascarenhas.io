@@ -16,7 +16,7 @@ Fala Pessoal, bora falar sobre uma lib web3 para React que facilita muito nossa 
 
 O [Wagmi](https://wagmi.sh/) facilita "Conectar carteira", exibir ENS(Ethereum names server) e informações de saldo, assinar mensagens, interagir com contratos e muito mais — tudo com armazenamento em cache, desduplicação de solicitações e persistência.
 
-Vamos usar o [Wagmi](https://wagmi.sh/) React, o [Wagmi](https://wagmi.sh/) tem o módulo core e também uma [CLI](https://wagmi.sh/examples/connect-wallet).
+Vamos usar o [Wagmi](https://wagmi.sh/) React, o [Wagmi](https://wagmi.sh/) tem o módulo core e também e uma [CLI](https://wagmi.sh/examples/connect-wallet).
 
 ***S﻿e quiser ver um exemplo você vá até [final deste artigo](#wagmi-exemplo)***
 
@@ -30,9 +30,9 @@ Instale as dependências abaixo no seu projeto React
 yarn add wagmi ethers@^5
 ```
 
-Primeiro vamos criar a configuração para usarmos no Wagmi provider. Na configuração do provider resumidamente temos os provedores web3 e os conectores.
+Primeiro vamos criar uma configuração para usarmos no Wagmi provider. Na configuração do provider resumidamente temos os provedores web3 e os conectores.
 
-Provedor é uma forma de se conectar a um Blockchain, parecido como você usa o axios ou fetch do javascript para conectar-se com um servidor/API. Como exemplo de provedor temos Alchemy, Infura ou mesmo uma wallet pode ser um provedor.
+Provedor é uma forma de se conectar a um Blockchain, parecido como você usa o axios ou fetch do javascript para conectar-se com um servidor/API. Como exemplo de provedor temos [Alchemy](https://alchemyapi.io/), [Infura](https://www.infura.io/) ou mesmo uma wallet pode ser um provedor.
 
 Conector são as múltiplas wallets que o usuário pode se conectar ao seu dApp.
 
