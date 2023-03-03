@@ -2,6 +2,7 @@
 date: 2023-03-02 07:11:57
 title: Wagmi Hooks Web3 para React
 slug: wagmi-hooks-web3-react
+thumbnail: /assets/img/wagmi-thumbnail.png
 description: Hooks web3 para React que facilita muito nossa vida.
 tags:
   - Web3
