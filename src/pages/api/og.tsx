@@ -18,7 +18,8 @@ export default async function handler(req: NextRequest) {
     const { searchParams } = new URL(req.url)
 
     const hasTitle = searchParams.has('title')
-    const slug = searchParams.get('slug')
+    const slugRaw = searchParams.get('slug') || ''
+    const slug = slugRaw.substr(0, slugRaw.lastIndexOf('.'))
     const title = hasTitle
       ? searchParams.get('title')?.slice(0, 100)
       : 'Jeff Mascarenhas'
