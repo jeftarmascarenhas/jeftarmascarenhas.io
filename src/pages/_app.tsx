@@ -44,6 +44,10 @@ export default function App({ Component, pageProps }: LayoutAppProps) {
           rel="apple-touch-icon"
           href="/assets/img/jeftarmascarenhas-icon.png"
         />
+        <meta
+          name="google-site-verification"
+          content="7JJI_YUuwwGlVo_A_rYptLlkEkH1etJu4E1YFKB2Bvc"
+        />
         <meta name="theme-color" content="#1ED760" />
         <meta
           name="description"
