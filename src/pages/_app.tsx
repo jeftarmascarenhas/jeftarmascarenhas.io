@@ -48,7 +48,7 @@ export default function App({ Component, pageProps }: LayoutAppProps) {
           name="google-site-verification"
           content="7JJI_YUuwwGlVo_A_rYptLlkEkH1etJu4E1YFKB2Bvc"
         />
-        <meta name="theme-color" content="#1ED760" />
+        <meta name="theme-color" content="#319795" />
         <meta
           name="description"
           content="Site e Blog de dev para dev onde falo sobre Blockchain, Solidity, Ethereum, Smart Contracts, Javascript, React, Node.js, Next.js, além de fazer vídeos para meu canal do Youtube."
