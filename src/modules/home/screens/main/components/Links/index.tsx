@@ -7,13 +7,19 @@ const LINKS_DATA = [
     id: 1,
     title: 'Vídeos',
     link: `/videos`,
-    description: `Aproveite os vídeos que faço com amor para todos o vocês.`
+    description: `Aproveite os vídeos que faço com amor para todos o vocês. Tudo sobre blockchain, Javascript e tecnologias`
   },
   {
     id: 2,
     title: 'Cursos',
     link: `/courses`,
-    description: `O objetivo com os cursos é fazer um conteúdo diferenciado com o foco no mundo real e bastante prática.`
+    description: `O objetivo com os cursos é fazer um conteúdo diferenciado com o foco no mundo real e bastante prática. Faça sua inscrição.`
+  },
+  {
+    id: 3,
+    title: 'Blog',
+    link: `/blog`,
+    description: `Nesse blog escreve tudo que estou fazendo e interessado como blockchain, web3, desenvolvimento web e mobile.`
   }
   // {
   //   id: 3,
