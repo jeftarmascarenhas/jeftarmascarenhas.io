@@ -6,14 +6,14 @@ import {
   VStack
 } from '@chakra-ui/react'
 import CardCourse from '@global-components/card-course'
-import UserSubscriptionModal from '@global-components/modals/user-subscription-modal'
+// import UserSubscriptionModal from '@global-components/modals/user-subscription-modal'
 import Image from 'next/image'
 
 export default function ListCourses() {
-  const { isOpen, onOpen, onClose } = useDisclosure()
-  const handleClickCourse = () => {
-    onOpen()
-  }
+  // const { isOpen, onOpen, onClose } = useDisclosure()
+  // const handleClickCourse = () => {
+  //   onOpen()
+  // }
   return (
     <>
       <VStack py="8" align="stretch" as="section">
@@ -31,7 +31,8 @@ export default function ListCourses() {
         </HStack>
         <SimpleGrid columns={{ base: 1, md: 2, lg: 2, xl: 2 }} spacing="10">
           <CardCourse
-            onClick={handleClickCourse}
+            // onClick={handleClickCourse}
+            href="/courses/base-blockchain-ethereum"
             info={{
               type: `Iniciante`,
               title: `Base Blockchain Ethereum`,
@@ -50,7 +51,8 @@ export default function ListCourses() {
             }
           />
           <CardCourse
-            onClick={handleClickCourse}
+            // onClick={handleClickCourse}
+            href="/courses/curso-pensando-do-jeito"
             bgColor="blackAlpha.900"
             modeType="dark"
             info={{
@@ -73,7 +75,7 @@ export default function ListCourses() {
           />
         </SimpleGrid>
       </VStack>
-      <UserSubscriptionModal isOpen={isOpen} onClose={onClose} />
+      {/* <UserSubscriptionModal isOpen={isOpen} onClose={onClose} /> */}
     </>
   )
 }

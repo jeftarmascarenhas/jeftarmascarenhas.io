@@ -40,6 +40,7 @@ collections:
       - { name: slug, label: Slug }
       - { name: thumbnail, label: Thumbnail, widget: image, required: true }
       - { name: banner, label: Banner, widget: image, required: true }
+      - { name: videoUri, label: Video URI, widget: string, required: false }
       - { name: description, label: Description, widget: string }
       - { name: tags, label: Tags, widget: list, default: [''] }
       - name: button
