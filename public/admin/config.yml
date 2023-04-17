@@ -28,11 +28,43 @@ collections:
       - { name: description, label: Description, widget: string }
       - { name: tags, label: Tags, widget: list, default: [''] }
       - { name: body, label: Body, widget: markdown }
-  - name: 'Pages'
-    label: 'pages'
-    folder: content/pages/work-journal.md
+  - name: courses
+    label: Courses
+    folder: content/courses
+    create: true
+    slug: '{{slug}}'
     fields:
       - { name: date, label: Date, widget: date, format: YYYY-MM-DD hh:mm:ss }
+      - { name: enable, label: Enable, widget: boolean, required: false }
       - { name: title, label: Title }
       - { name: slug, label: Slug }
+      - { name: thumbnail, label: Thumbnail, widget: image, required: true }
+      - { name: banner, label: Banner, widget: image, required: true }
       - { name: description, label: Description, widget: string }
+      - { name: tags, label: Tags, widget: list, default: [''] }
+      - name: button
+        label: Button
+        widget: object
+        fields:
+          - { name: title, label: Title, widget: string }
+          - { name: link, label: Link, widget: string }
+      - { name: body, label: Body, widget: markdown }
+      - name: learn
+        label: Learn
+        widget: list
+        fields:
+          - { name: title, label: Title, widget: text, required: true }
+          - { name: description, label: Description, widget: text }
+      - name: projects
+        label: Projects
+        widget: list
+        fields:
+          - { name: title, label: Title, widget: text, required: true }
+          - { name: description, label: Description, widget: text }
+      - { name: moduleTitle, label: Module Title, widget: string }
+      - name: modules
+        label: Modules
+        widget: list
+        fields:
+          - { name: title, label: Title, widget: text, required: true }
+          - { name: description, label: Description, widget: text }
