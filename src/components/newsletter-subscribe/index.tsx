@@ -24,6 +24,7 @@ const formEmailSchema = YUP.object({
 export default function NewsletterSubscribe({
   onSubmit,
   title = 'Receba posts, vídeos e cursos',
+  showTitle = true,
   buttonName = 'Inscrever-se'
 }: Props) {
   const [loading, setLoading] = useState(false)
@@ -91,15 +92,17 @@ export default function NewsletterSubscribe({
         <VStack align="stretch">
           <Box>
             <FormControl isInvalid={!!errors.email} isDisabled={loading}>
-              <FormLabel
-                as="label"
-                htmlFor="email"
-                fontWeight="medium"
-                fontSize="larger"
-                marginBottom="2"
-              >
-                {title}
-              </FormLabel>
+              {showTitle && (
+                <FormLabel
+                  as="label"
+                  htmlFor="email"
+                  fontWeight="medium"
+                  fontSize="larger"
+                  marginBottom="2"
+                >
+                  {title}
+                </FormLabel>
+              )}
               <Input
                 mt="2"
                 placeholder="Digite seu email"

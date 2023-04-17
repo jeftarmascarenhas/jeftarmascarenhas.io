@@ -23,10 +23,14 @@ const theme = extendTheme({
     }
   },
   colors: {
-    primary: '#845EC2',
-    secondary: '#1ED760',
+    primary: {
+      900: '#845EC2'
+    },
+    secondary: {
+      900: '#1ED760'
+    },
     grayText: '#636363'
-  },
+  } as unknown as Theme['colors'],
   fonts: {
     heading: 'Inter',
     body: 'Inter'
