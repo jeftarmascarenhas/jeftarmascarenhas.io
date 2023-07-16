@@ -42,3 +42,6 @@ node_modules/
 /npm-debug.log
 .DS_Store
 out/
+
+# local folders
+content-draft/
