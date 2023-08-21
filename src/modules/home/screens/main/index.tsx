@@ -2,7 +2,7 @@ import { Box, Divider } from '@chakra-ui/react'
 import DefaultContainer from '@global-components/default-container'
 import MaxContent from '@global-components/max-content'
 import NewsletterSubscribe from '@global-components/newsletter-subscribe'
-import Bio from './components/Bio'
+import Bio from '@global-components/Bio'
 import Life from './components/Life'
 import Links from './components/Links'
 

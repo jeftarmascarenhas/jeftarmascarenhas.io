@@ -12,7 +12,7 @@ const subtitles = [
 
 export default function HeaderCourses() {
   return (
-    <VStack align="stretch" pr={{ base: '0', xl: '60' }} pb="10" maxWidth={684}>
+    <VStack align="stretch" pr={{ base: '0', xl: '60' }} pb="10" maxWidth={984}>
       <TitlePage title="Cursos" subtitles={subtitles} />
     </VStack>
   )

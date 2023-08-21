@@ -3,6 +3,7 @@ import DefaultContainer from '@global-components/default-container'
 import MaxContent from '@global-components/max-content'
 import Advantages from '@global-modules/courses/components/advantages'
 import CourseHeader from './components/course-header'
+import Bio from '@global-components/Bio'
 
 export default function index() {
   return (
@@ -18,6 +19,9 @@ export default function index() {
             <CourseHeader />
             <Box mt="16">
               <Advantages />
+            </Box>
+            <Box mt="16">
+              <Bio />
             </Box>
           </MaxContent>
         </VStack>

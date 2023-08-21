@@ -26,49 +26,42 @@ export default function ListCourses() {
             Cursos.
           </Text>
           <Text as="h3" fontWeight="semibold" color="gray.500">
-            Depoimentos e novidades
+            Aprendizado e novidades
           </Text>
         </HStack>
         <SimpleGrid columns={{ base: 1, md: 2, lg: 2, xl: 2 }} spacing="10">
           <CardCourse
-            // onClick={handleClickCourse}
-            href="/courses/base-blockchain-ethereum"
+            href="/courses/curso-supply-chain-web3-polygon-blockchain"
             info={{
-              type: `Iniciante`,
-              title: `Base Blockchain Ethereum`,
-              // price: `R$ 200,00`,
-              resume: `Seja um profissional completo com conhecimento em Solidity e desenvolvendo projetos completos.`
+              type: `Lançamento - Outubro 2023`,
+              title: `Curso Supply Chain Web3 com Polygon Blockchain`,
+              resume: `Aprenda a desenvolver um sistema de supply chain baseado em smart contracts com técnicas avançadas de Solidity, API em Nodejs e um front-end com Next.js para gerenciar toda a cadeia de suprimentos.`
             }}
             image={
               <VStack align="center" py="4">
                 <Image
-                  src="/assets/images/courses/solidity.png"
+                  src="/assets/images/courses/supply-chain1.png"
                   width={125}
                   height={196}
-                  alt="Base Blockchain Ethereum"
+                  alt="Curso Supply Chain Web3 com Polygon Blockchain"
                 />
               </VStack>
             }
           />
           <CardCourse
-            // onClick={handleClickCourse}
-            href="/courses/curso-pensando-do-jeito"
-            bgColor="blackAlpha.900"
-            modeType="dark"
+            href="/courses/curso-blockchain-ethersjs"
             info={{
-              type: `Intermediário`,
-              title: `Pensando do jeito
-              React`,
-              // price: `R$ 80,00`,
-              resume: `Aprenda a componentizar de forma simples e profissional.`
+              type: `Lançamento - Novembro 2023`,
+              title: `Curso Blockchain Ethers.js`,
+              resume: `Guia completo do zero ao avançado. Aprenda a utilizar Ethers.js para interagir com blockchain, smart contract, criar Dapps e APIs.`
             }}
             image={
               <VStack align="center" py="4">
                 <Image
-                  src="/assets/images/courses/react.png"
-                  width={245}
-                  height={213}
-                  alt="Base Blockchain Ethereum"
+                  src="/assets/images/courses/ethersjs.png"
+                  width={125}
+                  height={196}
+                  alt="Curso Blockchain Ethers.jS"
                 />
               </VStack>
             }

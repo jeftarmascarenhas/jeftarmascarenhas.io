@@ -23,13 +23,12 @@ export default function Bio() {
           Fala Pessoal
         </Text>
         <Text as="p" fontSize="larger">
-          Sou Jeftar Mascarenhas, desde de 2012 venho trabalhando com
+          Sou Jeftar Mascarenhas, desde de 2011 venho trabalhando com
           desenvolvimento web/mobile com JavaScript e muitas libs e frameworks.
           :)
         </Text>
         <Text as="p" fontSize="larger" pt="2">
-          Atualmente estou trabalhando com desenvolvimento Blockchain com
-          web3.js, ethers.js e Solidity. Hoje tenho o canal{' '}
+          Atualmente trabalho como Blockchain Engineer e tenho o canal{' '}
           <Box
             as={Link}
             href="https://www.youtube.com/@nftchoose"
@@ -38,20 +37,20 @@ export default function Bio() {
           >
             @NFT Choose
           </Box>{' '}
-          e estou gravando meu curso Base Blockchain
+          Onde ajudo as pessoas que trabalham ou querem entrar no mundo web3
         </Text>
         <HStack>
           <Link
             href="https://www.linkedin.com/in/jeftarmascarenhas/"
             target="_blank"
           >
-            <AiFillLinkedin size={20} />
+            <AiFillLinkedin size={30} />
           </Link>
           <Link href="https://twitter.com/jeftar" target="_blank">
-            <AiFillTwitterCircle size={20} />
+            <AiFillTwitterCircle size={30} />
           </Link>
           <Link href="https://github.com/jeftarmascarenhas" target="_blank">
-            <AiOutlineGithub size={20} />
+            <AiOutlineGithub size={30} />
           </Link>
         </HStack>
       </VStack>

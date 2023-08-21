@@ -9,7 +9,7 @@ export default function CourseHeader() {
       <SimpleGrid columns={{ base: 1, md: 2 }} alignItems="center" spacing="8">
         <VStack align="flex-start" spacing="4">
           <Text fontWeight="bold" fontSize={{ base: '3xl', md: '4xl' }}>
-            Seja avisado das melhores aulas e vídeos sobre{' '}
+            Seja avisado dos melhores cursos e vídeos{' '}
             <Box textColor="#1ED760" as="span">
               Web3
             </Box>

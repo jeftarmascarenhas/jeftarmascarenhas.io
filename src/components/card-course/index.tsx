@@ -1,4 +1,4 @@
-import { Text, VStack } from '@chakra-ui/react'
+import { Button, Text, VStack } from '@chakra-ui/react'
 import Link from 'next/link'
 import { Props } from './types'
 
@@ -7,6 +7,7 @@ export default function CardCourse({
   info,
   modeType = 'light',
   href = '',
+  bgImg,
   onClick,
   ...rest
 }: Props) {
@@ -19,6 +20,7 @@ export default function CardCourse({
       {...rest}
       onClick={onClick}
       align="stretch"
+      justifyContent="space-between"
       boxShadow="2xl"
       rounded="lg"
       p="6"
@@ -29,14 +31,27 @@ export default function CardCourse({
       _hover={{
         transform: `scale(1.04)`
       }}
+      pos="relative"
+      overflow="hidden"
+      _after={bgImg && {
+        content: `""`,
+        bgColor: "rgba(0,0,0,0.2)",
+        position: 'absolute',
+        width: `100%`,
+        height: `100%`,
+        top: 0,
+        left: 0,
+      }}
+      bgImg={bgImg}
     >
       <Link
         href={href}
         onClick={e => {
           if (onClick) e.preventDefault()
         }}
+      style={{position: 'relative', zIndex: 2}}
       >
-        <VStack align="stretch" spacing="4">
+        <VStack maxH={500} align="stretch" spacing="4">
           <VStack align="stretch" spacing="2">
             {info.type && (
               <Text as="h3" fontSize="lg" fontWeight="medium" color={typeColor}>
@@ -66,6 +81,7 @@ export default function CardCourse({
           {image}
         </VStack>
       </Link>
+      <Button as="a" href={href} colorScheme="teal" w="full" textTransform="uppercase">Faça sua inscrição</Button>
     </VStack>
   )
 }
