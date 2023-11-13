@@ -33,7 +33,7 @@ export default function ListCourses() {
           <CardCourse
             href="/courses/curso-supply-chain-web3-polygon-blockchain"
             info={{
-              type: `Lançamento - Outubro 2023`,
+              type: `Lançamento - Dezembro 2023`,
               title: `Curso Supply Chain Web3 com Polygon Blockchain`,
               resume: `Aprenda a desenvolver um sistema de supply chain baseado em smart contracts com técnicas avançadas de Solidity, API em Nodejs e um front-end com Next.js para gerenciar toda a cadeia de suprimentos.`
             }}
@@ -51,7 +51,7 @@ export default function ListCourses() {
           <CardCourse
             href="/courses/curso-blockchain-ethersjs"
             info={{
-              type: `Lançamento - Novembro 2023`,
+              type: `Lançamento - Janeiro 2024`,
               title: `Curso Blockchain Ethers.js`,
               resume: `Guia completo do zero ao avançado. Aprenda a utilizar Ethers.js para interagir com blockchain, smart contract, criar Dapps e APIs.`
             }}
