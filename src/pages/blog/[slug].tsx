@@ -1,15 +1,15 @@
 import fm from 'front-matter'
 import { marked } from 'marked'
-import { Post } from '@global-entities/post'
-import { getAllPosts, getPostBySlug } from '@global-libs/api'
 import SinglePost from '@global-modules/blog/screens/single'
+import { getAllPosts, getPostBySlug } from '@global-libs/api'
 
 export default SinglePost
 
 type Params = { params: { slug: string } }
 
 export async function getStaticPaths() {
-  const paths = getAllPosts().map(item => ({
+  const posts = await getAllPosts()
+  const paths = posts?.map(item => ({
     params: {
       slug: item?.slug
     }
@@ -28,7 +28,7 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }: Params) {
-  const post = getPostBySlug(params.slug) as Post
+  const post = await getPostBySlug(params.slug)
   const parMarkdown = fm(post.content)
   const content = marked(parMarkdown.body)
   return {

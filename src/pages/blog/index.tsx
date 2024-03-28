@@ -4,10 +4,10 @@ import { generateSitemap } from '@global-libs/api/sitemap'
 import { Posts } from '@global-entities/post'
 
 export async function getStaticProps() {
-  const posts = getAllPosts() as Posts
+  const posts = await getAllPosts()
 
   if (process.env.NODE_ENV !== 'development') {
-    await generateSitemap(posts)
+    await generateSitemap(posts as Posts)
   }
 
   return {

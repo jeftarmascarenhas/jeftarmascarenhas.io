@@ -2,7 +2,7 @@ import { getWorkJournal } from '@global-libs/api'
 import WorkJournalScreen from '@global-modules/work-journal/screens/main'
 
 export async function getStaticProps() {
-  const yearsData = getWorkJournal
+  const yearsData = await getWorkJournal()
   return {
     props: {
       yearsData
