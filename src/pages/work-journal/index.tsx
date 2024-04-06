@@ -1,11 +1,12 @@
-import { getWorkJournal } from '@global-libs/api'
+import { getWorkJournalPage } from '@global-libs/api'
 import WorkJournalScreen from '@global-modules/work-journal/screens/main'
 
 export async function getStaticProps() {
-  const yearsData = await getWorkJournal()
+  const page = await getWorkJournalPage()
+
   return {
     props: {
-      yearsData
+      page
     },
     revalidate: 30
   }

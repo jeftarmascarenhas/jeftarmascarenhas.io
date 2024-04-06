@@ -1,5 +1,5 @@
-import { WorkJournalData } from '@global-entities/work-journal'
+import { WorkJournals } from '@global-entities/work-journal'
 
 export type Props = {
-  yearsData: WorkJournalData
+  workJournals: WorkJournals[]
 }

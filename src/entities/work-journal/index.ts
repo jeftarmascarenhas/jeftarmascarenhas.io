@@ -10,12 +10,24 @@ export type WorkInfo = {
   items: WorkItem[]
 }
 
-export type WorkJournalData = {
+export type WorkSubtitles = {
+  id: number
+  title: string
+}
+
+export type WorkJournals = {
   id: number
   title: string
   subtitle: string
   infos: WorkInfo[]
-}[]
+}
+
+export type WorkJournalData = {
+  id?: number
+  title: string
+  subtitles: WorkSubtitles[]
+  workJournals: WorkJournals[]
+}
 
 export type RequestWorkJournalInfosItems = {
   id: number
@@ -24,15 +36,30 @@ export type RequestWorkJournalInfosItems = {
 }
 
 export type RequestWorkJournalInfos = {
+  id: number
   title: string
   items: RequestWorkJournalInfosItems[]
 }
 
-export type RequestWorkJournal = {
+export type  RequestWorkJournalSubtitles = {
+  id: number
+  title: string
+}
+
+export type RequestWorkJournals = {
   id: number
   attributes: {
     title: string
     subtitle: string
     infos: RequestWorkJournalInfos[]
+  }
+}
+
+export type RequestWorkJournal = {
+  id: number
+  title: string
+  subtitles: RequestWorkJournalSubtitles[]
+  workJournals: {
+    data: RequestWorkJournals[]
   }
 }

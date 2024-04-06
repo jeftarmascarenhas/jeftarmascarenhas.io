@@ -4,9 +4,9 @@ export type Post = {
   frontmatter: {
     date: string
     title: string
+    tags: string[]
     thumbnail?: string
     description: string
-    tags: string[]
   }
   content: string
 }
@@ -18,7 +18,7 @@ export type RequestPostTags = {
   title: string
 }
 
-export type RequestPostThumbnail = {
+export type RequestThumbnail = {
   data: {
     attributes: {
       url: string
@@ -37,6 +37,6 @@ export type RequestPost = {
     content: string
     description: string
     tags: RequestPostTags[]
-    thumbnail: RequestPostThumbnail
+    thumbnail: RequestThumbnail
   }
 }

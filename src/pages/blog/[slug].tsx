@@ -1,15 +1,13 @@
 import fm from 'front-matter'
 import { marked } from 'marked'
-import SinglePost from '@global-modules/blog/screens/single'
-import { getAllPosts, getPostBySlug } from '@global-libs/api'
-
-export default SinglePost
+export { default } from '@global-modules/blog/screens/single'
+import { getBlogPage, getPostBySlug } from '@global-libs/api'
 
 type Params = { params: { slug: string } }
 
 export async function getStaticPaths() {
-  const posts = await getAllPosts()
-  const paths = posts?.map(item => ({
+  const blogPage = await getBlogPage()
+  const paths = blogPage?.posts?.map(item => ({
     params: {
       slug: item?.slug
     }

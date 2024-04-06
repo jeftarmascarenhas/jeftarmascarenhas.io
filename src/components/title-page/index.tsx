@@ -1,9 +1,10 @@
-import { Text, Box } from '@chakra-ui/react'
 import uuid from 'react-uuid'
+import { Text, Box } from '@chakra-ui/react'
+import { WorkSubtitles } from '@global-entities/work-journal'
 
 export type Props = {
   title: string
-  subtitles?: string[]
+  subtitles?: WorkSubtitles[]
 }
 
 export default function TitlePage({ title, subtitles }: Props) {
@@ -19,7 +20,7 @@ export default function TitlePage({ title, subtitles }: Props) {
       {subtitles?.length &&
         subtitles.map(subtitle => (
           <Text as="p" key={uuid()} fontSize="larger" mt={{ base: 6, md: 6 }}>
-            {subtitle}
+            {subtitle?.title}
           </Text>
         ))}
     </Box>

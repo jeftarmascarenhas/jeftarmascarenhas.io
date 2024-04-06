@@ -1,17 +1,19 @@
+import Link from 'next/link'
+import { NextSeo } from 'next-seo'
 import { Box, Divider, Text, VStack } from '@chakra-ui/react'
+
+import TitlePage from '@global-components/title-page'
 import DefaultContainer from '@global-components/default-container'
 import NewsletterSubscribe from '@global-components/newsletter-subscribe'
-import TitlePage from '@global-components/title-page'
 import JournalList from '@global-modules/work-journal/components/journal-list'
-import { NextSeo } from 'next-seo'
-import Link from 'next/link'
+
 import { Props } from './types'
 
-export default function WorkJournal({ yearsData }: Props) {
+export default function WorkJournal({ page }: Props) {
   return (
     <>
       <NextSeo
-        title="Diário de Trabalho | Jeftar Mascarenhas"
+        title={page?.title}
         description="Coisas que estou trabalhando e estudando. Atualizado toda semana."
         openGraph={{
           images: [
@@ -27,19 +29,17 @@ export default function WorkJournal({ yearsData }: Props) {
       <DefaultContainer>
         <Box maxWidth={1100}>
           <VStack
+            mb="20"
             as="section"
+            spacing="10"
             align="stretch"
             pt={{ base: 10 }}
             px={{ base: 4, lg: 16 }}
-            mb="20"
-            spacing="10"
           >
             <Box pb={{ base: 4, sm: 6, md: 10 }}>
               <TitlePage
-                title="Diário de trabalho"
-                subtitles={[
-                  'Coisas que estou trabalhando e estudando. Atualizado toda semana.'
-                ]}
+                title={page?.title}
+                subtitles={page?.subtitles}
               />
               <Text
                 fontSize="sm"
@@ -60,7 +60,7 @@ export default function WorkJournal({ yearsData }: Props) {
                 </Link>
               </Text>
             </Box>
-            <JournalList yearsData={yearsData} />
+            <JournalList workJournals={page?.workJournals} />
           </VStack>
         </Box>
         <Box py={{ base: 10, md: 20 }} px={{ base: 4, lg: 16 }}>

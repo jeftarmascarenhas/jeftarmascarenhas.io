@@ -1,18 +1,19 @@
-import { getAllPosts } from '@global-libs/api'
-import BlogScreen from '@global-modules/blog/screens/main'
-import { generateSitemap } from '@global-libs/api/sitemap'
 import { Posts } from '@global-entities/post'
+import { getBlogPage } from '@global-libs/api'
+import { generateSitemap } from '@global-libs/api/sitemap'
+
+import BlogScreen from '@global-modules/blog/screens/main'
 
 export async function getStaticProps() {
-  const posts = await getAllPosts()
+  const blogPage = await getBlogPage()
 
   if (process.env.NODE_ENV !== 'development') {
-    await generateSitemap(posts as Posts)
+    await generateSitemap(blogPage?.posts as Posts)
   }
 
   return {
     props: {
-      posts
+      posts: blogPage?.posts
     },
     revalidate: 10
   }

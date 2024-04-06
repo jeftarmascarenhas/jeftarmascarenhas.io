@@ -1,19 +1,14 @@
-import {
-  HStack,
-  SimpleGrid,
-  Text,
-  useDisclosure,
-  VStack
-} from '@chakra-ui/react'
+import { Courses } from '@global-entities/course'
 import CardCourse from '@global-components/card-course'
+import { Text, VStack, HStack, Image, SimpleGrid } from '@chakra-ui/react'
 // import UserSubscriptionModal from '@global-components/modals/user-subscription-modal'
-import Image from 'next/image'
 
-export default function ListCourses() {
+export default function ListCourses({ courses }: { courses: Courses }) {
   // const { isOpen, onOpen, onClose } = useDisclosure()
   // const handleClickCourse = () => {
   //   onOpen()
   // }
+
   return (
     <>
       <VStack py="8" align="stretch" as="section">
@@ -30,42 +25,33 @@ export default function ListCourses() {
           </Text>
         </HStack>
         <SimpleGrid columns={{ base: 1, md: 2, lg: 2, xl: 2 }} spacing="10">
-          <CardCourse
-            href="/courses/curso-supply-chain-web3-polygon-blockchain"
-            info={{
-              type: `Lançamento - Dezembro 2023`,
-              title: `Curso Supply Chain Web3 com Polygon Blockchain`,
-              resume: `Aprenda a desenvolver um sistema de supply chain baseado em smart contracts com técnicas avançadas de Solidity, API em Nodejs e um front-end com Next.js para gerenciar toda a cadeia de suprimentos.`
-            }}
-            image={
-              <VStack align="center" py="4">
-                <Image
-                  src="/assets/images/courses/supply-chain1.png"
-                  width={125}
-                  height={196}
-                  alt="Curso Supply Chain Web3 com Polygon Blockchain"
-                />
-              </VStack>
-            }
-          />
-          <CardCourse
-            href="/courses/curso-blockchain-ethersjs"
-            info={{
-              type: `Lançamento - Janeiro 2024`,
-              title: `Curso Blockchain Ethers.js`,
-              resume: `Guia completo do zero ao avançado. Aprenda a utilizar Ethers.js para interagir com blockchain, smart contract, criar Dapps e APIs.`
-            }}
-            image={
-              <VStack align="center" py="4">
-                <Image
-                  src="/assets/images/courses/ethersjs.png"
-                  width={125}
-                  height={196}
-                  alt="Curso Blockchain Ethers.jS"
-                />
-              </VStack>
-            }
-          />
+          {courses?.length &&
+            courses?.map(course => (
+              <CardCourse
+                key={course.id}
+                href={course?.slug}
+                info={{
+                  type: course?.date,
+                  title: course?.title,
+                  resume: course?.description
+                }}
+                image={
+                  <VStack align="center" py="4">
+                    <Image
+                      width={125}
+                      borderRadius="md"
+                      objectFit="contain"
+                      alt={course?.title}
+                      src={course?.thumbnail}
+                      height={{ base: 'auto', md: 196 }}
+                      maxWidth={{ base: 'auto', md: 295 }}
+                      minWidth={{ base: 'auto', md: 295 }}
+                      fallbackSrc="https://via.placeholder.com/150/1ED760/000000?text=Jeff%20Mascarenhas"
+                    />
+                  </VStack>
+                }
+              />
+            ))}
         </SimpleGrid>
       </VStack>
       {/* <UserSubscriptionModal isOpen={isOpen} onClose={onClose} /> */}

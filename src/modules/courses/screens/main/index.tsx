@@ -1,16 +1,33 @@
+import { NextSeo } from 'next-seo'
 import { Box, VStack } from '@chakra-ui/react'
+import Advantages from 'modules/courses/components/advantages'
 import DefaultContainer from '@global-components/default-container'
 import NewsletterSubscribe from '@global-components/newsletter-subscribe'
-import Advantages from 'modules/courses/components/advantages'
 
-import HeaderCourses from 'modules/courses/components/header-courses'
-import ListCourses from 'modules/courses/components/list-courses'
-import VideosFree from 'modules/courses/components/videos-free'
 import MaxContent from '@global-components/max-content'
+import VideosFree from 'modules/courses/components/videos-free'
+import ListCourses from 'modules/courses/components/list-courses'
+import HeaderCourses from 'modules/courses/components/header-courses'
 
-export default function CourseScreen() {
+import { Props } from './types'
+
+export default function CourseScreen({ page }: Props) {
   return (
     <>
+      <NextSeo
+        description={page?.description}
+        title="Cursos | Jeftar Mascarenhas"
+        openGraph={{
+          images: [
+            {
+              url: 'https://jeftar.com.br/assets/images/covers/courses-cover.png',
+              width: 1200,
+              height: 630,
+              alt: 'Jeftar Mascarenhas Site E Cursos Blockchain, Front-end e JavaScript'
+            }
+          ]
+        }}
+      />
       <DefaultContainer>
         <VStack
           align="stretch"
@@ -22,7 +39,7 @@ export default function CourseScreen() {
             <HeaderCourses />
             <Advantages />
           </MaxContent>
-          <ListCourses />
+          <ListCourses courses={page?.courses} />
         </VStack>
       </DefaultContainer>
       <Box
