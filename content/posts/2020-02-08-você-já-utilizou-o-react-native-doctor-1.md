@@ -1,6 +1,7 @@
 ---
 date: '2020-02-08 01:37:28'
 title: Você já utilizou o React Native Doctor?
+slug: voce-ja-utilizou-o-react-native-doctor
 description: Verifique se seu ambiente está com algum problema
 tags:
   - React
