@@ -1,16 +1,13 @@
-import { Text, VStack } from '@chakra-ui/react'
+import { VStack } from '@chakra-ui/react'
 import TitlePage from '@global-components/title-page'
 import React from 'react'
+import { WorkSubtitles } from '@global-entities/work-journal'
 
-const subtitles = [
-  `Aprenda de forma fácil com conteúdo de qualidade e muita prática,
-  entenda como é ser um dev no dia a dia, como estudar e realmente
-  aprender.`,
-  `O conhecimento adquerido nos cursos são testados para válidar se você
-  realmente aprendeu.`
-]
+interface HeaderCoursesProps {
+  subtitles: WorkSubtitles[]
+}
 
-export default function HeaderCourses() {
+export default function HeaderCourses({ subtitles }: HeaderCoursesProps) {
   return (
     <VStack align="stretch" pr={{ base: '0', xl: '60' }} pb="10" maxWidth={984}>
       <TitlePage title="Cursos" subtitles={subtitles} />

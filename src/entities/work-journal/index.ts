@@ -11,7 +11,7 @@ export type WorkInfo = {
 }
 
 export type WorkSubtitles = {
-  id: number
+  id?: number
   title: string
 }
 

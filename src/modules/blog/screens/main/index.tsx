@@ -5,6 +5,14 @@ import { Props } from './types'
 import { Box, HStack, Text, VStack } from '@chakra-ui/react'
 import PostItem from './components/post/post'
 import TitlePage from '@global-components/title-page'
+import { WorkSubtitles } from '@global-entities/work-journal'
+
+const subtitles: WorkSubtitles[] = [
+  {
+    title:
+      'Artigos sobre tecnologia, Front-end blockchain, back-end e tudo que acho interessante ou estou estudando.'
+  }
+]
 
 export default function BlogScreen({ posts }: Props) {
   return (
@@ -31,10 +39,7 @@ export default function BlogScreen({ posts }: Props) {
           <Box pb={{ base: 4, sm: 6, md: 10 }}>
             <TitlePage
               title="Blog"
-              subtitles={[
-                `Artigos sobre tecnologia, Front-end blockchain, back-end
-              e tudo que acho interessante ou estou estudando.`
-              ]}
+              subtitles={subtitles}
             />
           </Box>
           <MaxContent>

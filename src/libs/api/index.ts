@@ -1,19 +1,19 @@
 import axios from 'axios'
 import { format } from 'date-fns'
 import { pt } from 'date-fns/locale'
-import { API_SITE_URL, API_SITE_TOKEN } from '@configs/api'
+import { STRAPI_API_URL, STRAPI_API_TOKEN } from '@configs/api'
 import {
   WorkJournalData,
   RequestWorkJournal
 } from '@global-entities/work-journal'
-import { Post, RequestPostTags } from '@global-entities/post'
 import { Blog, RquestBlog } from '@global-entities/blog'
+import { Post, RequestPostTags } from '@global-entities/post'
 import { Course, CourseData, RequestCourse } from '@global-entities/course'
 
 const siteApi = axios.create({
-  baseURL: `${API_SITE_URL}/api`,
+  baseURL: `${STRAPI_API_URL}/api`,
   headers: {
-    Authorization: `Bearer ${API_SITE_TOKEN}`
+    Authorization: `Bearer ${STRAPI_API_TOKEN}`
   }
 })
 
@@ -31,7 +31,7 @@ export async function getCoursePage(): Promise<CourseData> {
     courses: coursePage?.courses?.data?.map(course => ({
       ...course?.attributes,
       id: course.id,
-      thumbnail: `${API_SITE_URL}${course?.attributes?.thumbnail?.data?.attributes?.url}`,
+      thumbnail: `${STRAPI_API_URL}${course?.attributes?.thumbnail?.data?.attributes?.url}`,
       date: format(
         new Date(course?.attributes?.date),
         "'Lançamento -' MMMM 'de' yyyy",
@@ -65,7 +65,7 @@ export async function getCourseBySlug(slug: string): Promise<Course> {
     slug: course?.attributes?.slug,
     title: course?.attributes?.title,
     description: course?.attributes?.description,
-    thumbnail: `${API_SITE_URL}${course?.attributes?.thumbnail?.data?.attributes?.url}`
+    thumbnail: `${STRAPI_API_URL}${course?.attributes?.thumbnail?.data?.attributes?.url}`
   }
 }
 
@@ -81,7 +81,7 @@ export async function getBlogPage(): Promise<Blog> {
       frontmatter: {
         ...post?.attributes,
         tags: post?.attributes?.tags?.map(tag => tag?.title),
-        thumbnail: `${API_SITE_URL}${post?.attributes?.thumbnail?.data?.attributes?.url}`,
+        thumbnail: `${STRAPI_API_URL}${post?.attributes?.thumbnail?.data?.attributes?.url}`,
         date: format(
           new Date(post?.attributes?.date),
           "dd 'de' MMMM 'de' yyyy",
@@ -117,7 +117,7 @@ export async function getPostBySlug(slug: string): Promise<Post> {
       ...post,
       date,
       tags: post?.tags?.map((tag: RequestPostTags) => tag?.title),
-      thumbnail: `${API_SITE_URL}${post?.thumbnail?.data?.attributes?.url}`
+      thumbnail: `${STRAPI_API_URL}${post?.thumbnail?.data?.attributes?.url}`
     }
   }
 }

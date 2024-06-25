@@ -12,6 +12,8 @@ import HeaderCourses from 'modules/courses/components/header-courses'
 import { Props } from './types'
 
 export default function CourseScreen({ page }: Props) {
+  const subtitles = page.subtitles.map(title => ({ title }))
+
   return (
     <>
       <NextSeo
@@ -36,7 +38,7 @@ export default function CourseScreen({ page }: Props) {
           spacing="10"
         >
           <MaxContent>
-            <HeaderCourses />
+            <HeaderCourses subtitles={subtitles} />
             <Advantages />
           </MaxContent>
           <ListCourses courses={page?.courses} />

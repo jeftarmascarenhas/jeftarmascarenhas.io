@@ -2,12 +2,17 @@ import { Box, Text, VStack } from '@chakra-ui/react'
 import TitlePage from '@global-components/title-page'
 import Image from 'next/image'
 import React from 'react'
+import { WorkSubtitles } from '@global-entities/work-journal'
 
-const subtitles = [
-  `Nasci em Recife onde moro até hoje.`,
-  `Recife é um lugar maravilho, com praias e pessoas maravilhosas.
+const subtitles: WorkSubtitles[] = [
+  {
+    title: `Nasci em Recife onde moro até hoje.`
+  },
+  {
+    title: `Recife é um lugar maravilho, com praias e pessoas maravilhosas.
   Conheci algumas cidades como São Paulo e Minas Gerais onde tive ótimas
   experiências.`
+  }
 ]
 
 export default function Life() {
